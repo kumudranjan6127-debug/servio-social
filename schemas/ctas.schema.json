@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "brand/ctas.yml",
+  "description": "The call-to-action library. Every post ends with exactly one CTA, picked by key (e.g. 'cta: get-quote' in a calendar entry).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["ctas"],
+  "properties": {
+    "ctas": {
+      "type": "object",
+      "minProperties": 1,
+      "propertyNames": {
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+        "$comment": "CTA keys are lowercase words joined by hyphens, e.g. get-quote, site-audit."
+      },
+      "additionalProperties": { "$ref": "#/definitions/ctaEntry" }
+    }
+  },
+  "definitions": {
+    "ctaEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label", "url", "text"],
+      "properties": {
+        "label": { "type": "string", "minLength": 1, "$comment": "Short human name, used in previews and reports." },
+        "url": { "type": "string", "pattern": "^https://", "$comment": "Clean link with NO tracking parameters; tracking is appended automatically when utm is true." },
+        "utm": { "type": "boolean" },
+        "text": {
+          "type": "object",
+          "additionalProperties": false,
+          "minProperties": 1,
+          "$comment": "A ready-made closing line per platform. Deliberately different per platform: identical text is rejected by X and down-ranked by Meta.",
+          "properties": {
+            "linkedin": { "type": "string", "minLength": 1 },
+            "x": { "type": "string", "minLength": 1 },
+            "instagram": { "type": "string", "minLength": 1 },
+            "facebook": { "type": "string", "minLength": 1 }
+          }
+        }
+      }
+    }
+  }
+}

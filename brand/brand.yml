@@ -1,0 +1,158 @@
+# =============================================================================
+# Servio brand system - the single source of truth for who Servio is
+# and how it sounds online.
+#
+# Every AI-generated post is built from this file. If you edit something here
+# (a price, a service, a rule), all future posts follow the new version.
+# Nothing in this file is code; it is safe to edit the text.
+# =============================================================================
+
+name: Servio
+website: https://servio-0.web.app
+
+# The main tagline, plus the shorter alternative used on the site.
+tagline: "Your Business Deserves a Website That Converts"
+tagline_alt: "High-Performance Web Solutions"
+
+# Two-to-three sentence description of the business. Used to ground every post.
+description: >
+  Servio is a web development agency that builds fast, conversion-focused
+  websites for small and medium businesses. From single-page landing sites to
+  full e-commerce stores, every build is judged by one thing: whether it turns
+  visitors into customers. Based in India, working with clients anywhere.
+
+# -----------------------------------------------------------------------------
+# Services (6). Each has a detail page on the website at /services/<slug>.
+# -----------------------------------------------------------------------------
+services:
+  - name: Landing Pages
+    slug: landing-pages
+  - name: Business Websites
+    slug: business-websites
+  - name: Portfolio Websites
+    slug: portfolio-websites
+  - name: E-Commerce Stores
+    slug: ecommerce-stores
+  - name: Custom Web Applications
+    slug: custom-web-applications
+  - name: Website Maintenance
+    slug: website-maintenance
+
+# -----------------------------------------------------------------------------
+# Pricing. IMPORTANT RULE: these are the ONLY prices a post may ever mention,
+# written exactly as they appear here. If a price, discount, or delivery
+# timeline is not in this file, it must never be quoted anywhere.
+# When unsure, leave price out of the post entirely.
+# -----------------------------------------------------------------------------
+pricing:
+  rule: >
+    Only quote prices that appear in this file, exactly as written here.
+    Never invent, round, discount, or estimate a price. Never promise a
+    delivery timeline that is not written here. When unsure, do not mention
+    price at all.
+  currency: INR
+  plans:
+    - name: Starter
+      price: "₹7,999"
+    - name: Business
+      price: "₹65,000"
+    - name: Premium
+      price: "₹1,60,000"
+
+# -----------------------------------------------------------------------------
+# Who we are talking to, and what hurts them. Posts should speak to these
+# people about these problems.
+# -----------------------------------------------------------------------------
+audience:
+  who:
+    - "Small and medium business owners (India-first, global-friendly)"
+    - "Non-technical startup founders"
+  pain_points:
+    - "No website at all: the business runs on WhatsApp and Instagram alone"
+    - "An outdated website that makes the business look less trustworthy than it is"
+    - "A website that gets visitors but does not convert them into enquiries"
+    - "A slow website that people abandon before it loads"
+
+# -----------------------------------------------------------------------------
+# Voice: how Servio sounds. The writer should re-read this before every post.
+# -----------------------------------------------------------------------------
+voice:
+  personality: >
+    Confident, practical, warm. An expert who explains things in plain
+    English, like a trusted consultant, not a salesperson.
+  style:
+    - "Short sentences. Short paragraphs."
+    - "Plain English. If a technical word is unavoidable, explain it in one line."
+    - "Concrete numbers over adjectives, but only real numbers. Never invent one."
+    - "One idea per post. If a draft covers two ideas, cut one."
+    - "Exactly one call to action per post, taken from brand/ctas.yml."
+    - "Spend most of the post on the reader's business, not on Servio."
+
+# -----------------------------------------------------------------------------
+# Visual identity: warm Indian-heritage palette. Used by image templates.
+# -----------------------------------------------------------------------------
+visual:
+  colors:
+    copper: "#B87333"        # primary accent
+    zari_gold: "#C99A3B"     # secondary accent and highlights
+    peacock_teal: "#0F6F6C"  # deep accent
+    sandstone: "#F5F0E8"     # light background
+    ink: "#1C1815"           # text and dark backgrounds
+  fonts:
+    display: "Fraunces"      # headlines
+    body: "Inter"            # everything else
+
+# -----------------------------------------------------------------------------
+# Existing Servio blog posts that can be repurposed into social content.
+# A calendar entry can point at one of these with "source: blog:<slug>".
+# -----------------------------------------------------------------------------
+blog:
+  base_url: https://servio-0.web.app/blog
+  slugs:
+    - why-your-small-business-needs-a-website
+    - landing-page-mistakes
+    - page-speed-revenue
+    - seo-basics-small-business
+    - ecommerce-vs-booking-site
+    - content-that-converts
+
+# -----------------------------------------------------------------------------
+# AVOID LIST - hard rules, written as direct instructions to the AI writer.
+# Breaking any of these makes a post unpublishable, no matter how good it reads.
+# -----------------------------------------------------------------------------
+avoid:
+  - >
+    Never invent statistics, percentages, or research findings. If you do not
+    have a real, verifiable number, make the point without a number.
+  - >
+    Never invent client names, client results, or testimonials. Only mention
+    client work that is explicitly provided in this repo's brand or calendar
+    files.
+  - >
+    No hype vocabulary. Banned words and phrases include "game-changer",
+    "unleash", "revolutionize", "skyrocket", "to the moon", and rocket emoji.
+    If it sounds like a crypto ad, delete it.
+  - >
+    No emoji walls. At most one or two emoji in a post, and only when they add
+    meaning. Zero emoji is always acceptable.
+  - >
+    No engagement bait. Never write "tag a friend", "like if you agree",
+    "comment YES", "share this with someone who needs it", or anything
+    similar. Meta actively down-ranks this.
+  - >
+    Never post identical text on two platforms. X rejects duplicate posts and
+    Meta down-ranks copy-paste content. Write a fresh variant for each
+    platform, even when the idea is the same.
+  - >
+    Never promise a price, discount, or delivery timeline that is not written
+    in the pricing section of this file. When unsure, leave price out.
+  - >
+    Never name, disparage, or compare Servio against a specific competitor.
+  - >
+    Avoid the em-dash-heavy AI writing cadence. Do not string thoughts
+    together with dashes. Use short, separate sentences instead.
+  - >
+    Exactly one call to action per post. A post with two CTAs makes the reader
+    pick neither.
+  - >
+    One idea per post. Depth on one point beats a shallow list of five.

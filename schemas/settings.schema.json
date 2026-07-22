@@ -1,0 +1,75 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "config/settings.yml",
+  "description": "Runtime settings: how the system behaves, which AI model it uses, when it posts, and which platforms are switched on.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["mode", "model", "timezone", "slots", "platforms", "limits"],
+  "properties": {
+    "mode": {
+      "enum": ["review", "auto"],
+      "$comment": "LOCKED to 'review' by owner decision (2026-07-22): a human must merge the pull request before anything is published. 'auto' exists in this schema for a much later phase only."
+    },
+    "model": {
+      "type": "string",
+      "minLength": 1,
+      "$comment": "Treated as an opaque id so switching models is a one-line change."
+    },
+    "timezone": {
+      "type": "string",
+      "minLength": 1,
+      "$comment": "An IANA timezone name like Asia/Kolkata. The validator also checks it is a real timezone."
+    },
+    "slots": {
+      "type": "object",
+      "minProperties": 1,
+      "propertyNames": { "pattern": "^[a-z][a-z0-9-]*$" },
+      "additionalProperties": {
+        "type": "string",
+        "pattern": "^([01][0-9]|2[0-3]):[0-5][0-9]$"
+      },
+      "$comment": "Named posting times of day, e.g. morning: \"10:00\". Times are local (see timezone) in 24-hour HH:MM."
+    },
+    "platforms": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["linkedin", "x", "instagram", "facebook"],
+      "properties": {
+        "linkedin": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["enabled"],
+          "properties": {
+            "enabled": { "type": "boolean" },
+            "author": {
+              "enum": ["personal", "company"],
+              "$comment": "LOCKED to 'personal' for the MVP; 'company' is a later, approval-gated phase."
+            }
+          }
+        },
+        "x": { "$ref": "#/definitions/simplePlatform" },
+        "instagram": { "$ref": "#/definitions/simplePlatform" },
+        "facebook": { "$ref": "#/definitions/simplePlatform" }
+      }
+    },
+    "limits": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["max_posts_per_day", "research_max_searches"],
+      "properties": {
+        "max_posts_per_day": { "type": "integer", "minimum": 1 },
+        "research_max_searches": { "type": "integer", "minimum": 0 }
+      }
+    }
+  },
+  "definitions": {
+    "simplePlatform": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["enabled"],
+      "properties": {
+        "enabled": { "type": "boolean" }
+      }
+    }
+  }
+}

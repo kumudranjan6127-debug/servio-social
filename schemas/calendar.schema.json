@@ -1,0 +1,153 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "calendar files",
+  "description": "One schema for all three kinds of calendar file. Monthly files (YYYY-MM.yml) are lists of dated entries. recurring.yml holds the weekly rhythm and the holiday list. evergreen.yml is a list of date-less backup posts. The validator picks the right definition below based on the file name; the top-level anyOf is documentation of the union only (anyOf, not oneOf, because an empty list legitimately matches both list-shaped branches).",
+  "$comment": "Design note: dated entries and evergreen entries are separate definitions rather than one shape with optional fields, because their rules genuinely differ - dated entries have an id that must start with the date, while evergreen entries have a 'slug' and MUST NOT have a date (the real id is built as date+slug on the day the entry is used).",
+  "anyOf": [
+    { "$ref": "#/definitions/datedFile" },
+    { "$ref": "#/definitions/recurringFile" },
+    { "$ref": "#/definitions/evergreenFile" }
+  ],
+  "definitions": {
+    "category": {
+      "enum": ["education", "portfolio", "service", "case-study", "pain-point", "holiday", "campaign"]
+    },
+    "platform": {
+      "enum": ["linkedin", "x", "instagram", "facebook"]
+    },
+    "platformList": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "$ref": "#/definitions/platform" }
+    },
+    "isoDate": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+      "$comment": "Shape only (YYYY-MM-DD). The validator additionally checks the date really exists on the calendar."
+    },
+    "ctaKey": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "$comment": "Must exist as a key in brand/ctas.yml - the validator cross-checks this."
+    },
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "image": {
+      "type": "string",
+      "pattern": "^(template:[a-z0-9-]+|asset:.+|none)$",
+      "$comment": "template:<name> uses an SVG template from assets/templates, asset:<path> uses a fixed file, none means no image."
+    },
+    "status": {
+      "enum": ["planned", "generated", "published", "skipped"],
+      "$comment": "Machine-updated. Hand-written entries can omit it; the system treats a missing status as 'planned'."
+    },
+
+    "datedEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "date", "slot", "category", "topic", "platforms", "cta"],
+      "$comment": "research (default false), image (default none) and status (default planned) may be omitted; angle and source are optional by design.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}-[a-z0-9-]+$",
+          "$comment": "Globally unique, THE dedup key. Must start with the entry's date - the validator cross-checks this."
+        },
+        "date": { "$ref": "#/definitions/isoDate" },
+        "slot": { "type": "string", "$comment": "Must exist under 'slots:' in config/settings.yml - the validator cross-checks this." },
+        "category": { "$ref": "#/definitions/category" },
+        "topic": { "type": "string", "minLength": 1 },
+        "angle": { "type": "string" },
+        "platforms": { "$ref": "#/definitions/platformList" },
+        "cta": { "$ref": "#/definitions/ctaKey" },
+        "research": { "type": "boolean" },
+        "image": { "$ref": "#/definitions/image" },
+        "source": { "type": "string", "$comment": "Optional pointer to existing Servio content, e.g. blog:page-speed-revenue." },
+        "status": { "$ref": "#/definitions/status" }
+      }
+    },
+    "datedFile": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/datedEntry" }
+    },
+
+    "evergreenEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["slug", "category", "topic", "platforms", "cta"],
+      "$comment": "No 'date' and no 'id' here on purpose: evergreen posts are date-less. The system builds the full id (date + slug) on the day the entry is consumed and flips 'used' to true.",
+      "properties": {
+        "slug": { "$ref": "#/definitions/slug" },
+        "category": { "$ref": "#/definitions/category" },
+        "topic": { "type": "string", "minLength": 1 },
+        "angle": { "type": "string" },
+        "platforms": { "$ref": "#/definitions/platformList" },
+        "cta": { "$ref": "#/definitions/ctaKey" },
+        "research": { "type": "boolean" },
+        "image": { "$ref": "#/definitions/image" },
+        "source": { "type": "string" },
+        "status": { "$ref": "#/definitions/status" },
+        "used": { "type": "boolean" }
+      }
+    },
+    "evergreenFile": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/evergreenEntry" }
+    },
+
+    "weeklyDay": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["category"],
+      "$comment": "The default plan for one day of the week, used only when no dated entry or holiday exists for that date.",
+      "properties": {
+        "category": { "$ref": "#/definitions/category" },
+        "platforms": { "$ref": "#/definitions/platformList" },
+        "slot": { "type": "string" },
+        "cta": { "$ref": "#/definitions/ctaKey" },
+        "research": { "type": "boolean" },
+        "image": { "$ref": "#/definitions/image" }
+      }
+    },
+    "holiday": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["date", "name", "topic"],
+      "properties": {
+        "date": { "$ref": "#/definitions/isoDate" },
+        "name": { "type": "string", "minLength": 1 },
+        "topic": { "type": "string", "minLength": 1 },
+        "platforms": { "$ref": "#/definitions/platformList" },
+        "cta": { "$ref": "#/definitions/ctaKey" },
+        "slot": { "type": "string" },
+        "image": { "$ref": "#/definitions/image" }
+      }
+    },
+    "recurringFile": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "weekly": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "mon": { "$ref": "#/definitions/weeklyDay" },
+            "tue": { "$ref": "#/definitions/weeklyDay" },
+            "wed": { "$ref": "#/definitions/weeklyDay" },
+            "thu": { "$ref": "#/definitions/weeklyDay" },
+            "fri": { "$ref": "#/definitions/weeklyDay" },
+            "sat": { "$ref": "#/definitions/weeklyDay" },
+            "sun": { "$ref": "#/definitions/weeklyDay" }
+          }
+        },
+        "holidays": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/holiday" }
+        }
+      }
+    }
+  }
+}

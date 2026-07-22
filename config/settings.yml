@@ -1,0 +1,16 @@
+# Runtime settings for servio-social. Safe to edit; every change is checked by
+# "npm run validate" before it can break anything.
+
+mode: review              # review | auto — LOCKED to review (see decisions)
+model: claude-sonnet-5    # opaque model id, switchable
+timezone: Asia/Kolkata
+slots:
+  morning: "10:00"        # local time, HH:MM
+platforms:                # ALL false in Phase 0
+  linkedin:  { enabled: false, author: personal }
+  x:         { enabled: false }
+  instagram: { enabled: false }
+  facebook:  { enabled: false }
+limits:
+  max_posts_per_day: 4
+  research_max_searches: 5

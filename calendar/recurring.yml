@@ -1,0 +1,99 @@
+# Recurring schedule — the system's fallback plan.
+#
+# How this file is used: when a date has no entry in the monthly calendar files,
+# the system first checks the "holidays" list below, then falls back to the
+# "weekly" rhythm for that day of the week, then to calendar/evergreen.yml.
+#
+# WEEKLY RHYTHM
+# For each day of the week: the default kind of post (category) and which
+# social networks to post on. This only kicks in when nothing specific is planned.
+weekly:
+  mon:
+    category: education        # start the week teaching something useful
+    platforms: [linkedin, x, facebook, instagram]
+  tue:
+    category: service          # explain one Servio service in plain English
+    platforms: [linkedin, x, facebook, instagram]
+  wed:
+    category: pain-point       # speak to a real frustration business owners have
+    platforms: [linkedin, x, facebook, instagram]
+  thu:
+    category: case-study       # show how we work, process over hype
+    platforms: [linkedin, x, facebook, instagram]
+  fri:
+    category: portfolio        # end the work week showing the work
+    platforms: [linkedin, facebook, instagram]
+  sat:
+    category: education        # lighter weekend read; LinkedIn is quiet on weekends
+    platforms: [x, facebook, instagram]
+  sun:
+    category: service          # gentle Sunday reminder, consumer platforms only
+    platforms: [facebook, instagram]
+
+# HOLIDAYS (India-focused, next ~6 months)
+# On these dates the holiday post replaces the normal plan for the day.
+# Rule of thumb baked into every topic below: greeting first, business second.
+# No forced festival selling — a warm wish with at most one gentle, relevant idea.
+#
+# Lunar-calendar festival dates below (Raksha Bandhan, Ganesh Chaturthi,
+# Dussehra, Diwali) were verified against Drik Panchang for 2026 on 2026-07-22.
+holidays:
+  - date: 2026-08-15
+    name: "Independence Day"
+    topic: "Independence Day greeting, with one thought: owning your own website means owning your corner of the internet, independent of any platform's rules"
+    platforms: [linkedin, x, facebook, instagram]
+    cta: get-quote
+
+  - date: 2026-08-28
+    name: "Raksha Bandhan"
+    topic: "Warm Raksha Bandhan wishes; a gentle nod to protection — the festival protects a bond, a maintenance plan protects the website a business depends on"
+    platforms: [facebook, instagram, x]
+    cta: view-services
+
+  - date: 2026-09-14
+    name: "Ganesh Chaturthi"
+    topic: "Ganesh Chaturthi greeting; Ganesha is the remover of obstacles — a kind word for founders who have been putting off starting their first website"
+    platforms: [facebook, instagram, x]
+    cta: contact
+
+  - date: 2026-10-02
+    name: "Gandhi Jayanti"
+    topic: "A quiet thought on simplicity: the simplest, most honest websites are usually the most effective; greeting first, no sales push"
+    platforms: [linkedin, x, facebook, instagram]
+    cta: read-blog
+
+  - date: 2026-10-20
+    name: "Dussehra (Vijayadashami)"
+    topic: "Dussehra wishes on the victory of good over evil; a playful nod to the small demons that hold websites back — slow pages, broken links, confusing menus"
+    platforms: [facebook, instagram, x]
+    cta: site-audit
+
+  - date: 2026-11-08
+    name: "Diwali (Lakshmi Puja)"
+    topic: "Warm Diwali wishes first and foremost; a soft note that festive season is peak online shopping, a good moment for stores to be ready for it"
+    platforms: [facebook, instagram, x]
+    cta: get-quote
+
+  - date: 2026-12-25
+    name: "Christmas"
+    topic: "Simple season's greetings and a genuine thank-you to clients and followers; no pitch at all"
+    platforms: [linkedin, x, facebook, instagram]
+    cta: contact
+
+  - date: 2027-01-01
+    name: "New Year's Day"
+    topic: "New year wishes with a fresh-start question: is your website ready for the year ahead, or carrying last year's problems into this one?"
+    platforms: [linkedin, x, facebook, instagram]
+    cta: site-audit
+
+  - date: 2027-01-14
+    name: "Makar Sankranti / Pongal"
+    topic: "Festival greetings for the harvest and the sun changing course — a light nudge for anyone whose website has been on the wrong course"
+    platforms: [facebook, instagram, x]
+    cta: read-blog
+
+  - date: 2027-01-26
+    name: "Republic Day"
+    topic: "Republic Day greetings, with a note of pride in building websites for Indian small businesses — and work to show for it"
+    platforms: [linkedin, x, facebook, instagram]
+    cta: see-portfolio

@@ -1,0 +1,14 @@
+# Installed packages (recreated any time with "npm install")
+node_modules/
+
+# Environment files may contain secrets - never commit them.
+# The example file is safe: it documents variable NAMES only, no values.
+.env*
+!.env.example
+
+# Build output (this project has none today, but just in case)
+dist/
+
+# Log files and OS clutter
+*.log
+.DS_Store

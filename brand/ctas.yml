@@ -1,0 +1,87 @@
+# =============================================================================
+# CTA (call-to-action) library.
+#
+# Every post ends with exactly ONE of these. The calendar picks which one by
+# key (for example "cta: get-quote").
+#
+# Each CTA has:
+#   label - a short human name for the action (used in previews and reports)
+#   url   - the clean page link on the Servio website
+#   utm   - true means the pipeline automatically appends tracking to the link:
+#           ?utm_source=<platform>&utm_medium=social&utm_campaign=<calendar-id>
+#           Do NOT add tracking parameters to the urls in this file; keep them
+#           clean or the tracking would be applied twice.
+#   text  - a ready-made closing line per platform. They are deliberately
+#           different on each platform because posting identical text
+#           everywhere gets rejected by X and down-ranked by Meta.
+#
+# Note on Instagram: links inside Instagram captions are not clickable, so
+# every Instagram variant points people to the "link in bio" instead. The url
+# is still used to keep the bio link and its tracking up to date.
+# =============================================================================
+
+ctas:
+  get-quote:
+    label: "Get a quote"
+    url: https://servio-0.web.app/contact
+    utm: true
+    text:
+      linkedin: "Ready to talk about your website? Get a quote here:"
+      x: "Get a quote:"
+      instagram: "Tap the link in our bio to get a quote."
+      facebook: "Thinking about it? Send us a message or get a quote here:"
+
+  see-portfolio:
+    label: "See our work"
+    url: https://servio-0.web.app/portfolio
+    utm: true
+    text:
+      linkedin: "See how we have done this for other businesses:"
+      x: "See our work:"
+      instagram: "Link in bio to see our recent work."
+      facebook: "Take a look at what we have built for businesses like yours:"
+
+  read-blog:
+    label: "Read the full guide"
+    url: https://servio-0.web.app/blog
+    utm: true
+    text:
+      linkedin: "The full guide is on our blog:"
+      x: "Full guide:"
+      instagram: "The full guide is on our blog. Link in bio."
+      facebook: "We wrote a full guide on this. Read it here:"
+
+  view-services:
+    label: "Explore our services"
+    url: https://servio-0.web.app/services
+    utm: true
+    text:
+      linkedin: "Here is everything we can build for you:"
+      x: "What we build:"
+      instagram: "Link in bio to see everything we build."
+      facebook: "From landing pages to online stores, see what we can build for you:"
+
+  contact:
+    label: "Talk to us"
+    url: https://servio-0.web.app/contact
+    utm: true
+    text:
+      linkedin: "Have a question about your website? Talk to us:"
+      x: "Talk to us:"
+      instagram: "Questions? The link in our bio is the fastest way to reach us."
+      facebook: "Have a question? We are happy to help:"
+
+  # Audit requests go through the contact page for now. If you later add a
+  # dedicated audit page, just change the url below.
+  # Owner note: the word "free" is deliberately not used here. Posts may only
+  # promise what is written in the brand files, so if your audit is free and
+  # you want posts to say so, add the word "free" to the lines below.
+  site-audit:
+    label: "Request a site audit"
+    url: https://servio-0.web.app/contact
+    utm: true
+    text:
+      linkedin: "Want to know exactly what is holding your site back? Ask us for a site audit:"
+      x: "Site audit:"
+      instagram: "Tap the link in our bio to request a site audit."
+      facebook: "Curious what is slowing your site down? Ask us for a site audit:"

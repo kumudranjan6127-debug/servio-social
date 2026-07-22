@@ -1,0 +1,23 @@
+{
+  "name": "servio-social",
+  "description": "AI social media automation for Servio. Phase 0: brand system, calendar, schemas and validator. No posting yet.",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "validate": "tsx src/validate.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "ajv": "^8",
+    "ajv-formats": "^3",
+    "yaml": "^2"
+  },
+  "devDependencies": {
+    "@types/node": "^24",
+    "tsx": "^4",
+    "typescript": "^5"
+  }
+}

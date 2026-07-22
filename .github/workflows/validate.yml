@@ -1,0 +1,37 @@
+# Runs the content checker on every pull request and on every push to main.
+# If a calendar entry, brand file, or draft has a mistake, this check turns
+# red and the pull request cannot be merged until the mistake is fixed.
+# It can also be started by hand from the GitHub "Actions" tab (workflow_dispatch).
+
+name: Validate content
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# The job only reads the repo; it never needs permission to write anything.
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get the code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check the TypeScript code compiles
+        run: npm run typecheck
+
+      - name: Check every content file
+        run: npm run validate
