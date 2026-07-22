@@ -15,6 +15,10 @@
       "minLength": 1,
       "$comment": "Treated as an opaque id so switching models is a one-line change."
     },
+    "publisher": {
+      "enum": ["buffer", "direct"],
+      "$comment": "How posts reach the platforms. 'buffer' (owner-approved 2026-07-22) sends everything through the Buffer API with one token; 'direct' is the documented fallback that talks to each platform's own API."
+    },
     "timezone": {
       "type": "string",
       "minLength": 1,
@@ -43,7 +47,7 @@
             "enabled": { "type": "boolean" },
             "author": {
               "enum": ["personal", "company"],
-              "$comment": "LOCKED to 'personal' for the MVP; 'company' is a later, approval-gated phase."
+              "$comment": "'company' is the MVP choice (owner-approved 2026-07-22): publishing goes through Buffer, whose LinkedIn connection already covers Company Pages - no LinkedIn API approval needed. 'personal' remains valid for the direct-API fallback path."
             }
           }
         },

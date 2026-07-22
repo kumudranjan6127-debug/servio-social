@@ -8,53 +8,61 @@ Runs entirely on GitHub: **Git is the database, GitHub Actions is the runtime, a
 
 ---
 
-## LOCKED DECISIONS (owner-approved 2026-07-22 — do not change without explicit approval)
+## LOCKED DECISIONS (owner-approved 2026-07-22, revised same day — do not change without explicit approval)
 
 1. **Mode: `review`.** Content is generated into a Pull Request; a human merge is the ONLY path to
    publishing. `mode: auto` exists in the schema but must never be enabled without the owner's
    explicit instruction. Phase 0 additionally has every platform `enabled: false` and makes
    **zero external API calls**.
-2. **LinkedIn: personal profile** (`Share on LinkedIn`, `w_member_social`, legacy `/v2/ugcPosts`
-   stack) for the MVP. Company-page posting (Community Management API) is a later phase.
-3. **X: cleanest official approach.** Links are allowed in post text at the standard pay-per-use
-   rate ($0.20/post with link vs $0.015 without, verified July 2026). No link-in-reply or other
-   placement workarounds — reliability over cost.
-4. **Model: `claude-sonnet-5`**, read from `config/settings.yml` (`model:` key). The pipeline must
-   treat the model id as opaque config so switching to `claude-opus-4-8` later is a one-line change.
-5. **Instagram = Business/Creator account; Facebook = Page.** Owner will complete platform
-   prerequisites following `docs/SETUP.md`.
+2. **Publisher: Buffer.** All publishing goes through the Buffer GraphQL API (one Bearer token,
+   `createPost` mutation, all channels) instead of four direct platform integrations. The
+   direct-API designs below are retained as the documented **fallback path** (`publisher: direct`)
+   in case Buffer's beta API ever becomes unreliable.
+3. **MVP platforms: LinkedIn Company Page + Instagram Business**, both connected as channels
+   inside Buffer. (Via Buffer, company-page posting needs NO LinkedIn API approval — the wall
+   that forced the earlier "personal profile" decision is gone.) X and Facebook come later by
+   connecting their channels in Buffer; no developer accounts needed.
+4. **Model: `gemini-2.5-flash`** (owner already operates a Gemini key for the Servio website),
+   read from `config/settings.yml` (`model:` key). The pipeline must treat the model id as opaque
+   config so switching models/providers later stays a one-line + one-client change.
+5. **Timing: target publish 9:00 AM IST.** Content is generated the **evening before** (owner
+   reviews at leisure); on merge it is sent to Buffer **scheduled for the next 9:00 AM IST** —
+   Buffer's scheduler provides exact timing that GitHub's best-effort cron cannot.
 
 ---
 
 ## System overview
 
 ```
-generate.yml (cron, daily)                    publish.yml (on merge to main)
+generate.yml (cron, daily EVENING)            publish.yml (on merge to main)
   └─ src/generate.ts                            └─ src/publish.ts
        1 pick calendar entry (src/calendar.ts)       1 find pending drafts/
-       2 Claude call #1: research (web_search)       2 dedup vs published/*.jsonl
-       3 Claude call #2: structured generation       3 per-platform adapters (src/publishers/*)
-       4 render branded image (src/image/)           4 append JSONL log + archive draft
-       5 validate (src/validate.ts)                  5 open Issue for any platform failure
-       6 write drafts/<id>/ + open PR
-validate.yml (every PR): schemas + lint      health.yml (weekly): token expiry warnings,
-                                             IG token auto-refresh, calendar-runway warning
+       2 Gemini call #1: research (optional)         2 dedup vs published/*.jsonl
+       3 Gemini call #2: structured generation       3 Buffer adapter (src/publishers/buffer.ts):
+       4 render branded image (src/image/)             one createPost per platform, scheduled
+       5 validate (src/validate.ts)                    for the next 9:00 AM IST
+       6 write drafts/<id>/ + open PR                4 append JSONL log + archive draft
+                                                     5 open Issue for any channel failure
+validate.yml (every PR): schemas + lint      health.yml (weekly): calendar-runway warning,
+                                             Buffer token sanity check
 ```
 
-Two Claude calls are REQUIRED (verified): web-search results (citations) and guaranteed-JSON
-structured output are incompatible in one request. Call 1 = research prose; call 2 = strict JSON.
+Generation uses two AI calls: call 1 = topic research returning prose notes (skipped when the
+calendar entry sets `research: false`); call 2 = generation constrained to a JSON schema
+(Gemini `responseSchema`), so the pipeline never parses free-form text.
 
 ## Phase roadmap
 
 - **Phase 0 (this phase):** scaffold, brand system, calendar, prompts, schemas, validator,
   validate.yml CI, docs. The system "thinks" but cannot post. NO generation code, NO publishers,
   NO API calls.
-- **Phase 1:** generation pipeline (Claude two-call), image rendering (SVG template → JPEG via
+- **Phase 1:** generation pipeline (Gemini two-call), image rendering (SVG template → JPEG via
   sharp), PR preview flow. Value: daily ready-to-paste content packs with zero platform APIs.
-- **Phase 2:** publishers, rolled out per platform: Facebook → Instagram → X → LinkedIn (personal).
-- **Phase 3:** LinkedIn company page (approval-gated).
-- **Phase 4:** auto mode + multiple daily slots.
-- **Phase 5:** analytics loop (collect → analyze → strategist PR).
+- **Phase 2:** the Buffer publisher adapter — LinkedIn Company Page + Instagram first; X and
+  Facebook whenever their channels are connected in Buffer.
+- **Phase 3:** auto mode + multiple daily slots.
+- **Phase 4:** analytics loop (collect → analyze → strategist PR).
+- **(Fallback, only if ever needed):** direct platform adapters per the reference section below.
 
 ## Repository layout
 
@@ -65,8 +73,9 @@ calendar/           YYYY-MM.yml (dated entries) · recurring.yml (weekly rhythm 
 prompts/            system.md · research.md · platforms/{linkedin,x,instagram,facebook}.md
 assets/             logo/ · fonts/ · templates/ (SVG image templates, Phase 1)
 schemas/            JSON Schemas: settings, brand, ctas, calendar, draft
-src/                validate.ts (Phase 0) · generate.ts, publish.ts, calendar.ts, claude.ts,
-                    log.ts, image/, publishers/ (Phase 1+)
+src/                validate.ts (Phase 0) · generate.ts, publish.ts, calendar.ts, ai.ts (Gemini
+                    client), log.ts, image/, publishers/ (buffer.ts primary; direct adapters
+                    only if the fallback path is ever activated) (Phase 1+)
 config/settings.yml runtime config (mode, model, slots, platforms)
 drafts/             generated posts awaiting approval (one folder per post id)
 published/          YYYY-MM.jsonl append-only log · archive/ of published drafts
@@ -78,14 +87,15 @@ docs/               ARCHITECTURE.md (this file) · SETUP.md (owner runbooks)
 ### config/settings.yml
 ```yaml
 mode: review              # review | auto — LOCKED to review (see decisions)
-model: claude-sonnet-5    # opaque model id, switchable
+model: gemini-2.5-flash   # opaque model id, switchable
+publisher: buffer         # buffer | direct (direct = the documented fallback path)
 timezone: Asia/Kolkata
 slots:
-  morning: "10:00"        # local time, HH:MM
+  morning: "09:00"        # target publish time; generation happens the evening before
 platforms:                # ALL false in Phase 0
-  linkedin:  { enabled: false, author: personal }
-  x:         { enabled: false }
+  linkedin:  { enabled: false, author: company }
   instagram: { enabled: false }
+  x:         { enabled: false }
   facebook:  { enabled: false }
 limits:
   max_posts_per_day: 4
@@ -119,7 +129,7 @@ next unused evergreen → skip with warning.
 ```yaml
 id: 2026-07-23-page-speed
 generated_at: <ISO datetime>
-model: claude-sonnet-5
+model: gemini-2.5-flash
 topic: ...
 category: education
 cta: get-quote
@@ -163,6 +173,20 @@ research_notes: "..."          # optional, from call #1
 - UTM convention for every link: `?utm_source=<platform>&utm_medium=social&utm_campaign=<calendar-id>`
 
 ## Platform facts that shape the design (web-verified 2026-07-22)
+
+- **Buffer (THE publisher):** new GraphQL API (the 2019-era public API is dead — ignore old
+  tutorials). One `createPost` mutation covers all 11 channels incl. our four, with per-channel
+  metadata (IG post/story/reel type, LinkedIn first comment, X threads). Auth = one Bearer
+  personal API token, no OAuth, no rotation; available on every Buffer plan incl. Free (Free caps
+  the number of connected channels). Caveat: **beta** — already shipped one breaking change
+  (May 2026 assets-input migration), no SLA; hence the documented `direct` fallback below and
+  review-mode + failure-Issue protection.
+- **Gemini (the writer):** `gemini-2.5-flash` via the official SDK; JSON guaranteed with
+  `responseMimeType: application/json` + `responseSchema`; generous free tier comfortably covers
+  one pack/day (verify current quotas at build time). Same provider the Servio website already
+  uses, but with a separate API key for independent usage/rotation.
+
+### Fallback-path reference (direct platform APIs — only if `publisher: direct` is ever activated)
 
 - **X:** OAuth 1.0a (4 static secrets, never expire). v2 media upload only. Alt text = separate
   metadata call. Pay-per-use: $0.015/post, $0.20 with URL. Duplicate posts rejected → per-platform

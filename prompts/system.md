@@ -4,7 +4,7 @@
 HOW THIS FILE IS USED (plain English):
 This is the main instruction sheet for the AI writing call (call #2 in the pipeline).
 Phase 1 code takes this file, replaces every {{DOUBLE_BRACES}} placeholder with real
-content, and sends the result to Claude. The AI then returns one JSON object with
+content, and sends the result to the AI writer (Gemini). The AI then returns one JSON object with
 the finished post text for each platform. Nothing in this repo posts anything —
 a human always reviews the result in a Pull Request first.
 -->

@@ -1,16 +1,18 @@
 # Runtime settings for servio-social. Safe to edit; every change is checked by
 # "npm run validate" before it can break anything.
 
-mode: review              # review | auto — LOCKED to review (see decisions)
-model: claude-sonnet-5    # opaque model id, switchable
+mode: review              # review | auto — LOCKED to review (see docs/ARCHITECTURE.md)
+model: gemini-2.5-flash   # the AI writer; opaque id, switchable in this one line
+publisher: buffer         # buffer | direct — owner-approved: everything posts through Buffer
 timezone: Asia/Kolkata
 slots:
-  morning: "10:00"        # local time, HH:MM
-platforms:                # ALL false in Phase 0
-  linkedin:  { enabled: false, author: personal }
-  x:         { enabled: false }
-  instagram: { enabled: false }
-  facebook:  { enabled: false }
+  morning: "09:00"        # target publish time (local, 24h HH:MM). Content is generated the
+                          # evening before; Buffer's scheduler fires at exactly this time.
+platforms:                # ALL false until Phase 2 wiring exists and the owner flips them on.
+  linkedin:  { enabled: false, author: company }   # Servio Company Page, via Buffer
+  instagram: { enabled: false }                    # Instagram Business account, via Buffer
+  x:         { enabled: false }                    # later: connect the channel in Buffer
+  facebook:  { enabled: false }                    # later: connect the channel in Buffer
 limits:
   max_posts_per_day: 4
   research_max_searches: 5

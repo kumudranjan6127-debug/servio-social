@@ -133,9 +133,10 @@ anything locally. But if you want instant feedback while editing:
 
 ## More documentation
 
-- **[docs/SETUP.md](docs/SETUP.md)** — step-by-step runbooks for every account and
-  key the system will need (Meta, X, LinkedIn, Anthropic, Cloudinary). Nothing in
-  it blocks Phase 0 or 1 — most of it is only needed when publishing starts.
+- **[docs/SETUP.md](docs/SETUP.md)** — step-by-step runbooks for the two keys the
+  system runs on (Gemini for writing, Buffer for publishing), plus a fallback
+  appendix for the direct platform APIs. Nothing in it blocks Phase 0 — only the
+  Gemini key is needed for Phase 1, and Buffer only when publishing starts.
 - **[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)** — the technical brief: locked
   decisions, data formats, and platform facts. Written for developers, but the
   "LOCKED DECISIONS" section at the top is worth every owner's read.
