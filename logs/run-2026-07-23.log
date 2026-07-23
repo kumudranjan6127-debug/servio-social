@@ -70,3 +70,27 @@ Request failed with status code 429
 | Cloudinary | ok | not configured — posts go out without images, Instagram is skipped |
 | History | ok | data/posts.json readable — 0 record(s) |
 2026-07-23T12:09:25.861Z [ERROR] Health check FAILED: Gemini
+2026-07-23T12:14:53.848Z [INFO ] ============================================================
+2026-07-23T12:14:53.876Z [INFO ] servio-social — health check (no posting)
+2026-07-23T12:14:53.876Z [INFO ] ============================================================
+2026-07-23T12:14:55.530Z [INFO ] buffer.getChannels: 2 channel(s): linkedin/servio-0, instagram/servio4u
+2026-07-23T12:14:55.531Z [INFO ] [OK  ] Environment: all required variables present (validated on startup by env.ts)
+2026-07-23T12:14:55.531Z [INFO ] [OK  ] Gemini: gemini-flash-latest replied "ok"
+2026-07-23T12:14:55.531Z [INFO ] [OK  ] Buffer: account reachable — 2 channel(s) connected
+2026-07-23T12:14:55.532Z [INFO ] [OK  ] LinkedIn channel: "servio-0" (service: linkedin)
+2026-07-23T12:14:55.532Z [INFO ] [OK  ] Instagram channel: "servio4u" (service: instagram)
+2026-07-23T12:14:55.532Z [INFO ] [OK  ] Cloudinary: not configured — posts go out without images, Instagram is skipped
+2026-07-23T12:14:55.532Z [INFO ] [OK  ] History: data/posts.json readable — 0 record(s)
+2026-07-23T12:14:55.533Z [INFO ] summary:
+## Servio social — health check
+
+| Check | Result | Detail |
+| --- | --- | --- |
+| Environment | ok | all required variables present (validated on startup by env.ts) |
+| Gemini | ok | gemini-flash-latest replied "ok" |
+| Buffer | ok | account reachable — 2 channel(s) connected |
+| LinkedIn channel | ok | "servio-0" (service: linkedin) |
+| Instagram channel | ok | "servio4u" (service: instagram) |
+| Cloudinary | ok | not configured — posts go out without images, Instagram is skipped |
+| History | ok | data/posts.json readable — 0 record(s) |
+2026-07-23T12:14:55.533Z [INFO ] Health check passed — every required dependency is reachable.
