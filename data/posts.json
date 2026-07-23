@@ -1,3 +1,46 @@
 {
-  "posts": []
+  "posts": [
+    {
+      "date": "2026-07-23",
+      "topic": "AI",
+      "angle": "How small business owners can embed lightweight AI workflows into their website forms to automatically qualify inbound leads before booking sales calls.",
+      "linkedin": {
+        "text": "Stop letting unqualified leads clog your calendar.\n\nMost website forms send every single submission straight to a booking link. That wastes hours on discovery calls with bad fits.\n\nInstead, you can connect your form to an AI prompt using simple webhooks in Make or Zapier. When a prospect submits an open-ended description of their project, the AI scores their fit against your ideal client criteria in real time.\n\nIf they qualify, they get instantly redirected to your calendar booking page. If they are not a fit, they are automatically routed to a polite email nurture sequence.\n\nThe AI model also parses unstructured text fields to generate a clean summary and intent score directly inside your CRM before you jump on a call. It even filters out spam submissions by analyzing text intent—eliminating the need for aggressive CAPTCHAs.\n\nRead our blog to learn how to build automated web workflows for your business: https://servio-0.web.app?utm_source=linkedin&utm_medium=social&utm_campaign=2026-07-23-ai",
+        "hashtags": [
+          "#Servio",
+          "#WebDevelopment",
+          "#AIWorkflows",
+          "#Automation",
+          "#LeadQualification"
+        ],
+        "status": "published",
+        "postId": "6a621603efe4ad74f545e0d2"
+      },
+      "instagram": {
+        "text": "Are half of your sales calls turning out to be wrong-fit prospects?\n\nYour website form does not have to be a static inbox filler. You can embed smart automation directly into your inquiry process.\n\nBy connecting form webhooks to a lightweight AI prompt using Make or Zapier, you can grade inbound submissions automatically.\n\nQualified prospects get redirected immediately to a calendar page. Non-fit inquiries are routed to a polite email sequence instead.\n\nEven better, submission confirmation pages can instantly display custom case studies tailored to the specific project details the user described—no aggressive CAPTCHAs needed.\n\nSave your call slots for actual prospects. Check our link in bio to read the full guide on modern web workflows.",
+        "hashtags": [
+          "#Servio",
+          "#WebDesign",
+          "#Automation",
+          "#LeadGen",
+          "#Webhooks",
+          "#SmallBusiness",
+          "#TechAgency",
+          "#WebDev"
+        ],
+        "status": "published",
+        "postId": "6a6216065f4414afc10cb04f"
+      },
+      "twitter": {
+        "text": "Connect your form to an AI prompt with webhooks. Route fit leads to your calendar and non-fits to email nurture automatically. Keep your call schedule clean. #WebDev #Servio https://servio-0.web.app?utm_source=twitter&utm_medium=social&utm_campaign=2026-07-23-ai",
+        "hashtags": [
+          "#WebDev",
+          "#Servio"
+        ]
+      },
+      "imagePrompt": "A modern minimal vector illustration showing a website contact form seamlessly flowing into a clean AI processing node, branching into a calendar booking icon and an email icon. Styled in a professional blue and white palette with sharp typography and ample white space. Modern minimal startup-tech style: clean flat composition, generous white space, clean typography, blue (#1E4FFF family) and white palette, simple abstract geometric shapes, professional and calm, no photorealistic faces, no clutter, no watermarks.",
+      "createdAtIso": "2026-07-23T13:24:22.658Z",
+      "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1784813058/zi740gwhtyu9m5h4hmhm.png"
+    }
+  ]
 }

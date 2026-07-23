@@ -177,3 +177,33 @@ mutation Create {
 **Image:** none
 
 **Blog draft:** /home/runner/work/servio-social/servio-social/data/blog-drafts/2026-07-23-ai.md
+2026-07-23T13:23:48.189Z [INFO ] ============================================================
+2026-07-23T13:23:48.190Z [INFO ] servio-social — daily run for 2026-07-23 (IST)
+2026-07-23T13:23:48.190Z [INFO ] ============================================================
+2026-07-23T13:23:48.627Z [INFO ] buffer.getChannels: 2 channel(s): linkedin/servio-0, instagram/servio4u
+2026-07-23T13:23:48.628Z [INFO ] Channel check ok: linkedin → "servio-0" (6a60fda5e2638b94d7b5c5bf)
+2026-07-23T13:23:48.628Z [INFO ] Channel check ok: instagram → "servio4u" (6a60fe95e2638b94d7b5ca91)
+2026-07-23T13:23:53.008Z [INFO ] Topic chosen: "AI" — "AI" has never been posted about — least-recently-used pick from the pool
+2026-07-23T13:23:53.009Z [INFO ] Angle: How small business owners can embed lightweight AI workflows into their website forms to automatically qualify inbound leads before booking sales calls.
+2026-07-23T13:23:53.009Z [INFO ] Topic: "AI" — How small business owners can embed lightweight AI workflows into their website forms to automatically qualify inbound leads before booking sales calls. ("AI" has never been posted about — least-recently-used pick from the pool)
+2026-07-23T13:24:00.747Z [WARN ] gemini:writer: attempt 1/3 failed (Request failed with status code 503) — retrying in 1107ms
+2026-07-23T13:24:18.376Z [INFO ] Writer finished for "AI" — linkedin 152 words, instagram 116 words, twitter 262 chars
+2026-07-23T13:24:18.380Z [INFO ] Validation passed (max similarity vs history: 0.00)
+2026-07-23T13:24:19.333Z [INFO ] cloudinary.upload: hosted servio-pool-01.png at https://res.cloudinary.com/rcdkca9i/image/upload/v1784813058/zi740gwhtyu9m5h4hmhm.png
+2026-07-23T13:24:20.159Z [INFO ] buffer.publish.linkedin: created post 6a621603efe4ad74f545e0d2 (dueAt 2026-07-24T04:29:00.000Z)
+2026-07-23T13:24:22.658Z [INFO ] buffer.publish.instagram: created post 6a6216065f4414afc10cb04f (dueAt 2026-07-24T00:37:00.000Z)
+2026-07-23T13:24:22.658Z [INFO ] history: saved record for 2026-07-23 (1 total)
+2026-07-23T13:24:22.659Z [INFO ] history: blog draft saved to /home/runner/work/servio-social/servio-social/data/blog-drafts/2026-07-23-ai.md
+2026-07-23T13:24:22.659Z [INFO ] summary:
+## Servio social — daily run 2026-07-23
+
+**Topic:** AI — How small business owners can embed lightweight AI workflows into their website forms to automatically qualify inbound leads before booking sales calls.
+
+| Platform | Status | Post id | Detail |
+| --- | --- | --- | --- |
+| LinkedIn | published | 6a621603efe4ad74f545e0d2 | queued via Buffer |
+| Instagram | published | 6a6216065f4414afc10cb04f | queued via Buffer |
+
+**Image:** https://res.cloudinary.com/rcdkca9i/image/upload/v1784813058/zi740gwhtyu9m5h4hmhm.png
+
+**Blog draft:** /home/runner/work/servio-social/servio-social/data/blog-drafts/2026-07-23-ai.md
