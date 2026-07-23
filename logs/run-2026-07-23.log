@@ -1,0 +1,24 @@
+2026-07-23T11:58:33.533Z [INFO ] ============================================================
+2026-07-23T11:58:33.534Z [INFO ] servio-social — daily run for 2026-07-23 (IST)  [DRY RUN — nothing will be sent]
+2026-07-23T11:58:33.534Z [INFO ] ============================================================
+2026-07-23T11:58:34.106Z [INFO ] buffer.getChannels: 2 channel(s): linkedin/servio-0, instagram/servio4u
+2026-07-23T11:58:34.107Z [WARN ] Channel check: no channel with id " 6a60fda5e2638b94d7b5c5bf" in this Buffer account — check BUFFER_LINKEDIN_CHANNEL_ID (run `npm run channels`)
+2026-07-23T11:58:34.107Z [INFO ] Channel check ok: instagram → "servio4u" (6a60fe95e2638b94d7b5ca91)
+2026-07-23T11:58:34.246Z [WARN ] gemini:angle: attempt 1/2 failed (Request failed with status code 404) — retrying in 1011ms
+2026-07-23T11:58:35.322Z [ERROR] gemini:angle: all 2 attempts failed (Request failed with status code 404)
+2026-07-23T11:58:35.322Z [WARN ] gemini:angle failed — using a template angle instead: Request failed with status code 404
+2026-07-23T11:58:35.323Z [INFO ] Topic chosen: "AI" — "AI" has never been posted about — least-recently-used pick from the pool
+2026-07-23T11:58:35.323Z [INFO ] Angle: Common AI mistakes small businesses make on their websites, and the simple fixes
+2026-07-23T11:58:35.323Z [INFO ] Topic: "AI" — Common AI mistakes small businesses make on their websites, and the simple fixes ("AI" has never been posted about — least-recently-used pick from the pool)
+2026-07-23T11:58:35.392Z [WARN ] gemini:research: attempt 1/3 failed (Request failed with status code 404) — retrying in 1127ms
+2026-07-23T11:58:36.607Z [WARN ] gemini:research: attempt 2/3 failed (Request failed with status code 404) — retrying in 2218ms
+2026-07-23T11:58:38.883Z [ERROR] gemini:research: all 3 attempts failed (Request failed with status code 404)
+2026-07-23T11:58:38.883Z [WARN ] gemini:research failed — continuing without research notes: Request failed with status code 404
+2026-07-23T11:58:38.941Z [WARN ] gemini:writer: attempt 1/3 failed (Request failed with status code 404) — retrying in 1152ms
+2026-07-23T11:58:40.159Z [WARN ] gemini:writer: attempt 2/3 failed (Request failed with status code 429) — retrying in 2198ms
+2026-07-23T11:58:42.414Z [ERROR] gemini:writer: all 3 attempts failed (Request failed with status code 429)
+2026-07-23T11:58:42.414Z [ERROR] daily run failed: Request failed with status code 429
+2026-07-23T11:58:42.415Z [INFO ] summary:
+## Servio social — daily run FAILED
+
+Request failed with status code 429
