@@ -6,9 +6,14 @@ node_modules/
 .env*
 !.env.example
 
+# Run logs are written on every local run. The GitHub Actions workflow
+# force-adds logs/ (git add -f) when it commits run results back, so CI
+# run logs ARE still preserved in the repo history - only local ones are
+# kept out.
+logs/
+
 # Build output (this project has none today, but just in case)
 dist/
 
-# Log files and OS clutter
-*.log
+# OS clutter
 .DS_Store

@@ -1,0 +1,99 @@
+# Daily social post — runs the fully-automatic pipeline (see docs/BUILD.md).
+#
+# Modes:
+#   schedule           -> daily run every morning
+#   workflow_dispatch  -> manual run; pick daily / health / week and DRY_RUN
+name: Daily social post
+
+on:
+  schedule:
+    # "30 3 * * *" UTC == 09:00 IST. IST (Asia/Kolkata) is UTC+05:30 with no
+    # daylight saving, so 03:30 UTC is always 9 in the morning in India.
+    # Caveat: GitHub cron is best-effort — under load, scheduled runs can start
+    # minutes (occasionally much longer) late. That is safe here: the pipeline
+    # writes one history record per IST day and exits immediately if today's
+    # record already exists, so late or duplicate triggers never double-post.
+    - cron: "30 3 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Rehearse the full pipeline without sending anything to Buffer"
+        type: boolean
+        default: false
+      mode:
+        description: "Which flow to run"
+        type: choice
+        options:
+          - daily
+          - health
+          - week
+        default: daily
+
+# The job commits data/ and logs/ back to the repo, so it needs write access.
+permissions:
+  contents: write
+
+# Never let two runs overlap (they would race on data/posts.json and the git
+# push). A second trigger waits; running posts are never cancelled mid-flight.
+concurrency:
+  group: social-post
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Run pipeline
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          BUFFER_LINKEDIN_CHANNEL_ID: ${{ secrets.BUFFER_LINKEDIN_CHANNEL_ID }}
+          BUFFER_INSTAGRAM_CHANNEL_ID: ${{ secrets.BUFFER_INSTAGRAM_CHANNEL_ID }}
+          CLOUDINARY_CLOUD_NAME: ${{ secrets.CLOUDINARY_CLOUD_NAME }}
+          CLOUDINARY_UPLOAD_PRESET: ${{ secrets.CLOUDINARY_UPLOAD_PRESET }}
+          NOTIFY_WEBHOOK_URL: ${{ secrets.NOTIFY_WEBHOOK_URL }}
+          # Scheduled runs have no inputs, so this evaluates to "false" there;
+          # manual runs use the checkbox.
+          DRY_RUN: ${{ inputs.dry_run == true && 'true' || 'false' }}
+        run: |
+          MODE="${{ inputs.mode || 'daily' }}"
+          echo "Running mode: $MODE (DRY_RUN=$DRY_RUN)"
+          case "$MODE" in
+            health) npx tsx src/index.ts --health ;;
+            week)   npx tsx src/index.ts --week ;;
+            *)      npx tsx src/index.ts ;;
+          esac
+
+      # Runs even when the pipeline failed: the run log is exactly what you
+      # need to debug a failure, so it must still be committed back.
+      - name: Commit run results (data/ and logs/) back to the repo
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          # logs/ is gitignored (local runs stay out of git); force-add so CI
+          # run logs are preserved in the repo. "|| true" covers the case
+          # where the run failed before any log file was written.
+          git add -f logs/ || true
+          if git diff --cached --quiet; then
+            echo "Nothing changed - no commit."
+          else
+            git commit -m "chore(social): record run output [skip ci]"
+            git push
+          fi

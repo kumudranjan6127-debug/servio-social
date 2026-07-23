@@ -1,5 +1,34 @@
 # servio-social — Architecture
 
+## V2 — FULLY AUTOMATIC PIPELINE (the current system — read this first)
+
+On **2026-07-22 the owner superseded the review-mode design** documented in the
+rest of this file: there is no Pull Request approval step anymore. The system
+now runs end-to-end with zero human intervention:
+
+**GitHub Actions (daily, 09:00 IST — cron `30 3 * * *` UTC) → Gemini** picks a
+topic and writes the content (LinkedIn + Instagram + a stored X version + a
+blog draft) **→ validate/dedup** (quality rules + Dice-similarity scan against
+history; failed drafts are regenerated with the validator's feedback) **→
+Buffer** (`createPost` mutation; branded pool image hosted via Cloudinary
+unsigned upload) **→ LinkedIn Company Page + Instagram Business**. History
+lives in `data/posts.json` (one record per IST day — runs are idempotent), and
+Instagram is skipped (not failed) when no publicly hosted image exists.
+
+The authoritative technical brief for V2 — the exact file list, the verified
+external API contracts (Buffer GraphQL, Gemini REST, Cloudinary), and the
+cross-cutting rules — is **[docs/BUILD.md](BUILD.md)**. The frozen shared
+contracts are `src/types.ts` and `src/config/env.ts`. The owner-facing docs are
+the repository `README.md` and `docs/SETUP.md`.
+
+Everything below this line is the V1 (review-mode) design. It is kept because
+its platform research still backs the documented **fallback path** (direct
+platform APIs, used only if Buffer ever becomes unavailable). Sections marked
+*"(superseded by V2 — kept for the fallback path)"* no longer describe the
+running system.
+
+---
+
 AI-powered social media content automation for **Servio** (web development agency).
 Runs entirely on GitHub: **Git is the database, GitHub Actions is the runtime, a Pull Request is the approval screen.**
 
@@ -9,6 +38,8 @@ Runs entirely on GitHub: **Git is the database, GitHub Actions is the runtime, a
 ---
 
 ## LOCKED DECISIONS (owner-approved 2026-07-22, revised same day — do not change without explicit approval)
+
+*(superseded by V2 — kept for the fallback path: decisions 1 and 5 no longer apply — the system is fully automatic and publishes at 09:00 IST directly; decisions 2, 3, and 4 carried over into V2.)*
 
 1. **Mode: `review`.** Content is generated into a Pull Request; a human merge is the ONLY path to
    publishing. `mode: auto` exists in the schema but must never be enabled without the owner's
@@ -33,6 +64,8 @@ Runs entirely on GitHub: **Git is the database, GitHub Actions is the runtime, a
 
 ## System overview
 
+*(superseded by V2 — kept for the fallback path: the running flow is the single `social-post.yml` workflow described in BUILD.md, not the generate/publish PR pair below.)*
+
 ```
 generate.yml (cron, daily EVENING)            publish.yml (on merge to main)
   └─ src/generate.ts                            └─ src/publish.ts
@@ -53,6 +86,8 @@ calendar entry sets `research: false`); call 2 = generation constrained to a JSO
 
 ## Phase roadmap
 
+*(superseded by V2 — kept for the fallback path: the owner skipped straight to full automation on 2026-07-22; there are no phases anymore.)*
+
 - **Phase 0 (this phase):** scaffold, brand system, calendar, prompts, schemas, validator,
   validate.yml CI, docs. The system "thinks" but cannot post. NO generation code, NO publishers,
   NO API calls.
@@ -65,6 +100,8 @@ calendar entry sets `research: false`); call 2 = generation constrained to a JSO
 - **(Fallback, only if ever needed):** direct platform adapters per the reference section below.
 
 ## Repository layout
+
+*(superseded by V2 — kept for the fallback path: the actual layout is in README.md — `src/ai`, `src/buffer`, `src/services`, `data/posts.json`; the calendar/brand/drafts folders below were never built.)*
 
 ```
 .github/workflows/  validate.yml (Phase 0) · generate.yml, publish.yml, health.yml (Phase 1+)
@@ -83,6 +120,8 @@ docs/               ARCHITECTURE.md (this file) · SETUP.md (owner runbooks)
 ```
 
 ## Data shapes (canonical — schemas must match these exactly)
+
+*(superseded by V2 — kept for the fallback path: the live data shapes are the TypeScript interfaces in `src/types.ts`, and history lives in `data/posts.json`, not YAML/JSONL files.)*
 
 ### config/settings.yml
 ```yaml
@@ -150,6 +189,8 @@ research_notes: "..."          # optional, from call #1
 
 ## Brand facts (source of truth for brand/ files — taken from the live Servio site/codebase)
 
+*(superseded by V2 — kept for the fallback path: the brand/ YAML files were never built; V2 embeds the brand block defined in BUILD.md, and the V2 social images are blue/white, not the website palette below.)*
+
 - Name: **Servio** · Website: https://servio-0.web.app · Tagline: "Your Business Deserves a
   Website That Converts" / "High-Performance Web Solutions"
 - Services (6): Landing Pages · Business Websites · Portfolio Websites · E-Commerce Stores ·
@@ -208,6 +249,8 @@ research_notes: "..."          # optional, from call #1
   duplicate runs harmless.
 
 ## Engineering conventions
+
+*(superseded by V2 — kept for the fallback path: V2's conventions live in BUILD.md; the dependency list below is outdated — V2 uses `axios`, `dotenv`, `zod`.)*
 
 - TypeScript strict, Node ≥ 20, ESM (`"type": "module"`), run with `tsx` (no build step).
 - Minimal deps (Phase 0): `yaml`, `ajv`, `ajv-formats`; dev: `typescript`, `tsx`, `@types/node`.

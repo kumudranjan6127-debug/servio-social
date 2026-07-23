@@ -1,23 +1,34 @@
 {
   "name": "servio-social",
-  "description": "AI social media automation for Servio. Phase 0: brand system, calendar, schemas and validator. No posting yet.",
+  "description": "Fully-automatic AI social pipeline for Servio: Gemini writes, Buffer publishes to LinkedIn + Instagram, GitHub Actions runs it daily at 09:00 IST.",
   "private": true,
   "type": "module",
   "engines": {
     "node": ">=20"
   },
   "scripts": {
-    "validate": "tsx src/validate.ts",
-    "typecheck": "tsc --noEmit"
+    "start": "tsx src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "channels": "tsx src/buffer/getChannels.ts",
+    "health": "tsx src/index.ts --health",
+    "generate:week": "tsx src/index.ts --week",
+    "images": "node scripts/generate-brand-images.mjs"
   },
   "dependencies": {
-    "ajv": "^8",
-    "ajv-formats": "^3",
-    "yaml": "^2"
+    "axios": "^1",
+    "dotenv": "^16",
+    "zod": "^3"
   },
   "devDependencies": {
+    "@eslint/js": "^9",
     "@types/node": "^24",
+    "eslint": "^9",
+    "globals": "^16",
+    "prettier": "^3",
     "tsx": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "typescript-eslint": "^8"
   }
 }
