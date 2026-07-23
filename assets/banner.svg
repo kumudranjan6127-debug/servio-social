@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 340" width="1280" height="340" role="img" aria-label="Servio Social — fully automatic AI social media for Servio">
+  <defs>
+    <radialGradient id="bg" cx="16%" cy="48%" r="95%">
+      <stop offset="0" stop-color="#241a10"/>
+      <stop offset="55%" stop-color="#140f0a"/>
+      <stop offset="100%" stop-color="#0b0805"/>
+    </radialGradient>
+    <radialGradient id="petal" cx="50%" cy="82%" r="82%">
+      <stop offset="0" stop-color="#E8C874" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#C9A24B" stop-opacity="0.02"/>
+    </radialGradient>
+    <radialGradient id="core" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#FBEEC0"/>
+      <stop offset="55%" stop-color="#F0C24B"/>
+      <stop offset="100%" stop-color="#B9832B"/>
+    </radialGradient>
+    <linearGradient id="goldText" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F6E6B0"/>
+      <stop offset="52%" stop-color="#E8C874"/>
+      <stop offset="100%" stop-color="#C08F32"/>
+    </linearGradient>
+    <linearGradient id="glint" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="rule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C9A24B" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#C9A24B" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="4.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="titleClip">
+      <text x="404" y="158" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="82" font-weight="800" letter-spacing="1">Servio Social</text>
+    </clipPath>
+    <path id="pet" d="M0 0 C 26 -34 26 -86 0 -116 C -26 -86 -26 -34 0 0 Z"/>
+  </defs>
+
+  <rect width="1280" height="340" fill="url(#bg)"/>
+
+  <!-- slowly rotating compass ring (echoes the Servio mark) -->
+  <g>
+    <circle cx="200" cy="170" r="152" fill="none" stroke="#C9A24B" stroke-opacity="0.28" stroke-width="7" stroke-dasharray="1.6 15">
+      <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 200 170" to="360 200 170" dur="240s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="200" cy="170" r="132" fill="none" stroke="#C9A24B" stroke-opacity="0.10" stroke-width="1"/>
+    <circle cx="200" cy="170" r="163" fill="none" stroke="#C9A24B" stroke-opacity="0.08" stroke-width="1"/>
+  </g>
+
+  <!-- lotus -->
+  <g transform="translate(200 170)" filter="url(#glow)">
+    <!-- outer petals, drifting clockwise -->
+    <g fill="url(#petal)" stroke="#E8C874" stroke-width="1.4" stroke-opacity="0.55">
+      <use href="#pet" transform="rotate(0)"/>
+      <use href="#pet" transform="rotate(45)"/>
+      <use href="#pet" transform="rotate(90)"/>
+      <use href="#pet" transform="rotate(135)"/>
+      <use href="#pet" transform="rotate(180)"/>
+      <use href="#pet" transform="rotate(225)"/>
+      <use href="#pet" transform="rotate(270)"/>
+      <use href="#pet" transform="rotate(315)"/>
+      <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0" to="360" dur="150s" repeatCount="indefinite"/>
+    </g>
+    <!-- inner petals, drifting counter-clockwise -->
+    <g fill="url(#petal)" stroke="#F0D68A" stroke-width="1.2" stroke-opacity="0.6" transform="scale(0.66)">
+      <use href="#pet" transform="rotate(22.5)"/>
+      <use href="#pet" transform="rotate(67.5)"/>
+      <use href="#pet" transform="rotate(112.5)"/>
+      <use href="#pet" transform="rotate(157.5)"/>
+      <use href="#pet" transform="rotate(202.5)"/>
+      <use href="#pet" transform="rotate(247.5)"/>
+      <use href="#pet" transform="rotate(292.5)"/>
+      <use href="#pet" transform="rotate(337.5)"/>
+      <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="360" to="0" dur="115s" repeatCount="indefinite" additive="sum"/>
+    </g>
+    <!-- radiating halo -->
+    <circle r="40" fill="none" stroke="#E8C874" stroke-width="1.5">
+      <animate attributeName="r" values="34;66;34" dur="5.5s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values="0.4;0;0.4" dur="5.5s" repeatCount="indefinite"/>
+    </circle>
+    <!-- glowing core -->
+    <circle r="30" fill="url(#core)">
+      <animate attributeName="r" values="28;33;28" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="30" fill="none" stroke="#FBEEC0" stroke-opacity="0.6" stroke-width="1"/>
+    <g fill="#3a2a0d">
+      <circle cx="0" cy="0" r="2.4"/>
+      <circle cx="12" cy="0" r="2.2"/>
+      <circle cx="6" cy="10.4" r="2.2"/>
+      <circle cx="-6" cy="10.4" r="2.2"/>
+      <circle cx="-12" cy="0" r="2.2"/>
+      <circle cx="-6" cy="-10.4" r="2.2"/>
+      <circle cx="6" cy="-10.4" r="2.2"/>
+    </g>
+  </g>
+
+  <!-- title -->
+  <text x="404" y="158" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="82" font-weight="800" letter-spacing="1" fill="url(#goldText)">Servio Social</text>
+  <!-- light sweep across the title -->
+  <g clip-path="url(#titleClip)">
+    <rect x="0" y="70" width="150" height="150" fill="url(#glint)" transform="skewX(-18)">
+      <animate attributeName="x" values="360;980;980" keyTimes="0;0.55;1" dur="6.5s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- underline with a travelling spark -->
+  <rect x="406" y="178" width="392" height="3" rx="1.5" fill="url(#rule)"/>
+  <circle cy="179.5" r="3.2" fill="#FBEEC0">
+    <animate attributeName="cx" values="410;792;410" keyTimes="0;0.5;1" dur="6.5s" calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.06;0.94;1" dur="6.5s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- tagline -->
+  <text x="408" y="223" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="27" font-weight="500" fill="#E7D5A6">AI writes it. Buffer posts it. <tspan fill="#F0C24B" font-weight="700">You sleep.</tspan></text>
+  <text x="410" y="259" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="15" letter-spacing="2.5" fill="#B9A06A" opacity="0.85">FULLY&#160;AUTOMATIC&#160;&#183;&#160;GEMINI&#160;&#8594;&#160;BUFFER&#160;&#8594;&#160;LINKEDIN&#160;+&#160;INSTAGRAM&#160;&#183;&#160;09:00&#160;IST</text>
+
+  <!-- drifting gold embers -->
+  <g fill="#E8C874">
+    <circle cx="520" cy="300" r="2">
+      <animate attributeName="cy" values="300;250" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.8;0" dur="6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="760" cy="310" r="1.6">
+      <animate attributeName="cy" values="310;248" dur="7.5s" begin="1s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.7;0" dur="7.5s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="980" cy="300" r="2.2">
+      <animate attributeName="cy" values="305;250" dur="6.8s" begin="0.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.75;0" dur="6.8s" begin="0.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1120" cy="300" r="1.6">
+      <animate attributeName="cy" values="300;252" dur="8s" begin="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.6;0" dur="8s" begin="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>

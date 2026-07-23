@@ -1,4 +1,27 @@
-# servio-social
+<p align="center">
+  <img src="assets/banner.svg" alt="Servio Social — fully automatic AI social media for Servio" width="100%">
+</p>
+
+<p align="center">
+  <b>Fully automatic AI social media for <a href="https://servio-0.web.app">Servio</a>.</b><br>
+  <sub>Every morning at 9:00&nbsp;AM&nbsp;IST — nobody involved, nothing to click.</sub>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/100%25-Automatic-C9A24B?style=for-the-badge&labelColor=14100A" alt="100% Automatic">
+  <img src="https://img.shields.io/badge/Written_by-Google_Gemini-E8C874?style=for-the-badge&labelColor=14100A&logo=googlegemini&logoColor=E8C874" alt="Written by Google Gemini">
+  <img src="https://img.shields.io/badge/Published_by-Buffer-C9A24B?style=for-the-badge&labelColor=14100A&logo=buffer&logoColor=E8C874" alt="Published by Buffer">
+  <img src="https://img.shields.io/badge/Runs-Daily_09%3A00_IST-E8C874?style=for-the-badge&labelColor=14100A&logo=githubactions&logoColor=E8C874" alt="Runs daily at 09:00 IST">
+</p>
+
+<p align="center">
+  <a href="#quick-start"><b>Quick start</b></a> &nbsp;·&nbsp;
+  <a href="docs/SETUP.md"><b>Setup guide</b></a> &nbsp;·&nbsp;
+  <a href="#the-schedule--how-900-ist-daily-works"><b>Schedule</b></a> &nbsp;·&nbsp;
+  <a href="#troubleshooting--the-8-most-likely-problems"><b>Troubleshooting</b></a>
+</p>
+
+---
 
 A fully automatic social media system for **Servio** — the web development agency.
 Every morning at **9:00 AM India time**, with no human involved, it:
