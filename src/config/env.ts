@@ -35,11 +35,14 @@ const EnvSchema = z.object({
     .transform((v) => v?.trim() === "true" || v?.trim() === "1"),
   // Empty/whitespace (e.g. an unset GitHub secret passed as "") falls back to
   // the default rather than producing a broken ":generateContent" URL.
+  // Default is the "flash-latest" alias, which always resolves to the current
+  // Gemini flash model — pinned versions (e.g. gemini-2.5-flash) get retired
+  // and start returning 404 "no longer available to new users".
   GEMINI_MODEL: z
     .string()
     .trim()
     .optional()
-    .transform((v) => (v && v.length > 0 ? v : "gemini-2.5-flash")),
+    .transform((v) => (v && v.length > 0 ? v : "gemini-flash-latest")),
   /** Similarity above this (0..1) forces regeneration. */
   SIMILARITY_THRESHOLD: z.coerce.number().min(0).max(1).default(0.7),
   /** How many regeneration attempts before the run fails. */

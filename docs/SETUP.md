@@ -193,7 +193,7 @@ one for Instagram.
 
 ## B. Gemini API key (the AI writer) — *required*
 
-This key lets the system call Gemini (model: `gemini-2.5-flash`) to research
+This key lets the system call Gemini (model: `gemini-flash-latest`) to research
 topics and write every post.
 
 You already have a Gemini key from the Servio website project. You *could*
@@ -214,7 +214,7 @@ This value is **GEMINI_API_KEY** — it goes into GitHub Secrets in section D.
 The same leak rule from section A4 applies: pasted anywhere ≠ secret anymore —
 regenerate it.
 
-**Cost:** the Gemini API has a **free tier**, and `gemini-2.5-flash` is
+**Cost:** the Gemini API has a **free tier**, and `gemini-flash-latest` is
 included in it (confirmed on Google's pricing page, ai.google.dev). One
 post-pack per day is a small handful of requests — comfortably within free
 limits. The exact per-day request caps live on Google's separate "rate limits"
@@ -306,7 +306,7 @@ ones, like Cloudinary if you skipped section C, say "info" — that's fine).
 
 | Name (exact) | What it powers | Where it comes from | Required? |
 |---|---|---|---|
-| `GEMINI_API_KEY` | The AI writer (Gemini, `gemini-2.5-flash`) | Section B — aistudio.google.com/apikey | **Yes** |
+| `GEMINI_API_KEY` | The AI writer (Gemini, `gemini-flash-latest`) | Section B — aistudio.google.com/apikey | **Yes** |
 | `BUFFER_API_KEY` | The publisher — all channels through Buffer | Section A4 — publish.buffer.com/settings/api | **Yes** |
 | `BUFFER_LINKEDIN_CHANNEL_ID` | Which Buffer channel is the LinkedIn Page | Section A5 — printed by `npm run channels` | **Yes** |
 | `BUFFER_INSTAGRAM_CHANNEL_ID` | Which Buffer channel is Instagram | Section A5 — printed by `npm run channels` | **Yes** |

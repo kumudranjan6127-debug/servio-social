@@ -53,7 +53,7 @@ Runs entirely on GitHub: **Git is the database, GitHub Actions is the runtime, a
    inside Buffer. (Via Buffer, company-page posting needs NO LinkedIn API approval — the wall
    that forced the earlier "personal profile" decision is gone.) X and Facebook come later by
    connecting their channels in Buffer; no developer accounts needed.
-4. **Model: `gemini-2.5-flash`** (owner already operates a Gemini key for the Servio website),
+4. **Model: `gemini-flash-latest`** (owner already operates a Gemini key for the Servio website),
    read from `config/settings.yml` (`model:` key). The pipeline must treat the model id as opaque
    config so switching models/providers later stays a one-line + one-client change.
 5. **Timing: target publish 9:00 AM IST.** Content is generated the **evening before** (owner
@@ -126,7 +126,7 @@ docs/               ARCHITECTURE.md (this file) · SETUP.md (owner runbooks)
 ### config/settings.yml
 ```yaml
 mode: review              # review | auto — LOCKED to review (see decisions)
-model: gemini-2.5-flash   # opaque model id, switchable
+model: gemini-flash-latest   # opaque model id, switchable
 publisher: buffer         # buffer | direct (direct = the documented fallback path)
 timezone: Asia/Kolkata
 slots:
@@ -168,7 +168,7 @@ next unused evergreen → skip with warning.
 ```yaml
 id: 2026-07-23-page-speed
 generated_at: <ISO datetime>
-model: gemini-2.5-flash
+model: gemini-flash-latest
 topic: ...
 category: education
 cta: get-quote
@@ -222,7 +222,7 @@ research_notes: "..."          # optional, from call #1
   the number of connected channels). Caveat: **beta** — already shipped one breaking change
   (May 2026 assets-input migration), no SLA; hence the documented `direct` fallback below and
   review-mode + failure-Issue protection.
-- **Gemini (the writer):** `gemini-2.5-flash` via the official SDK; JSON guaranteed with
+- **Gemini (the writer):** `gemini-flash-latest` via the official SDK; JSON guaranteed with
   `responseMimeType: application/json` + `responseSchema`; generous free tier comfortably covers
   one pack/day (verify current quotas at build time). Same provider the Servio website already
   uses, but with a separate API key for independent usage/rotation.
