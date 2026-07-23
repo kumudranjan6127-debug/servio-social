@@ -46,3 +46,27 @@ Request failed with status code 429
 ## Servio social — daily run FAILED
 
 Request failed with status code 429
+2026-07-23T12:09:25.283Z [INFO ] ============================================================
+2026-07-23T12:09:25.295Z [INFO ] servio-social — health check (no posting)
+2026-07-23T12:09:25.295Z [INFO ] ============================================================
+2026-07-23T12:09:25.859Z [INFO ] buffer.getChannels: 2 channel(s): linkedin/servio-0, instagram/servio4u
+2026-07-23T12:09:25.859Z [INFO ] [OK  ] Environment: all required variables present (validated on startup by env.ts)
+2026-07-23T12:09:25.860Z [INFO ] [FAIL] Gemini: Request failed with status code 404
+2026-07-23T12:09:25.860Z [INFO ] [OK  ] Buffer: account reachable — 2 channel(s) connected
+2026-07-23T12:09:25.860Z [INFO ] [OK  ] LinkedIn channel: "servio-0" (service: linkedin)
+2026-07-23T12:09:25.860Z [INFO ] [OK  ] Instagram channel: "servio4u" (service: instagram)
+2026-07-23T12:09:25.860Z [INFO ] [OK  ] Cloudinary: not configured — posts go out without images, Instagram is skipped
+2026-07-23T12:09:25.860Z [INFO ] [OK  ] History: data/posts.json readable — 0 record(s)
+2026-07-23T12:09:25.861Z [INFO ] summary:
+## Servio social — health check
+
+| Check | Result | Detail |
+| --- | --- | --- |
+| Environment | ok | all required variables present (validated on startup by env.ts) |
+| Gemini | FAILED | Request failed with status code 404 |
+| Buffer | ok | account reachable — 2 channel(s) connected |
+| LinkedIn channel | ok | "servio-0" (service: linkedin) |
+| Instagram channel | ok | "servio4u" (service: instagram) |
+| Cloudinary | ok | not configured — posts go out without images, Instagram is skipped |
+| History | ok | data/posts.json readable — 0 record(s) |
+2026-07-23T12:09:25.861Z [ERROR] Health check FAILED: Gemini
