@@ -136,3 +136,44 @@ mutation Create {
 
 **Blog draft:** /home/runner/work/servio-social/servio-social/data/blog-drafts/2026-07-23-ai.md
 2026-07-23T12:51:32.301Z [INFO ] cloudinary.upload: hosted servio-pool-01.png at https://res.cloudinary.com/rcdkca9i/image/upload/v1784811091/ucgglp3zgks3t077kzpe.png
+2026-07-23T13:01:44.853Z [INFO ] ============================================================
+2026-07-23T13:01:44.854Z [INFO ] servio-social — daily run for 2026-07-23 (IST)  [DRY RUN — nothing will be sent]
+2026-07-23T13:01:44.855Z [INFO ] ============================================================
+2026-07-23T13:01:45.312Z [INFO ] buffer.getChannels: 2 channel(s): linkedin/servio-0, instagram/servio4u
+2026-07-23T13:01:45.313Z [INFO ] Channel check ok: linkedin → "servio-0" (6a60fda5e2638b94d7b5c5bf)
+2026-07-23T13:01:45.313Z [INFO ] Channel check ok: instagram → "servio4u" (6a60fe95e2638b94d7b5ca91)
+2026-07-23T13:01:51.379Z [INFO ] Topic chosen: "AI" — "AI" has never been posted about — least-recently-used pick from the pool
+2026-07-23T13:01:51.380Z [INFO ] Angle: Integrate lightweight AI tools directly into your website's admin panel so non-technical employees can generate and update product descriptions without developer help.
+2026-07-23T13:01:51.380Z [INFO ] Topic: "AI" — Integrate lightweight AI tools directly into your website's admin panel so non-technical employees can generate and update product descriptions without developer help. ("AI" has never been posted about — least-recently-used pick from the pool)
+2026-07-23T13:02:15.926Z [INFO ] Writer finished for "AI" — linkedin 147 words, instagram 116 words, twitter 347 chars
+2026-07-23T13:02:15.930Z [INFO ] Validation passed (max similarity vs history: 0.00)
+2026-07-23T13:02:15.930Z [INFO ] [dry-run] skipping image selection and hosting
+2026-07-23T13:02:15.931Z [INFO ] [dry-run] buffer.publish.linkedin: NOT sending to Buffer. Mutation would be:
+mutation Create {
+  createPost(input: { text: "Your non-technical team does not need to learn prompt engineering to update your store.\n\nWhen adding new catalog items, staff often copy product details back and forth into external AI chat apps. This wastes time and leads to inconsistent brand voice.\n\nA better approach is embedding lightweight AI tools directly inside your CMS admin panel. Direct API connections bring models like Claude or OpenAI into your existing forms as native buttons.\n\nBy hardcoding system prompts on the backend, the system automatically enforces your formatting, brand voice, and keyword requirements. Your team simply enters raw specs—such as SKU, dimensions, or material—and clicks generate.\n\nIn a single click, the admin panel outputs the main copy, SEO meta tags, and image alt text into an inline draft preview. Staff can review and edit before anything goes live, without developer assistance.\n\nRead the blog to see how we build this: https://servio-0.web.app?utm_source=linkedin&utm_medium=social&utm_campaign=2026-07-23-ai\n\n#Servio #WebDevelopment #CMS #ECommerce #ArtificialIntelligence", channelId: "6a60fda5e2638b94d7b5c5bf", schedulingType: automatic, mode: addToQueue }) {
+    ... on PostActionSuccess { post { id dueAt } }
+    ... on MutationError { message }
+  }
+}
+2026-07-23T13:02:17.934Z [INFO ] [dry-run] buffer.publish.instagram: NOT sending to Buffer. Mutation would be:
+mutation Create {
+  createPost(input: { text: "Managing product descriptions shouldn't require a developer or hours of manual copying. 📝\n\nMost store owners ask their team to write product copy from scratch or use third-party chat tools. That creates mixed formatting and tone.\n\nWe build custom AI generation buttons right inside your website's admin panel.\n\nYour team inputs basic attributes—like SKU details or materials. With one tap, the system generates draft product descriptions, SEO meta tags, and alt text.\n\nBackend system prompts handle your tone and keywords behind the scenes. Your team simply reviews the inline preview and hits publish. No prompt engineering needed.\n\nNon-technical staff stay in full control.\n\nCheck out our website via the link in bio to learn more! 💻\n\n#Servio #WebDev #ECommerceTips #WebDesign #ArtificialIntelligence #TechAgency #Automation #CMS #BuildInPublic", channelId: "6a60fe95e2638b94d7b5ca91", schedulingType: automatic, mode: addToQueue, metadata: { instagram: { type: post, shouldShareToFeed: true, isAiGenerated: false } } }) {
+    ... on PostActionSuccess { post { id dueAt } }
+    ... on MutationError { message }
+  }
+}
+2026-07-23T13:02:17.934Z [INFO ] [dry-run] skipping saveRecord — data/posts.json stays untouched
+2026-07-23T13:02:17.935Z [INFO ] history: blog draft saved to /home/runner/work/servio-social/servio-social/data/blog-drafts/2026-07-23-ai.md
+2026-07-23T13:02:17.935Z [INFO ] summary:
+## Servio social — daily run 2026-07-23 (dry run)
+
+**Topic:** AI — Integrate lightweight AI tools directly into your website's admin panel so non-technical employees can generate and update product descriptions without developer help.
+
+| Platform | Status | Post id | Detail |
+| --- | --- | --- | --- |
+| LinkedIn | dry-run | — | payload logged, nothing sent |
+| Instagram | dry-run | — | payload logged, nothing sent |
+
+**Image:** none
+
+**Blog draft:** /home/runner/work/servio-social/servio-social/data/blog-drafts/2026-07-23-ai.md
