@@ -135,3 +135,4 @@ mutation Create {
 **Image:** none
 
 **Blog draft:** /home/runner/work/servio-social/servio-social/data/blog-drafts/2026-07-23-ai.md
+2026-07-23T12:51:32.301Z [INFO ] cloudinary.upload: hosted servio-pool-01.png at https://res.cloudinary.com/rcdkca9i/image/upload/v1784811091/ucgglp3zgks3t077kzpe.png
