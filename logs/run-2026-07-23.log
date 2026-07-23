@@ -94,3 +94,44 @@ Request failed with status code 429
 | Cloudinary | ok | not configured — posts go out without images, Instagram is skipped |
 | History | ok | data/posts.json readable — 0 record(s) |
 2026-07-23T12:14:55.533Z [INFO ] Health check passed — every required dependency is reachable.
+2026-07-23T12:15:56.596Z [INFO ] ============================================================
+2026-07-23T12:15:56.597Z [INFO ] servio-social — daily run for 2026-07-23 (IST)  [DRY RUN — nothing will be sent]
+2026-07-23T12:15:56.597Z [INFO ] ============================================================
+2026-07-23T12:15:56.816Z [INFO ] buffer.getChannels: 2 channel(s): linkedin/servio-0, instagram/servio4u
+2026-07-23T12:15:56.816Z [INFO ] Channel check ok: linkedin → "servio-0" (6a60fda5e2638b94d7b5c5bf)
+2026-07-23T12:15:56.817Z [INFO ] Channel check ok: instagram → "servio4u" (6a60fe95e2638b94d7b5ca91)
+2026-07-23T12:16:01.474Z [INFO ] Topic chosen: "AI" — "AI" has never been posted about — least-recently-used pick from the pool
+2026-07-23T12:16:01.475Z [INFO ] Angle: Replace static contact forms on your website with simple AI prompts that pre-qualify leads and send high-value prospects directly to your WhatsApp.
+2026-07-23T12:16:01.475Z [INFO ] Topic: "AI" — Replace static contact forms on your website with simple AI prompts that pre-qualify leads and send high-value prospects directly to your WhatsApp. ("AI" has never been posted about — least-recently-used pick from the pool)
+2026-07-23T12:16:32.141Z [INFO ] Writer finished for "AI" — linkedin 152 words, instagram 138 words, twitter 268 chars
+2026-07-23T12:16:32.145Z [INFO ] Validation passed (max similarity vs history: 0.00)
+2026-07-23T12:16:32.146Z [INFO ] [dry-run] skipping image selection and hosting
+2026-07-23T12:16:32.146Z [INFO ] [dry-run] buffer.publish.linkedin: NOT sending to Buffer. Mutation would be:
+mutation Create {
+  createPost(input: { text: "Most website contact forms lose leads before you ever see them.\n\nVisitors hate filling out rigid, static fields. They want answers, not a black hole. When you replace traditional HTML forms with a conversational AI prompt, the experience changes completely.\n\nAn AI prompt asks dynamic follow-up questions in real time. It screens inquiries based on budget, timeline, and scope fit. Unqualified prospects are filtered out, while serious buyers get guided through a quick chat that collects key project details.\n\nOnce pre-qualified, high-value leads are routed straight to your WhatsApp via a standard link. You get a notification on your phone 📱 and can reply instantly while buyer intent is at its peak.\n\nAs a bonus, dynamic intake blocks automated web spam without clunky captchas. You need simple lightweight APIs, not massive backend infrastructure.\n\nStop letting warm leads go cold in an inbox.\n\nSee how we build smart web solutions at Servio: https://servio-0.web.app?utm_source=linkedin&utm_medium=social&utm_campaign=2026-07-23-ai\n\n#Servio #WebDevelopment #LeadGeneration #ArtificialIntelligence #WebDesign", channelId: "6a60fda5e2638b94d7b5c5bf", schedulingType: automatic, mode: addToQueue }) {
+    ... on PostActionSuccess { post { id dueAt } }
+    ... on MutationError { message }
+  }
+}
+2026-07-23T12:16:34.149Z [INFO ] [dry-run] buffer.publish.instagram: NOT sending to Buffer. Mutation would be:
+mutation Create {
+  createPost(input: { text: "Imagine getting a WhatsApp message from a client who is already qualified, budget-approved, and ready to start. 💬\n\nThat does not happen with standard contact forms. Traditional fields feel tedious to fill out, and half of them are spam bots anyway.\n\nWe replaced static contact forms with lightweight AI prompts.\n\nHere is what happens instead:\n1. A visitor lands on your site and starts a natural conversation. 🤖\n2. The AI asks smart questions about timeline, budget, and scope.\n3. Qualified prospects get sent straight to your WhatsApp chat with full context attached. 📲\n\nYou reply instantly from your phone while buying intent is hot. Unqualified leads and web spam get filtered out automatically without complex server setups.\n\nUpgrading your website intake is easier than you think.\n\nCheck out our web development services via the link in bio.\n\n#Servio #WebDevelopment #WebDesign #AI #WhatsApp #LeadGeneration #SmallBusiness #Founders #TechStartup #DigitalProduct", channelId: "6a60fe95e2638b94d7b5ca91", schedulingType: automatic, mode: addToQueue, metadata: { instagram: { type: post, shouldShareToFeed: true, isAiGenerated: false } } }) {
+    ... on PostActionSuccess { post { id dueAt } }
+    ... on MutationError { message }
+  }
+}
+2026-07-23T12:16:34.150Z [INFO ] [dry-run] skipping saveRecord — data/posts.json stays untouched
+2026-07-23T12:16:34.150Z [INFO ] history: blog draft saved to /home/runner/work/servio-social/servio-social/data/blog-drafts/2026-07-23-ai.md
+2026-07-23T12:16:34.151Z [INFO ] summary:
+## Servio social — daily run 2026-07-23 (dry run)
+
+**Topic:** AI — Replace static contact forms on your website with simple AI prompts that pre-qualify leads and send high-value prospects directly to your WhatsApp.
+
+| Platform | Status | Post id | Detail |
+| --- | --- | --- | --- |
+| LinkedIn | dry-run | — | payload logged, nothing sent |
+| Instagram | dry-run | — | payload logged, nothing sent |
+
+**Image:** none
+
+**Blog draft:** /home/runner/work/servio-social/servio-social/data/blog-drafts/2026-07-23-ai.md
