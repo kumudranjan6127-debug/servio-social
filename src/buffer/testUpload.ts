@@ -1,0 +1,85 @@
+/**
+ * testUpload.ts — verifies the Cloudinary image pipeline end to end WITHOUT
+ * posting anything: it picks today's branded pool image, uploads it to
+ * Cloudinary via the same `hostImage` path the daily run uses, and prints the
+ * resulting public URL (open it in a browser to see the image).
+ *
+ * Run via `npm run cloudinary` (or workflow mode `cloudinary`). Unlike the
+ * channels/models diagnostics this uses the full validated env (all four
+ * required secrets must be present), because hostImage reads the Cloudinary
+ * config through the normal `env` object.
+ */
+
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import { imageHostingConfigured } from "../config/env";
+import { hostImage, poolImageProvider } from "./uploadMedia";
+import type { GeneratedContent } from "../types";
+
+/** A minimal content stub — poolImageProvider only reads `topic` (for alt text). */
+const STUB: GeneratedContent = {
+  topic: "Servio",
+  angle: "",
+  research: "",
+  linkedin: { text: "", hashtags: [] },
+  instagram: { text: "", hashtags: [] },
+  twitter: { text: "", hashtags: [] },
+  blogDraft: "",
+  imagePrompt: "",
+};
+
+/** True when this file is the process entry point (tsx src/buffer/testUpload.ts). */
+function isRunAsScript(): boolean {
+  const entry = process.argv[1];
+  if (!entry) return false;
+  const thisFile = fileURLToPath(import.meta.url);
+  // Case-insensitive: Windows paths can differ in drive-letter casing.
+  return path.resolve(entry).toLowerCase() === thisFile.toLowerCase();
+}
+
+async function main(): Promise<void> {
+  if (!imageHostingConfigured) {
+    console.log(
+      "Cloudinary is NOT configured.\n" +
+        "Add both secrets and rerun:\n" +
+        "  - CLOUDINARY_CLOUD_NAME     (Cloudinary dashboard, top of the page)\n" +
+        "  - CLOUDINARY_UPLOAD_PRESET  (Settings > Upload > an UNSIGNED preset)\n" +
+        "Until then, posts go out without an image and Instagram is skipped."
+    );
+    process.exit(1);
+  }
+
+  console.log("Cloudinary is configured. Uploading today's branded image to test it...\n");
+  const local = await poolImageProvider.getImage(STUB);
+  if (!local) {
+    console.log("No pool image found in assets/pool — run `npm run images` first.");
+    process.exit(1);
+  }
+  console.log(`Chosen image: ${path.basename(local.filePath)}`);
+
+  const hosted = await hostImage(local);
+  if (!hosted) {
+    console.log(
+      "\nUpload FAILED (see the cloudinary.upload error above). Most common causes:\n" +
+        "  - the upload preset is SIGNED, not UNSIGNED (make it unsigned in Cloudinary\n" +
+        "    Settings > Upload), or\n" +
+        "  - the cloud name / preset name has a typo.\n" +
+        "Instagram will stay skipped until this succeeds."
+    );
+    process.exit(1);
+  }
+
+  console.log(
+    "\nSUCCESS — Cloudinary works. Public image URL:\n" +
+      `  ${hosted.url}\n\n` +
+      "Open that URL in a browser to confirm the image loads. From the next real run,\n" +
+      "both posts carry this image and Instagram is no longer skipped."
+  );
+}
+
+if (isRunAsScript()) {
+  main().catch((err: unknown) => {
+    console.error(`Cloudinary test failed: ${err instanceof Error ? err.message : String(err)}`);
+    process.exit(1);
+  });
+}

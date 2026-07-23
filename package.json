@@ -13,6 +13,7 @@
     "format": "prettier --write .",
     "channels": "tsx src/buffer/getChannels.ts",
     "models": "tsx src/ai/listModels.ts",
+    "cloudinary": "tsx src/buffer/testUpload.ts",
     "health": "tsx src/index.ts --health",
     "generate:week": "tsx src/index.ts --week",
     "images": "node scripts/generate-brand-images.mjs"
