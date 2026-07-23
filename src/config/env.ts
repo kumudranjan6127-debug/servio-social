@@ -12,24 +12,34 @@ import "dotenv/config";
 
 const EnvSchema = z.object({
   // --- Required: the AI writer ---
-  GEMINI_API_KEY: z.string().min(10, "GEMINI_API_KEY looks empty or truncated"),
+  // .trim() on every secret: values pasted into GitHub Secrets often pick up a
+  // stray leading/trailing space or newline, which would otherwise silently
+  // break the key or make a channel id "not found". Whitespace is never
+  // meaningful here, so we strip it before validating.
+  GEMINI_API_KEY: z.string().trim().min(10, "GEMINI_API_KEY looks empty or truncated"),
 
   // --- Required: the publisher ---
-  BUFFER_API_KEY: z.string().min(10, "BUFFER_API_KEY looks empty or truncated"),
-  BUFFER_LINKEDIN_CHANNEL_ID: z.string().min(1, "BUFFER_LINKEDIN_CHANNEL_ID is required"),
-  BUFFER_INSTAGRAM_CHANNEL_ID: z.string().min(1, "BUFFER_INSTAGRAM_CHANNEL_ID is required"),
+  BUFFER_API_KEY: z.string().trim().min(10, "BUFFER_API_KEY looks empty or truncated"),
+  BUFFER_LINKEDIN_CHANNEL_ID: z.string().trim().min(1, "BUFFER_LINKEDIN_CHANNEL_ID is required"),
+  BUFFER_INSTAGRAM_CHANNEL_ID: z.string().trim().min(1, "BUFFER_INSTAGRAM_CHANNEL_ID is required"),
 
   // --- Optional: image hosting (Instagram needs a public image URL) ---
-  CLOUDINARY_CLOUD_NAME: z.string().optional(),
-  CLOUDINARY_UPLOAD_PRESET: z.string().optional(),
+  CLOUDINARY_CLOUD_NAME: z.string().trim().optional(),
+  CLOUDINARY_UPLOAD_PRESET: z.string().trim().optional(),
 
   // --- Optional: behavior switches ---
   /** "true" → full pipeline runs but NOTHING is sent to Buffer (payloads are logged). */
   DRY_RUN: z
     .string()
     .optional()
-    .transform((v) => v === "true" || v === "1"),
-  GEMINI_MODEL: z.string().default("gemini-2.5-flash"),
+    .transform((v) => v?.trim() === "true" || v?.trim() === "1"),
+  // Empty/whitespace (e.g. an unset GitHub secret passed as "") falls back to
+  // the default rather than producing a broken ":generateContent" URL.
+  GEMINI_MODEL: z
+    .string()
+    .trim()
+    .optional()
+    .transform((v) => (v && v.length > 0 ? v : "gemini-2.5-flash")),
   /** Similarity above this (0..1) forces regeneration. */
   SIMILARITY_THRESHOLD: z.coerce.number().min(0).max(1).default(0.7),
   /** How many regeneration attempts before the run fails. */
