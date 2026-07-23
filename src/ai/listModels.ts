@@ -22,6 +22,7 @@ import { fileURLToPath } from "node:url";
 
 /** Gemini REST base (same host/version the writer uses). */
 const MODELS_ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models";
+const GENERATE_BASE = "https://generativelanguage.googleapis.com/v1beta/models";
 
 /** Hard timeout for the outbound HTTP call. */
 const TIMEOUT_MS = 30_000;
@@ -74,6 +75,25 @@ async function fetchModels(
   }));
 }
 
+/**
+ * Actually attempts a tiny generateContent call against one model. Returns
+ * "ok" on success, or a short status+body description on failure. This is what
+ * distinguishes a model that is merely LISTED from one that is actually
+ * CALLABLE with this key (a listed-but-retired model returns HTTP 404 here).
+ */
+async function probeModel(apiKey: string, model: string): Promise<string> {
+  try {
+    await axios.post(
+      `${GENERATE_BASE}/${model}:generateContent`,
+      { contents: [{ role: "user", parts: [{ text: "Reply with the single word: ok" }] }] },
+      { headers: { "x-goog-api-key": apiKey }, timeout: TIMEOUT_MS }
+    );
+    return "ok";
+  } catch (err) {
+    return describeError(err);
+  }
+}
+
 // ---------------------------------------------------------------------------
 // CLI mode (npm run models)
 // ---------------------------------------------------------------------------
@@ -119,22 +139,46 @@ async function main(): Promise<void> {
   }
 
   console.log(
-    "Models your key can use for writing (supportedGenerationMethods includes generateContent):"
+    `Models your key LISTS as supporting generateContent (${usable.length}): ` + usable.join(", ")
   );
-  for (const id of usable) console.log(`  - ${id}`);
 
-  // Recommend a sensible default: prefer a current flash model if present.
+  // A model can be listed yet not actually callable (retired/tier-gated → 404).
+  // Probe a shortlist of preferred general-purpose text models, in order, and
+  // report which one truly answers. Prefer stable "flash" text models; skip
+  // image/tts/robotics/computer-use variants that are not plain text writers.
   const preference = [
+    "gemini-flash-latest",
     "gemini-2.5-flash",
     "gemini-2.0-flash",
-    "gemini-flash-latest",
-    "gemini-1.5-flash",
+    "gemini-3.6-flash",
+    "gemini-3.5-flash",
+    "gemini-2.5-flash-lite",
+    "gemini-flash-lite-latest",
+    "gemini-2.0-flash-001",
   ];
-  const recommended = preference.find((p) => usable.includes(p)) ?? usable[0];
+  const toProbe = preference.filter((p) => usable.includes(p));
+  console.log("\nTest-calling generateContent on the preferred text models:");
+  let firstWorking = "";
+  for (const model of toProbe) {
+    const result = await probeModel(parsed.data.GEMINI_API_KEY, model);
+    console.log(
+      `  ${result === "ok" ? "WORKS " : "FAIL  "} ${model}${result === "ok" ? "" : "  — " + result}`
+    );
+    if (result === "ok" && firstWorking === "") firstWorking = model;
+  }
+
+  if (firstWorking === "") {
+    console.log(
+      "\nNone of the preferred models answered. See the FAIL reasons above. If they are all " +
+        "404, the key's project may not have the Generative Language API enabled; if 429, it is " +
+        "a temporary rate limit — wait and rerun."
+    );
+    return;
+  }
   console.log(
-    `\nRecommended: set the GEMINI_MODEL secret to "${recommended ?? ""}".\n` +
-      "  (GitHub → repo Settings → Secrets and variables → Actions → New repository secret,\n" +
-      "   name GEMINI_MODEL, value one of the ids above. Leave it unset to use the default.)"
+    `\n>>> Working model: "${firstWorking}". Set the GEMINI_MODEL secret to this value ` +
+      "(GitHub → Settings → Secrets and variables → Actions → New repository secret, " +
+      "name GEMINI_MODEL). Then rerun mode `health` — Gemini should read OK."
   );
 }
 
