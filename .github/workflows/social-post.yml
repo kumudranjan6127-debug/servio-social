@@ -75,7 +75,11 @@ jobs:
           # your key). Unset -> env.ts falls back to its default. Empty "" from
           # an unset secret is turned back into unset below.
           GEMINI_MODEL: ${{ secrets.GEMINI_MODEL }}
-          # Optional fal.ai AI image generation (paid). Unset -> free branded pool.
+          # Optional AI image generation. Cloudflare Workers AI (free) is used
+          # first when configured, then fal.ai (paid), else the free branded pool.
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_IMAGE_MODEL: ${{ secrets.CLOUDFLARE_IMAGE_MODEL }}
           FAL_KEY: ${{ secrets.FAL_KEY }}
           FAL_IMAGE_MODEL: ${{ secrets.FAL_IMAGE_MODEL }}
           # Scheduled runs have no inputs, so this evaluates to "false" there;
@@ -93,6 +97,9 @@ jobs:
           if [ -z "$CLOUDINARY_CLOUD_NAME" ]; then unset CLOUDINARY_CLOUD_NAME; fi
           if [ -z "$CLOUDINARY_UPLOAD_PRESET" ]; then unset CLOUDINARY_UPLOAD_PRESET; fi
           if [ -z "$GEMINI_MODEL" ]; then unset GEMINI_MODEL; fi
+          if [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then unset CLOUDFLARE_ACCOUNT_ID; fi
+          if [ -z "$CLOUDFLARE_API_TOKEN" ]; then unset CLOUDFLARE_API_TOKEN; fi
+          if [ -z "$CLOUDFLARE_IMAGE_MODEL" ]; then unset CLOUDFLARE_IMAGE_MODEL; fi
           if [ -z "$FAL_KEY" ]; then unset FAL_KEY; fi
           if [ -z "$FAL_IMAGE_MODEL" ]; then unset FAL_IMAGE_MODEL; fi
           MODE="${{ inputs.mode || 'daily' }}"

@@ -40,6 +40,18 @@ const EnvSchema = z.object({
     .optional()
     .transform((v) => (v && v.length > 0 ? v : "fal-ai/flux/dev")),
 
+  // --- Optional: FREE AI image generation via Cloudflare Workers AI. Preferred
+  // over fal.ai when configured. Needs a (free) Cloudflare account id + an API
+  // token with Workers AI access. Free tier is 10k requests/day. ---
+  CLOUDFLARE_ACCOUNT_ID: z.string().trim().optional(),
+  CLOUDFLARE_API_TOKEN: z.string().trim().optional(),
+  /** Cloudflare Workers AI model. Default FLUX.1 schnell — free, fast, good. */
+  CLOUDFLARE_IMAGE_MODEL: z
+    .string()
+    .trim()
+    .optional()
+    .transform((v) => (v && v.length > 0 ? v : "@cf/black-forest-labs/flux-1-schnell")),
+
   // --- Optional: behavior switches ---
   /** "true" → full pipeline runs but NOTHING is sent to Buffer (payloads are logged). */
   DRY_RUN: z
@@ -91,5 +103,13 @@ export const imageHostingConfigured: boolean = Boolean(
   env.CLOUDINARY_CLOUD_NAME && env.CLOUDINARY_UPLOAD_PRESET
 );
 
-/** True when fal.ai AI image generation is configured (a FAL_KEY is present). */
-export const aiImageConfigured: boolean = Boolean(env.FAL_KEY);
+/** True when Cloudflare Workers AI (free image generation) is configured. */
+export const cloudflareImageConfigured: boolean = Boolean(
+  env.CLOUDFLARE_ACCOUNT_ID && env.CLOUDFLARE_API_TOKEN
+);
+
+/** True when fal.ai (paid image generation) is configured. */
+export const falImageConfigured: boolean = Boolean(env.FAL_KEY);
+
+/** True when ANY AI image generator is configured (Cloudflare preferred, then fal). */
+export const aiImageConfigured: boolean = cloudflareImageConfigured || falImageConfigured;

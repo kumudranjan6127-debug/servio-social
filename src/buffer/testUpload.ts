@@ -59,7 +59,9 @@ async function main(): Promise<void> {
 
   console.log(
     `Cloudinary is configured. Image source: ${
-      aiImageConfigured ? "fal.ai (AI generation), pool as fallback" : "branded pool"
+      aiImageConfigured
+        ? "AI generation (Cloudflare/fal), branded pool as fallback"
+        : "branded pool"
     }.\nProducing today's image and uploading it to test the full pipeline...\n`
   );
   const local = await pickLocalImage(STUB);
