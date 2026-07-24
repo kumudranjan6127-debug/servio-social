@@ -118,8 +118,9 @@ function buildAnglePrompt(topic: string, pastAngles: readonly string[]): string 
   const pastBlock =
     pastAngles.length > 0 ? pastAngles.map((angle) => `- ${angle}`).join("\n") : "(none yet)";
   return [
-    "You are the content strategist for Servio, a web development agency for small/medium",
-    "business owners and non-technical founders (India-first, global-friendly).",
+    "You are the content strategist for Servio, which builds websites for everyday small business",
+    "owners in India (shops, restaurants, clinics, salons, boutiques, local services, first-time founders).",
+    "These readers are BUSY and NOT technical.",
     "",
     `Today's topic: "${topic}"`,
     "",
@@ -128,10 +129,11 @@ function buildAnglePrompt(topic: string, pastAngles: readonly string[]): string 
     "",
     "Write ONE fresh, specific angle for today's social posts about this topic.",
     "Requirements:",
-    "- One sentence, under 30 words.",
-    '- Concrete and practical for small business owners — generic framings like "why X matters" are not acceptable.',
-    "- Clearly different from every past angle listed above.",
-    "- No hype words, no statistics.",
+    "- One sentence, under 30 words, in plain everyday English (no jargon like webhook, API, CRM, SEO).",
+    "- Frame it from the OWNER'S problem or gain, not the technology — e.g. 'why visitors leave your",
+    "  website without calling' rather than 'implementing X'. It should make an owner think 'that's my problem'.",
+    '- Concrete and practical; generic framings like "why X matters" are not acceptable.',
+    "- Clearly different from every past angle listed above. No hype words, no statistics.",
     "Return ONLY the angle sentence — no quotes, no numbering, no explanation.",
   ].join("\n");
 }
