@@ -225,22 +225,30 @@ You can trigger the system by hand any time:
 
 ---
 
-## The schedule — how "9:00 IST daily" works
+## The schedule + the review window — how it works
 
-- GitHub Actions runs the workflow on a schedule (this kind of schedule is
-  called a "cron" — just a timer). The timer is set to **03:30 UTC**, which is
-  exactly **09:00 IST** — India time is always UTC+5:30, with no daylight
-  saving, so this never drifts.
-- **GitHub's timer is "best effort":** on busy days a run can start a few
-  minutes late (rarely, longer). This is harmless — the post simply goes out a
-  little after 9.
-- **It can never double-post.** The system keeps one history record per Indian
-  calendar day. If it wakes up and today's record already exists, it says
-  "already posted" and stops. Late timers, repeated triggers, and manual runs
-  on the same day are all safe.
-- After every run, GitHub commits the day's history and log files back into
-  the repository — so `data/posts.json` and `logs/` are a complete, readable
-  diary of everything the system has ever done.
+The system runs the **evening before** and **schedules** the post for the next
+morning, so you always get a window to look at it first:
+
+- GitHub Actions runs the workflow on a timer (a "cron"), set to **14:30 UTC ==
+  20:00 IST (8 PM)**. It generates that day's post and **schedules it in Buffer
+  for 09:00 IST the next morning** (India time is always UTC+5:30, no daylight
+  saving, so times never drift).
+- **The review window:** from 8 PM until 9 AM the next day, the finished post
+  (text **and** image) sits in your **Buffer dashboard**. Open Buffer to
+  **read it, edit the words, or delete it** before it publishes. Do nothing and
+  it publishes automatically at 9 AM — so it stays hands-off by default.
+- **GitHub's timer is "best effort":** a run can occasionally start late. Safe
+  here — the post is scheduled for a fixed time regardless of when it was made.
+- **It can never double-post.** The system keeps one record per post date. If a
+  post for that morning already exists, it says "already exists" and stops. Late
+  timers, repeated triggers, and manual runs are all safe.
+- After every run, GitHub commits the day's history and logs back to the repo —
+  so `data/posts.json` and `logs/` are a complete, readable diary.
+
+**Want instant posting with no review window instead?** Add a repo secret
+`REVIEW_WINDOW` set to `false`, and change the cron back to `30 3 * * *`
+(09:00 IST) in `.github/workflows/social-post.yml`.
 
 ---
 

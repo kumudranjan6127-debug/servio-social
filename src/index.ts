@@ -394,8 +394,13 @@ function dailySummaryMd(
   hosted: HostedImage | null,
   draftPath: string
 ): string {
+  const reviewNote =
+    env.REVIEW_WINDOW && !env.DRY_RUN
+      ? `\n\n> **Scheduled for ${date} 09:00 IST.** Open your Buffer dashboard to review, edit, or delete it before then — otherwise it publishes automatically.`
+      : "";
   return [
     `## Servio social — daily run ${date}${env.DRY_RUN ? " (dry run)" : ""}`,
+    reviewNote,
     "",
     `**Topic:** ${content.topic} — ${content.angle}`,
     "",
@@ -423,12 +428,23 @@ function dailySummaryMd(
  * @returns The process exit code: 1 only when BOTH platforms failed.
  */
 async function runDaily(): Promise<number> {
-  const today = todayIst();
-  banner(`servio-social — daily run for ${today} (IST)`);
+  // Review window (default): schedule the post for the NEXT 09:00 IST so it
+  // waits in Buffer for review; the record + idempotency then key on the
+  // PUBLISH date (that morning), not the generation moment. 03:30 UTC == 09:00
+  // IST on the same calendar date, so the ISO's date part IS the IST post date.
+  const dueAtIso = env.REVIEW_WINDOW ? nextNineAmIstIso(1) : undefined;
+  const postDate = dueAtIso ? dueAtIso.slice(0, 10) : todayIst();
+  banner(
+    env.REVIEW_WINDOW
+      ? `servio-social — daily run: scheduling for ${postDate} 09:00 IST (review in Buffer)`
+      : `servio-social — daily run for ${postDate} (IST)`
+  );
 
   const history = loadHistory();
-  if (hasRecordForDate(history, today)) {
-    logger.info(`Already posted on ${today} — nothing to do (idempotency guard). Exiting 0.`);
+  if (hasRecordForDate(history, postDate)) {
+    logger.info(
+      `A post for ${postDate} already exists — nothing to do (idempotency guard). Exiting 0.`
+    );
     return 0;
   }
 
@@ -445,24 +461,26 @@ async function runDaily(): Promise<number> {
     hosted = await prepareImage(content);
   }
 
-  const { linkedin, instagram } = await publishBoth(content, hosted, undefined);
+  const { linkedin, instagram } = await publishBoth(content, hosted, dueAtIso);
 
   if (env.DRY_RUN) {
     logger.info("[dry-run] skipping saveRecord — data/posts.json stays untouched");
   } else {
-    saveRecord(buildRecord(today, content, linkedin, instagram, hosted));
+    saveRecord(buildRecord(postDate, content, linkedin, instagram, hosted));
   }
-  const draftPath = saveBlogDraft(today, content.topic, content.blogDraft);
+  const draftPath = saveBlogDraft(postDate, content.topic, content.blogDraft);
 
   const bothFailed = linkedin.status === "failed" && instagram.status === "failed";
   const statusLine = `LinkedIn ${linkedin.status}, Instagram ${instagram.status}`;
+  const verb = env.REVIEW_WINDOW ? "scheduled for" : "posted";
   await notifyWebhook(
     bothFailed
-      ? `Servio social ${today}: FAILED — ${statusLine}`
-      : `Servio social ${today}: "${content.topic}" — ${statusLine}`
+      ? `Servio social ${postDate}: FAILED — ${statusLine}`
+      : `Servio social ${postDate}: "${content.topic}" ${verb} ${postDate} 09:00 IST — ${statusLine}` +
+          (env.REVIEW_WINDOW ? " (review/edit/delete in Buffer before then)" : "")
   );
 
-  logger.summary(dailySummaryMd(today, content, linkedin, instagram, hosted, draftPath));
+  logger.summary(dailySummaryMd(postDate, content, linkedin, instagram, hosted, draftPath));
   return bothFailed ? 1 : 0;
 }
 

@@ -7,13 +7,17 @@ name: Daily social post
 
 on:
   schedule:
-    # "30 3 * * *" UTC == 09:00 IST. IST (Asia/Kolkata) is UTC+05:30 with no
-    # daylight saving, so 03:30 UTC is always 9 in the morning in India.
-    # Caveat: GitHub cron is best-effort — under load, scheduled runs can start
-    # minutes (occasionally much longer) late. That is safe here: the pipeline
-    # writes one history record per IST day and exits immediately if today's
-    # record already exists, so late or duplicate triggers never double-post.
-    - cron: "30 3 * * *"
+    # Review window: the run happens the EVENING BEFORE and SCHEDULES the post
+    # for the next 09:00 IST, so it waits in the Buffer dashboard overnight to be
+    # reviewed/edited/deleted before it publishes.
+    # "30 14 * * *" UTC == 20:00 IST (8 PM). IST is UTC+05:30, no daylight saving.
+    # The post is then scheduled by the pipeline for 09:00 IST the next morning.
+    # Caveat: GitHub cron is best-effort — under load a run can start late. Safe
+    # here: the pipeline writes one record per IST POST date and exits if that
+    # date already has a record, so late/duplicate triggers never double-post.
+    # (To publish instantly with no review window instead, set REVIEW_WINDOW=false
+    # and change this back to "30 3 * * *" = 09:00 IST.)
+    - cron: "30 14 * * *"
   workflow_dispatch:
     inputs:
       dry_run:
@@ -85,6 +89,9 @@ jobs:
           # Scheduled runs have no inputs, so this evaluates to "false" there;
           # manual runs use the checkbox.
           DRY_RUN: ${{ inputs.dry_run == true && 'true' || 'false' }}
+          # Review window on/off. Unset -> on (posts wait in Buffer for review).
+          # Set a repo secret/variable REVIEW_WINDOW=false to publish instantly.
+          REVIEW_WINDOW: ${{ secrets.REVIEW_WINDOW }}
         run: |
           # GitHub Actions passes an unset secret as an EMPTY STRING, not as
           # "undefined". The optional NOTIFY_WEBHOOK_URL is validated with

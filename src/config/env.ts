@@ -58,6 +58,14 @@ const EnvSchema = z.object({
     .string()
     .optional()
     .transform((v) => v?.trim() === "true" || v?.trim() === "1"),
+  // When true (default), the daily run SCHEDULES the post for the next 09:00 IST
+  // instead of publishing immediately — so it waits in the Buffer dashboard,
+  // where it can be reviewed, edited, or deleted before it goes live. Set to
+  // "false" to publish instantly with no review window.
+  REVIEW_WINDOW: z
+    .string()
+    .optional()
+    .transform((v) => v?.trim().toLowerCase() !== "false"),
   // Empty/whitespace (e.g. an unset GitHub secret passed as "") falls back to
   // the default rather than producing a broken ":generateContent" URL.
   // Default is the "flash-latest" alias, which always resolves to the current
