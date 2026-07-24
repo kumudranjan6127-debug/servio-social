@@ -27,6 +27,19 @@ const EnvSchema = z.object({
   CLOUDINARY_CLOUD_NAME: z.string().trim().optional(),
   CLOUDINARY_UPLOAD_PRESET: z.string().trim().optional(),
 
+  // --- Optional: AI image generation (fal.ai). When set, each post gets a
+  // bespoke professional image generated from the day's image prompt instead
+  // of the static branded pool. PAID (a few cents per image). Falls back to
+  // the free pool if unset or if generation fails. Still needs Cloudinary to
+  // host the result for Buffer. ---
+  FAL_KEY: z.string().trim().optional(),
+  /** fal.ai model id. Default flux/dev — strong quality/cost balance. */
+  FAL_IMAGE_MODEL: z
+    .string()
+    .trim()
+    .optional()
+    .transform((v) => (v && v.length > 0 ? v : "fal-ai/flux/dev")),
+
   // --- Optional: behavior switches ---
   /** "true" → full pipeline runs but NOTHING is sent to Buffer (payloads are logged). */
   DRY_RUN: z
@@ -77,3 +90,6 @@ export const env: Env = loadEnv();
 export const imageHostingConfigured: boolean = Boolean(
   env.CLOUDINARY_CLOUD_NAME && env.CLOUDINARY_UPLOAD_PRESET
 );
+
+/** True when fal.ai AI image generation is configured (a FAL_KEY is present). */
+export const aiImageConfigured: boolean = Boolean(env.FAL_KEY);

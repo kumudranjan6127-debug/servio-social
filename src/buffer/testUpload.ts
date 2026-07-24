@@ -12,20 +12,28 @@
 
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { imageHostingConfigured } from "../config/env";
-import { hostImage, poolImageProvider } from "./uploadMedia";
+import { aiImageConfigured, imageHostingConfigured } from "../config/env";
+import { hostImage } from "./uploadMedia";
+import { pickLocalImage } from "../ai/generateImage";
 import type { GeneratedContent } from "../types";
 
-/** A minimal content stub — poolImageProvider only reads `topic` (for alt text). */
+/**
+ * A minimal content stub. The pool provider only reads `topic` (for alt text);
+ * the fal.ai provider uses `imagePrompt`, so we give it a representative one so
+ * the test generates a realistic on-brand image.
+ */
 const STUB: GeneratedContent = {
-  topic: "Servio",
+  topic: "Web development",
   angle: "",
   research: "",
   linkedin: { text: "", hashtags: [] },
   instagram: { text: "", hashtags: [] },
   twitter: { text: "", hashtags: [] },
   blogDraft: "",
-  imagePrompt: "",
+  imagePrompt:
+    "Modern minimal vector illustration of a clean website layout on a laptop, " +
+    "blue (#1E4FFF family) and white palette, generous white space, professional " +
+    "startup-tech style, no text, no photorealistic faces, no clutter",
 };
 
 /** True when this file is the process entry point (tsx src/buffer/testUpload.ts). */
@@ -49,13 +57,17 @@ async function main(): Promise<void> {
     process.exit(1);
   }
 
-  console.log("Cloudinary is configured. Uploading today's branded image to test it...\n");
-  const local = await poolImageProvider.getImage(STUB);
+  console.log(
+    `Cloudinary is configured. Image source: ${
+      aiImageConfigured ? "fal.ai (AI generation), pool as fallback" : "branded pool"
+    }.\nProducing today's image and uploading it to test the full pipeline...\n`
+  );
+  const local = await pickLocalImage(STUB);
   if (!local) {
-    console.log("No pool image found in assets/pool — run `npm run images` first.");
+    console.log("No image could be produced (fal.ai failed and no pool image in assets/pool).");
     process.exit(1);
   }
-  console.log(`Chosen image: ${path.basename(local.filePath)}`);
+  console.log(`Chosen image: ${path.basename(local.filePath)} (aiGenerated: ${local.aiGenerated})`);
 
   const hosted = await hostImage(local);
   if (!hosted) {

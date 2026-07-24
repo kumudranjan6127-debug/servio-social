@@ -23,7 +23,8 @@ import { refineImagePrompt } from "./ai/generateImagePrompt";
 import { geminiCall, generateContent } from "./ai/generatePost";
 import { getChannels } from "./buffer/getChannels";
 import { nextNineAmIstIso, publishPost } from "./buffer/publish";
-import { hostImage, poolImageProvider } from "./buffer/uploadMedia";
+import { hostImage } from "./buffer/uploadMedia";
+import { pickLocalImage } from "./ai/generateImage";
 import { env, imageHostingConfigured } from "./config/env";
 import {
   hasRecordForDate,
@@ -234,13 +235,14 @@ async function generateValidated(
 // ---------------------------------------------------------------------------
 
 /**
- * Selects today's pool image and hosts it publicly (Cloudinary). Returns null
- * — and logs why — whenever no public image can be produced; Instagram is then
- * skipped by the caller. Never called in DRY_RUN (per BUILD.md, both image
- * steps are skipped entirely there).
+ * Selects today's image — a bespoke fal.ai image when configured, otherwise the
+ * branded pool — and hosts it publicly (Cloudinary). Returns null — and logs
+ * why — whenever no public image can be produced; Instagram is then skipped by
+ * the caller. Never called in DRY_RUN (per BUILD.md, both image steps are
+ * skipped entirely there).
  */
 async function prepareImage(content: GeneratedContent): Promise<HostedImage | null> {
-  const local = await poolImageProvider.getImage(content);
+  const local = await pickLocalImage(content);
   if (local === null) return null;
   const hosted = await hostImage(local);
   if (hosted === null) {
