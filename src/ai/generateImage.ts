@@ -82,7 +82,7 @@ export const cloudflareImageProvider: ImageProvider = {
       const base64 = await retry("cloudflare.generateImage", async () => {
         const res = await axios.post(
           `https://api.cloudflare.com/client/v4/accounts/${env.CLOUDFLARE_ACCOUNT_ID}/ai/run/${model}`,
-          { prompt: imagePromptFor(content), steps: 6 },
+          { prompt: imagePromptFor(content), steps: 8 },
           {
             headers: {
               Authorization: `Bearer ${env.CLOUDFLARE_API_TOKEN}`,

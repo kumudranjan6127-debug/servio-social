@@ -15,26 +15,29 @@ import { fileURLToPath } from "node:url";
 import { aiImageConfigured, imageHostingConfigured } from "../config/env";
 import { hostImage } from "./uploadMedia";
 import { pickLocalImage } from "../ai/generateImage";
+import { refineImagePrompt } from "../ai/generateImagePrompt";
 import type { GeneratedContent } from "../types";
 
 /**
- * A minimal content stub. The pool provider only reads `topic` (for alt text);
- * the fal.ai provider uses `imagePrompt`, so we give it a representative one so
- * the test generates a realistic on-brand image.
+ * A minimal content stub with a realistic, abstract concept prompt (icons/flow,
+ * not a literal screen). The pool provider only reads `topic`; the AI providers
+ * read `imagePrompt`. We run it through refineImagePrompt below so the test
+ * uses the exact same brand-safe prompt the daily run does.
  */
 const STUB: GeneratedContent = {
   topic: "Web development",
-  angle: "",
+  angle: "automating lead qualification on your website",
   research: "",
   linkedin: { text: "", hashtags: [] },
   instagram: { text: "", hashtags: [] },
   twitter: { text: "", hashtags: [] },
   blogDraft: "",
   imagePrompt:
-    "Modern minimal vector illustration of a clean website layout on a laptop, " +
-    "blue (#1E4FFF family) and white palette, generous white space, professional " +
-    "startup-tech style, no text, no photorealistic faces, no clutter",
+    "Abstract concept of an automated web workflow: a simple form icon flowing " +
+    "into a gear/AI node, branching to a calendar icon and an envelope icon, " +
+    "connected by clean lines",
 };
+STUB.imagePrompt = refineImagePrompt(STUB);
 
 /** True when this file is the process entry point (tsx src/buffer/testUpload.ts). */
 function isRunAsScript(): boolean {

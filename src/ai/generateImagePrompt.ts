@@ -10,11 +10,18 @@
 
 import type { GeneratedContent } from "../types";
 
-/** Brand style constants appended to every image prompt (per BUILD.md). */
+/**
+ * Brand style constants appended to every image prompt. Deliberately steers
+ * toward ABSTRACT, icon/shape-based art and hard-forbids text and UI screens:
+ * the free/fast image models (e.g. FLUX-schnell) render any on-image text as
+ * gibberish, so the reliable fix is to keep text out of the picture entirely.
+ */
 const IMAGE_STYLE =
-  "Modern minimal startup-tech style: clean flat composition, generous white space, " +
-  "clean typography, blue (#1E4FFF family) and white palette, simple abstract geometric " +
-  "shapes, professional and calm, no photorealistic faces, no clutter, no watermarks";
+  "Abstract minimalist tech illustration built from simple geometric shapes, icons and " +
+  "symbols — NOT a literal screenshot or device mockup. Clean flat vector composition, " +
+  "generous white space, blue (#1E4FFF family) and white palette, professional and calm. " +
+  "ABSOLUTELY NO TEXT, no words, no letters, no numbers, no user-interface mockups, no " +
+  "screens with writing, no photorealistic faces, no logos, no clutter, no watermarks";
 
 /**
  * Refine the generated image prompt into the final, brand-safe prompt.
