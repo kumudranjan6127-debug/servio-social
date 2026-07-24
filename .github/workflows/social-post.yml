@@ -30,6 +30,7 @@ on:
           - channels
           - models
           - cloudinary
+          - gemini-image
         default: daily
 
 # The job commits data/ and logs/ back to the repo, so it needs write access.
@@ -97,12 +98,13 @@ jobs:
           MODE="${{ inputs.mode || 'daily' }}"
           echo "Running mode: $MODE (DRY_RUN=$DRY_RUN)"
           case "$MODE" in
-            channels)   npx tsx src/buffer/getChannels.ts ;;
-            models)     npx tsx src/ai/listModels.ts ;;
-            cloudinary) npx tsx src/buffer/testUpload.ts ;;
-            health)     npx tsx src/index.ts --health ;;
-            week)       npx tsx src/index.ts --week ;;
-            *)          npx tsx src/index.ts ;;
+            channels)     npx tsx src/buffer/getChannels.ts ;;
+            models)       npx tsx src/ai/listModels.ts ;;
+            gemini-image) npx tsx src/ai/probeImageModels.ts ;;
+            cloudinary)   npx tsx src/buffer/testUpload.ts ;;
+            health)       npx tsx src/index.ts --health ;;
+            week)         npx tsx src/index.ts --week ;;
+            *)            npx tsx src/index.ts ;;
           esac
 
       # Runs even when the pipeline failed: the run log is exactly what you
