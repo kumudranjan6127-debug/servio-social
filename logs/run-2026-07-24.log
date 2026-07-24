@@ -73,3 +73,7 @@ Request failed with status code 429
 **Image:** https://res.cloudinary.com/rcdkca9i/image/upload/v1784907340/bxpv2qes7iua3pedgxxr.jpg
 
 **Blog draft:** /home/runner/work/servio-social/servio-social/data/blog-drafts/2026-07-25-automation.md
+2026-07-24T15:54:12.655Z [INFO ] ============================================================
+2026-07-24T15:54:12.656Z [INFO ] servio-social — daily run: scheduling for 2026-07-25 09:00 IST (review in Buffer)
+2026-07-24T15:54:12.656Z [INFO ] ============================================================
+2026-07-24T15:54:12.656Z [INFO ] A post for 2026-07-25 already exists — nothing to do (idempotency guard). Exiting 0.
