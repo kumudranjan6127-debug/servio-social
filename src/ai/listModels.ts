@@ -146,15 +146,18 @@ async function main(): Promise<void> {
   // Probe a shortlist of preferred general-purpose text models, in order, and
   // report which one truly answers. Prefer stable "flash" text models; skip
   // image/tts/robotics/computer-use variants that are not plain text writers.
+  // Best-quality first: Pro-tier, then newest flash, then lite. A 200 here on a
+  // key with no billing means the model is actually free-callable for this key.
   const preference = [
-    "gemini-flash-latest",
-    "gemini-2.5-flash",
-    "gemini-2.0-flash",
+    "gemini-3-pro-preview",
+    "gemini-3.1-pro-preview",
+    "gemini-pro-latest",
+    "gemini-2.5-pro",
     "gemini-3.6-flash",
     "gemini-3.5-flash",
-    "gemini-2.5-flash-lite",
+    "gemini-flash-latest",
+    "gemini-2.0-flash",
     "gemini-flash-lite-latest",
-    "gemini-2.0-flash-001",
   ];
   const toProbe = preference.filter((p) => usable.includes(p));
   console.log("\nTest-calling generateContent on the preferred text models:");
