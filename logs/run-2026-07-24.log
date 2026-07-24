@@ -40,3 +40,36 @@ Request failed with status code 503
 ## Servio social — daily run FAILED
 
 Request failed with status code 429
+2026-07-24T15:35:04.403Z [INFO ] ============================================================
+2026-07-24T15:35:04.404Z [INFO ] servio-social — daily run: scheduling for 2026-07-25 09:00 IST (review in Buffer)
+2026-07-24T15:35:04.405Z [INFO ] ============================================================
+2026-07-24T15:35:05.149Z [INFO ] buffer.getChannels: 2 channel(s): linkedin/servio-0, instagram/servio4u
+2026-07-24T15:35:05.150Z [INFO ] Channel check ok: linkedin → "servio-0" (6a60fda5e2638b94d7b5c5bf)
+2026-07-24T15:35:05.150Z [INFO ] Channel check ok: instagram → "servio4u" (6a60fe95e2638b94d7b5ca91)
+2026-07-24T15:35:11.290Z [INFO ] Topic chosen: "Automation" — "Automation" has never been posted about — least-recently-used pick from the pool
+2026-07-24T15:35:11.290Z [INFO ] Angle: How to stop stepping away from paying customers just to text basic price lists and store directions to phone inquiries.
+2026-07-24T15:35:11.290Z [INFO ] Topic: "Automation" — How to stop stepping away from paying customers just to text basic price lists and store directions to phone inquiries. ("Automation" has never been posted about — least-recently-used pick from the pool)
+2026-07-24T15:35:37.879Z [INFO ] Writer finished for "Automation" — linkedin 150 words, instagram 135 words, twitter 272 chars
+2026-07-24T15:35:37.884Z [INFO ] Validation passed (max similarity vs history: 0.09)
+2026-07-24T15:35:39.623Z [INFO ] cloudflare (@cf/black-forest-labs/flux-1-schnell): generated a bespoke image for "Automation"
+2026-07-24T15:35:40.531Z [INFO ] cloudinary.upload: hosted servio-ai-automation.png at https://res.cloudinary.com/rcdkca9i/image/upload/v1784907340/bxpv2qes7iua3pedgxxr.jpg
+2026-07-24T15:35:41.235Z [INFO ] buffer.publish.linkedin: created post 6a63864dde27d9a081f8e7a9 (dueAt 2026-07-25T03:30:00.000Z)
+2026-07-24T15:35:43.602Z [INFO ] buffer.publish.instagram: created post 6a63864f12fafbaf49c71196 (dueAt 2026-07-25T03:30:00.000Z)
+2026-07-24T15:35:43.603Z [INFO ] history: saved record for 2026-07-25 (2 total)
+2026-07-24T15:35:43.603Z [INFO ] history: blog draft saved to /home/runner/work/servio-social/servio-social/data/blog-drafts/2026-07-25-automation.md
+2026-07-24T15:35:43.604Z [INFO ] summary:
+## Servio social — daily run 2026-07-25
+
+
+> **Scheduled for 2026-07-25 09:00 IST.** Open your Buffer dashboard to review, edit, or delete it before then — otherwise it publishes automatically.
+
+**Topic:** Automation — How to stop stepping away from paying customers just to text basic price lists and store directions to phone inquiries.
+
+| Platform | Status | Post id | Detail |
+| --- | --- | --- | --- |
+| LinkedIn | scheduled | 6a63864dde27d9a081f8e7a9 | scheduled for 2026-07-25T03:30:00.000Z |
+| Instagram | scheduled | 6a63864f12fafbaf49c71196 | scheduled for 2026-07-25T03:30:00.000Z |
+
+**Image:** https://res.cloudinary.com/rcdkca9i/image/upload/v1784907340/bxpv2qes7iua3pedgxxr.jpg
+
+**Blog draft:** /home/runner/work/servio-social/servio-social/data/blog-drafts/2026-07-25-automation.md
