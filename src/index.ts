@@ -22,7 +22,7 @@ import { normalizeHashtags } from "./ai/generateHashtags";
 import { refineImagePrompt } from "./ai/generateImagePrompt";
 import { geminiCall, generateContent } from "./ai/generatePost";
 import { getChannels } from "./buffer/getChannels";
-import { nextNineAmIstIso, publishPost } from "./buffer/publish";
+import { nextNineAmIstIso, nextUpcomingNineAmIstIso, publishPost } from "./buffer/publish";
 import { hostImage } from "./buffer/uploadMedia";
 import { pickLocalImage } from "./ai/generateImage";
 import { env, imageHostingConfigured } from "./config/env";
@@ -432,7 +432,7 @@ async function runDaily(): Promise<number> {
   // waits in Buffer for review; the record + idempotency then key on the
   // PUBLISH date (that morning), not the generation moment. 03:30 UTC == 09:00
   // IST on the same calendar date, so the ISO's date part IS the IST post date.
-  const dueAtIso = env.REVIEW_WINDOW ? nextNineAmIstIso(1) : undefined;
+  const dueAtIso = env.REVIEW_WINDOW ? nextUpcomingNineAmIstIso() : undefined;
   const postDate = dueAtIso ? dueAtIso.slice(0, 10) : todayIst();
   banner(
     env.REVIEW_WINDOW

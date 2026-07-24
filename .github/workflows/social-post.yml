@@ -18,6 +18,12 @@ on:
     # (To publish instantly with no review window instead, set REVIEW_WINDOW=false
     # and change this back to "30 3 * * *" = 09:00 IST.)
     - cron: "30 14 * * *"
+    # BACKUP RUN — "30 0 * * *" UTC == 06:00 IST. A safety net for when the
+    # evening run failed (e.g. a Gemini outage): it targets the SAME morning's
+    # 09:00 slot, so if that day already has a post it does nothing, and if it
+    # does not it generates one and schedules it for 09:00 (a shorter ~3h review
+    # window). The date-keyed idempotency guard makes running both crons safe.
+    - cron: "30 0 * * *"
   workflow_dispatch:
     inputs:
       dry_run:

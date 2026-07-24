@@ -220,3 +220,27 @@ export function nextNineAmIstIso(daysAhead = 1): string {
   nineAmIst.setUTCDate(nineAmIst.getUTCDate() + daysAhead);
   return nineAmIst.toISOString();
 }
+
+/**
+ * Returns the UTC ISO instant of the SOONEST upcoming 09:00 IST: today's 09:00
+ * if it has not passed yet, otherwise tomorrow's. This lets the evening run
+ * (~20:00 IST → tomorrow morning) and a backup morning run (~06:00 IST → the
+ * same morning) both target the correct 09:00 slot, so the date-keyed
+ * idempotency guard stops them from ever scheduling two posts for one day.
+ */
+export function nextUpcomingNineAmIstIso(): string {
+  const now = new Date();
+  const istToday = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Kolkata",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).format(now);
+  const todayNineAm = new Date(`${istToday}T03:30:00.000Z`);
+  if (now.getTime() < todayNineAm.getTime()) {
+    return todayNineAm.toISOString();
+  }
+  const tomorrow = new Date(todayNineAm);
+  tomorrow.setUTCDate(tomorrow.getUTCDate() + 1);
+  return tomorrow.toISOString();
+}
