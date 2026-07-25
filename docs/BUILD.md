@@ -157,8 +157,9 @@ permissions contents write; concurrency group "social-post" cancel-in-progress f
 node 22 + npm cache, npm ci, npm run typecheck, then run tsx per mode with env from secrets
 (GEMINI_API_KEY, BUFFER_API_KEY, BUFFER_LINKEDIN_CHANNEL_ID, BUFFER_INSTAGRAM_CHANNEL_ID,
 CLOUDINARY_CLOUD_NAME, CLOUDINARY_UPLOAD_PRESET, NOTIFY_WEBHOOK_URL) + DRY_RUN from input;
-afterwards commit data/ and logs/ back with github-actions[bot] identity, "[skip ci]" message,
-push (guard: only if diff). Also agent D: `scripts/generate-brand-images.mjs` — dependency-free
+afterwards commit data/ back with github-actions[bot] identity, "[skip ci]" message,
+push (guard: only if diff); logs/ are uploaded as an ephemeral actions/upload-artifact
+(retention 14 days), not committed. Also agent D: `scripts/generate-brand-images.mjs` — dependency-free
 Node (zlib PNG encoder, same technique as classic icon generators): writes 6 abstract branded
 1080x1080 PNGs to assets/pool/ (blue #1E4FFF-family + white palette, gradients + simple geometric
 shapes, NO text), deterministic; and `package.json` (deps: axios dotenv zod; dev: typescript tsx

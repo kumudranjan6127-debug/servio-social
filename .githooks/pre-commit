@@ -1,0 +1,10 @@
+#!/bin/sh
+# Pre-commit secret guard. Activated repo-wide via: git config core.hooksPath .githooks
+# Blocks a commit if scripts/scan-secrets.mjs flags a likely credential in staged files.
+# Emergency bypass (use only when you are certain it is a false positive):
+#   git commit --no-verify
+if command -v node >/dev/null 2>&1; then
+  node "$(git rev-parse --show-toplevel)/scripts/scan-secrets.mjs" --staged || exit 1
+else
+  echo "secret-scan: node not found on PATH — skipping local scan (CI still enforces it)." >&2
+fi
