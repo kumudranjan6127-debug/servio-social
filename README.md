@@ -15,6 +15,10 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/kumudranjan6127-debug/servio-social/actions/workflows/secret-scan.yml"><img src="https://github.com/kumudranjan6127-debug/servio-social/actions/workflows/secret-scan.yml/badge.svg" alt="Secret scan status"></a>
+</p>
+
+<p align="center">
   <a href="#quick-start"><b>Quick start</b></a> &nbsp;·&nbsp;
   <a href="docs/SETUP.md"><b>Setup guide</b></a> &nbsp;·&nbsp;
   <a href="#the-schedule--how-900-ist-daily-works"><b>Schedule</b></a> &nbsp;·&nbsp;
