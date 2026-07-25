@@ -25,9 +25,9 @@
     "zod": "^4"
   },
   "devDependencies": {
-    "@eslint/js": "^9",
+    "@eslint/js": "^10.0.1",
     "@types/node": "^26",
-    "eslint": "^9",
+    "eslint": "^10.8.0",
     "globals": "^16",
     "prettier": "^3",
     "tsx": "^4",
