@@ -1,0 +1,18 @@
+# Normalize line endings so Windows checkouts don't produce CRLF churn
+# (fixes the "LF will be replaced by CRLF" warnings on commit).
+* text=auto eol=lf
+
+# Shell scripts and git hooks must stay LF even on Windows.
+*.sh text eol=lf
+.githooks/* text eol=lf
+
+# Treat binary assets as binary (no line-ending or diff munging).
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+
+# Keep generated run logs out of language stats.
+logs/** linguist-generated=true
