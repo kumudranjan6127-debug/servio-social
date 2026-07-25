@@ -58,10 +58,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
 
       - name: Set up Node 22
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: 22
           cache: npm
@@ -98,6 +98,11 @@ jobs:
           # Review window on/off. Unset -> on (posts wait in Buffer for review).
           # Set a repo secret/variable REVIEW_WINDOW=false to publish instantly.
           REVIEW_WINDOW: ${{ secrets.REVIEW_WINDOW }}
+          # Pass the dispatch input through env rather than interpolating it
+          # directly into the run script below — so even if `mode` were ever
+          # changed from a fixed `choice` to a free-form string, no value could
+          # break out into the shell (defense-in-depth against script injection).
+          MODE_INPUT: ${{ inputs.mode }}
         run: |
           # GitHub Actions passes an unset secret as an EMPTY STRING, not as
           # "undefined". The optional NOTIFY_WEBHOOK_URL is validated with
@@ -115,7 +120,7 @@ jobs:
           if [ -z "$CLOUDFLARE_IMAGE_MODEL" ]; then unset CLOUDFLARE_IMAGE_MODEL; fi
           if [ -z "$FAL_KEY" ]; then unset FAL_KEY; fi
           if [ -z "$FAL_IMAGE_MODEL" ]; then unset FAL_IMAGE_MODEL; fi
-          MODE="${{ inputs.mode || 'daily' }}"
+          MODE="${MODE_INPUT:-daily}"
           echo "Running mode: $MODE (DRY_RUN=$DRY_RUN)"
           case "$MODE" in
             channels)     npx tsx src/buffer/getChannels.ts ;;
@@ -127,19 +132,29 @@ jobs:
             *)            npx tsx src/index.ts ;;
           esac
 
-      # Runs even when the pipeline failed: the run log is exactly what you
-      # need to debug a failure, so it must still be committed back.
-      - name: Commit run results (data/ and logs/) back to the repo
+      # Run logs are kept as an EPHEMERAL build artifact instead of being
+      # committed. They are useful for debugging a failure, but they contain
+      # operational metadata (channel/post ids, image URLs) that need not live
+      # permanently in the (public) git history. Retained 14 days, then dropped.
+      - name: Upload run logs (ephemeral — not committed to history)
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: run-logs-${{ github.run_id }}
+          path: logs/
+          retention-days: 14
+          if-no-files-found: ignore
+
+      # data/ IS still committed: posts.json is the pipeline's state (the
+      # idempotency guard and dedup history read it on the next run), so it must
+      # persist in the repo. It contains only non-secret post content + public
+      # ids/URLs. Runs even on failure so partial state is not lost.
+      - name: Commit run results (data/) back to the repo
         if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/
-          # logs/ is gitignored (local runs stay out of git); force-add so CI
-          # run logs are preserved in the repo. The `channels`/`health` modes
-          # write no log file, so only add the dir when it actually exists —
-          # avoids a harmless-but-alarming "fatal: pathspec 'logs/'" line.
-          if [ -d logs ]; then git add -f logs/; fi
           if git diff --cached --quiet; then
             echo "Nothing changed - no commit."
           else

@@ -243,8 +243,10 @@ morning, so you always get a window to look at it first:
 - **It can never double-post.** The system keeps one record per post date. If a
   post for that morning already exists, it says "already exists" and stops. Late
   timers, repeated triggers, and manual runs are all safe.
-- After every run, GitHub commits the day's history and logs back to the repo —
-  so `data/posts.json` and `logs/` are a complete, readable diary.
+- After every run, GitHub commits the day's history (`data/posts.json`) back to
+  the repo, so it's a complete, readable diary. The run log is kept separately as
+  an ephemeral build artifact (downloadable from the Actions run for 14 days), so
+  operational details stay out of the permanent git history.
 
 **Want instant posting with no review window instead?** Add a repo secret
 `REVIEW_WINDOW` set to `false`, and change the cron back to `30 3 * * *`

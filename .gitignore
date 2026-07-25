@@ -6,10 +6,24 @@ node_modules/
 .env*
 !.env.example
 
-# Run logs are written on every local run. The GitHub Actions workflow
-# force-adds logs/ (git add -f) when it commits run results back, so CI
-# run logs ARE still preserved in the repo history - only local ones are
-# kept out.
+# Defense-in-depth: never accidentally commit a credential file, even one no
+# code references. These names cover the usual private keys, cloud
+# service-account JSON, and personal npm/registry auth.
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+*.keystore
+credentials.json
+gha-creds-*.json
+service-account*.json
+secrets/
+.npmrc
+
+# Run logs are written on every run and never committed. CI uploads them as an
+# ephemeral build artifact (retained 14 days), so they stay out of the public
+# git history entirely; local run logs are kept out the same way.
 logs/
 
 # Build output (this project has none today, but just in case)
