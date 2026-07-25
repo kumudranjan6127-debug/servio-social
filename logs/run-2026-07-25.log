@@ -1,0 +1,33 @@
+2026-07-25T03:44:57.014Z [INFO ] ============================================================
+2026-07-25T03:44:57.015Z [INFO ] servio-social — daily run: scheduling for 2026-07-26 09:00 IST (review in Buffer)
+2026-07-25T03:44:57.015Z [INFO ] ============================================================
+2026-07-25T03:44:57.438Z [INFO ] buffer.getChannels: 2 channel(s): linkedin/servio-0, instagram/servio4u
+2026-07-25T03:44:57.438Z [INFO ] Channel check ok: linkedin → "servio-0" (6a60fda5e2638b94d7b5c5bf)
+2026-07-25T03:44:57.439Z [INFO ] Channel check ok: instagram → "servio4u" (6a60fe95e2638b94d7b5ca91)
+2026-07-25T03:45:02.098Z [INFO ] Topic chosen: "Startups" — "Startups" has never been posted about — least-recently-used pick from the pool
+2026-07-25T03:45:02.098Z [INFO ] Angle: How to make your brand new business look established and trustworthy online so first-time customers do not hesitate to buy from you.
+2026-07-25T03:45:02.098Z [INFO ] Topic: "Startups" — How to make your brand new business look established and trustworthy online so first-time customers do not hesitate to buy from you. ("Startups" has never been posted about — least-recently-used pick from the pool)
+2026-07-25T03:45:24.836Z [INFO ] Writer finished for "Startups" — linkedin 153 words, instagram 127 words, twitter 273 chars
+2026-07-25T03:45:24.842Z [INFO ] Validation passed (max similarity vs history: 0.11)
+2026-07-25T03:45:26.251Z [INFO ] cloudflare (@cf/black-forest-labs/flux-1-schnell): generated a bespoke image for "Startups"
+2026-07-25T03:45:27.088Z [INFO ] cloudinary.upload: hosted servio-ai-startups.png at https://res.cloudinary.com/rcdkca9i/image/upload/v1784951126/cjlypqn78efsomrvc1wx.jpg
+2026-07-25T03:45:27.764Z [INFO ] buffer.publish.linkedin: created post 6a64315722bc282b886880bb (dueAt 2026-07-26T03:30:00.000Z)
+2026-07-25T03:45:30.097Z [INFO ] buffer.publish.instagram: created post 6a6431595e684934985e8440 (dueAt 2026-07-26T03:30:00.000Z)
+2026-07-25T03:45:30.098Z [INFO ] history: saved record for 2026-07-26 (3 total)
+2026-07-25T03:45:30.099Z [INFO ] history: blog draft saved to /home/runner/work/servio-social/servio-social/data/blog-drafts/2026-07-26-startups.md
+2026-07-25T03:45:30.099Z [INFO ] summary:
+## Servio social — daily run 2026-07-26
+
+
+> **Scheduled for 2026-07-26 09:00 IST.** Open your Buffer dashboard to review, edit, or delete it before then — otherwise it publishes automatically.
+
+**Topic:** Startups — How to make your brand new business look established and trustworthy online so first-time customers do not hesitate to buy from you.
+
+| Platform | Status | Post id | Detail |
+| --- | --- | --- | --- |
+| LinkedIn | scheduled | 6a64315722bc282b886880bb | scheduled for 2026-07-26T03:30:00.000Z |
+| Instagram | scheduled | 6a6431595e684934985e8440 | scheduled for 2026-07-26T03:30:00.000Z |
+
+**Image:** https://res.cloudinary.com/rcdkca9i/image/upload/v1784951126/cjlypqn78efsomrvc1wx.jpg
+
+**Blog draft:** /home/runner/work/servio-social/servio-social/data/blog-drafts/2026-07-26-startups.md
