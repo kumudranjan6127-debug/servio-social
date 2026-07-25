@@ -152,8 +152,8 @@ jobs:
       - name: Commit run results (data/) back to the repo
         if: always()
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "Jayam Srivastava"
+          git config user.email "jayamsrivastava99@gmail.com"
           git add data/
           if git diff --cached --quiet; then
             echo "Nothing changed - no commit."
