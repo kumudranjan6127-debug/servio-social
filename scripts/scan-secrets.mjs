@@ -24,7 +24,7 @@ const PATTERNS = [
   ["GitHub token", /\bgh[pousr]_[A-Za-z0-9]{36,}\b/],
   ["GitHub fine-grained PAT", /\bgithub_pat_[A-Za-z0-9_]{22,}\b/],
   ["Slack token", /\bxox[baprs]-[A-Za-z0-9-]{10,}/],
-  ["Slack webhook", /hooks\.slack\.com\/services\/[A-Za-z0-9\/]{20,}/],
+  ["Slack webhook", /hooks\.slack\.com\/services\/[A-Za-z0-9/]{20,}/],
   ["Discord webhook", /discord(?:app)?\.com\/api\/webhooks\/\d+\/[\w-]{20,}/],
   ["AWS access key id", /\bAKIA[0-9A-Z]{16}\b/],
   ["Private key block", /-----BEGIN [A-Z ]*PRIVATE KEY-----/],
