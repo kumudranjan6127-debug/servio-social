@@ -1,0 +1,51 @@
+name: Structure Health Report
+
+on:
+  schedule:
+    - cron: '0 */6 * * *' # 4 times/day
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set git identity (as requested)
+        run: |
+          git config --global user.name "Jayam Srivastava"
+          git config --global user.email "jayamsrivastava99@gmail.com"
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Generate structure report
+        id: generate_report
+        run: |
+          python scripts/structure_report.py
+          {
+            echo 'pr_body<<EOF'
+            cat reports/latest-pr-body.md
+            echo 'EOF'
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Create Pull Request with report
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore(report): update structure health report"
+          branch: "automation/structure-health-report"
+          delete-branch: false
+          title: "chore(report): structure health status"
+          body: ${{ steps.generate_report.outputs.pr_body }}
+          add-paths: |
+            reports/structure-status-log.md
+            reports/latest-pr-body.md
