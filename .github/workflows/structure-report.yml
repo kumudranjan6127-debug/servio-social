@@ -37,15 +37,8 @@ jobs:
             echo 'EOF'
           } >> "$GITHUB_OUTPUT"
 
-      - name: Create Pull Request with report
-        uses: peter-evans/create-pull-request@v7
-        with:
-          token: ${{ github.token }}
-          commit-message: "chore(report): update structure health report"
-          branch: "automation/structure-health-report"
-          delete-branch: false
-          title: "chore(report): structure health status"
-          body: ${{ steps.generate_report.outputs.pr_body }}
-          add-paths: |
-            reports/structure-status-log.md
-            reports/latest-pr-body.md
+      - name: Commit report directly to main
+        run: |
+          git add reports/structure-status-log.md reports/latest-pr-body.md
+          git commit -m "chore(report): update structure health report" || echo "No changes to commit"
+          git push origin HEAD:main
