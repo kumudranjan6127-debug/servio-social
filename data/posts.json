@@ -170,6 +170,49 @@
       "imagePrompt": "A clean, modern graphic for a social media post using a professional blue and white color palette. Features minimal line art depicting a calendar with monthly checkmarks next to a smoothly functioning online store interface on a laptop, conveying stability, affordable monthly care, and peace of mind for small business owners. Abstract minimalist tech illustration built from simple geometric shapes, icons and symbols — NOT a literal screenshot or device mockup. Clean flat vector composition, generous white space, blue (#1E4FFF family) and white palette, professional and calm. ABSOLUTELY NO TEXT, no words, no letters, no numbers, no user-interface mockups, no screens with writing, no photorealistic faces, no logos, no clutter, no watermarks.",
       "createdAtIso": "2026-07-26T04:04:21.925Z",
       "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1785038658/qsotbjgnfd1abeq8bti4.jpg"
+    },
+    {
+      "date": "2026-07-28",
+      "topic": "Web Development",
+      "angle": "Why customers leave your website without calling when your address, price list, and contact details are hard to find on a mobile screen.",
+      "linkedin": {
+        "text": "Imagine a hungry customer opening your restaurant's website on their phone, ready to visit. 🍽️\n\nBut your address is hidden inside a drop-down menu. Your price list is a tiny file that forces them to zoom in and out. And your phone number is printed inside an image, so they cannot tap it to call.\n\nWhat do they do? They close your page and go to a competitor down the street.\n\nWhen local buyers check your website on a mobile screen, they want three simple things: Where are you located? What are your rates? How do I reach you right now?\n\nIf these details are hard to find, people move on fast. Putting a tap-to-call button and clear starting rates on your main page makes it effortless for new customers to choose you.\n\nCurious what a clean, mobile-ready layout could look like for your business? Take a look at our work: https://servio-0.web.app?utm_source=linkedin&utm_medium=social&utm_campaign=2026-07-27-web-development",
+        "hashtags": [
+          "#Servio",
+          "#SmallBusiness",
+          "#WebDesign",
+          "#BusinessGrowth",
+          "#CustomerExperience"
+        ],
+        "status": "scheduled",
+        "postId": "6a66da7579ae388ebdb206ca"
+      },
+      "instagram": {
+        "text": "Ever wondered why dozens of people visit your website every day, but your phone never rings? 📲\n\nPut yourself in your customer's shoes. They land on your page using their phone. They want to check your dental clinic's address or price list.\n\nInstead of clear text, they find a complicated table that requires constant pinch-zooming. Or worse, your phone number cannot even be tapped to dial. 📍\n\nMost people will not copy-paste phone numbers or search through hidden menus. They just tap back and pick the next business on Google.\n\nMaking basic details easy to read on small screens turns lost visits into real appointments.\n\nWant to see simple website setups that work smoothly on any phone? Check out our work via the link in bio! ✨",
+        "hashtags": [
+          "#Servio",
+          "#SmallBusinessIndia",
+          "#WebsiteDesign",
+          "#LocalBusiness",
+          "#BusinessOwner",
+          "#CustomerService",
+          "#BusinessTips",
+          "#MobileFriendly",
+          "#ShopOwner"
+        ],
+        "status": "scheduled",
+        "postId": "6a66da77ac3719fcf9003a32"
+      },
+      "twitter": {
+        "text": "When people cannot tap your phone number or find your prices on a phone screen, they buy from someone else. Make your site easy to use: https://servio-0.web.app?utm_source=twitter&utm_medium=social&utm_campaign=2026-07-27-web-development #SmallBusiness #Servio",
+        "hashtags": [
+          "#SmallBusiness",
+          "#Servio"
+        ]
+      },
+      "imagePrompt": "A clean, modern social media graphic in a crisp blue and white palette with minimal startup style aesthetics. It features a phone mockup showing a clear tap-to-call button and simple address card, with bold clean typography reading 'Make It Easy for Customers to Reach You'. Abstract minimalist tech illustration built from simple geometric shapes, icons and symbols — NOT a literal screenshot or device mockup. Clean flat vector composition, generous white space, blue (#1E4FFF family) and white palette, professional and calm. ABSOLUTELY NO TEXT, no words, no letters, no numbers, no user-interface mockups, no screens with writing, no photorealistic faces, no logos, no clutter, no watermarks.",
+      "createdAtIso": "2026-07-27T04:11:35.641Z",
+      "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1785125492/myaaahf5mx44tzpyxvwv.jpg"
     }
   ]
 }
