@@ -213,6 +213,49 @@
       "imagePrompt": "A clean, modern social media graphic in a crisp blue and white palette with minimal startup style aesthetics. It features a phone mockup showing a clear tap-to-call button and simple address card, with bold clean typography reading 'Make It Easy for Customers to Reach You'. Abstract minimalist tech illustration built from simple geometric shapes, icons and symbols — NOT a literal screenshot or device mockup. Clean flat vector composition, generous white space, blue (#1E4FFF family) and white palette, professional and calm. ABSOLUTELY NO TEXT, no words, no letters, no numbers, no user-interface mockups, no screens with writing, no photorealistic faces, no logos, no clutter, no watermarks.",
       "createdAtIso": "2026-07-27T04:11:35.641Z",
       "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1785125492/myaaahf5mx44tzpyxvwv.jpg"
+    },
+    {
+      "date": "2026-07-29",
+      "topic": "React",
+      "angle": "Why potential customers close your website when simple clicks like picking a service or viewing prices force the entire screen to reload.",
+      "linkedin": {
+        "text": "Have you ever tried looking at a menu on a local restaurant website, clicked on prices, and had the whole screen turn white for three seconds?\n\nIt is frustrating. When every click makes the page blink, reload, and jump back to the top, people give up and leave.\n\nIf a customer is comparing haircut packages or dental fees on a phone with weak signal, a full screen refresh eats up their data and wipes out what they selected. They close the tab and check your competitor instead.\n\nYour website should feel as smooth as a phone app. When someone taps a different price option, only that tiny part of the screen should change instantly while everything else stays still. No blinking, no lost place, and no waiting.\n\nWhen your site feels quick, customers trust your business right away.\n\nSee real examples of fast, smooth sites built for local businesses at https://servio-0.web.app?utm_source=linkedin&utm_medium=social&utm_campaign=2026-07-28-react",
+        "hashtags": [
+          "#Servio",
+          "#SmallBusiness",
+          "#WebDesign",
+          "#CustomerExperience",
+          "#BusinessGrowth"
+        ],
+        "status": "scheduled",
+        "postId": "6a68258efbdf65da54139afa"
+      },
+      "instagram": {
+        "text": "Imagine a customer visiting your salon website to check prices. They tap \"Hair Styling\"—and the whole page goes blank. 🤦‍♂️\n\nThe screen blinks, reloads, and drops them right back at the top of the page. Now they have to scroll all the way down again just to find the price.\n\nIf they are on a slow phone network, that whole-screen reload takes forever. Even worse, it often wipes out the details they just picked. Most people will not try a second time. They just close your site and book with someone else.\n\nModern websites do not work like that. When a customer taps a different service, only the price tag updates on the spot. The rest of the page stays completely still, just like inside a phone app. 📱\n\nIt feels quick, effortless, and professional.\n\nWant to see how smooth your business website could feel? Tap the link in bio to check out our work at Servio. ✨",
+        "hashtags": [
+          "#Servio",
+          "#SmallBusinessIndia",
+          "#LocalBusiness",
+          "#SalonOwner",
+          "#BusinessWebsite",
+          "#CustomerService",
+          "#WebDesignTips",
+          "#IndiaBusiness",
+          "#ShopOwner"
+        ],
+        "status": "scheduled",
+        "postId": "6a68259136205497cb85993e"
+      },
+      "twitter": {
+        "text": "When a customer clicks a service on your site and the whole screen flashes white to reload, they leave. Your site should update instantly like an app, keeping prices clear without the wait.\n\nSee how it works: https://servio-0.web.app?utm_source=twitter&utm_medium=social&utm_campaign=2026-07-28-react #Servio #WebDesign",
+        "hashtags": [
+          "#Servio",
+          "#WebDesign"
+        ]
+      },
+      "imagePrompt": "A modern minimal startup social media visual in a clean blue and white palette. Clear typography reads 'Instant Clicks, Zero Reloads' alongside a sleek smartphone graphic displaying smooth, seamless price updates without screen flashes. Abstract minimalist tech illustration built from simple geometric shapes, icons and symbols — NOT a literal screenshot or device mockup. Clean flat vector composition, generous white space, blue (#1E4FFF family) and white palette, professional and calm. ABSOLUTELY NO TEXT, no words, no letters, no numbers, no user-interface mockups, no screens with writing, no photorealistic faces, no logos, no clutter, no watermarks.",
+      "createdAtIso": "2026-07-28T03:44:17.436Z",
+      "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1785210254/ucdcox9wqyksttwjrmfo.jpg"
     }
   ]
 }
