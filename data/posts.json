@@ -256,6 +256,48 @@
       "imagePrompt": "A modern minimal startup social media visual in a clean blue and white palette. Clear typography reads 'Instant Clicks, Zero Reloads' alongside a sleek smartphone graphic displaying smooth, seamless price updates without screen flashes. Abstract minimalist tech illustration built from simple geometric shapes, icons and symbols — NOT a literal screenshot or device mockup. Clean flat vector composition, generous white space, blue (#1E4FFF family) and white palette, professional and calm. ABSOLUTELY NO TEXT, no words, no letters, no numbers, no user-interface mockups, no screens with writing, no photorealistic faces, no logos, no clutter, no watermarks.",
       "createdAtIso": "2026-07-28T03:44:17.436Z",
       "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1785210254/ucdcox9wqyksttwjrmfo.jpg"
+    },
+    {
+      "date": "2026-07-30",
+      "topic": "Next.js",
+      "angle": "Why customers who click your link on WhatsApp close your website before your business address or phone number even appears.",
+      "linkedin": {
+        "text": "You text your boutique's website link to a customer on WhatsApp. They tap it, see a blank white screen for five seconds, and close it before your store address even shows up.\n\nThis happens because WhatsApp opens links inside its own simple browser. Standard websites force the customer's phone to download the entire site's hidden code all at once before displaying a single word. On mobile data, that means waiting on a blank screen.\n\nWe build websites that prepare your text and contact details on a fast server first. When a customer taps your WhatsApp link, your phone number, opening hours, and location appear instantly. Big photos are shrunk automatically so they never block key details or freeze the page.\n\nWant to see how fast your business website could open for local customers? Take a look at our work: https://servio-0.web.app?utm_source=linkedin&utm_medium=social&utm_campaign=2026-07-29-next-js",
+        "hashtags": [
+          "#Servio",
+          "#SmallBusiness",
+          "#WebDesign",
+          "#IndiaBusiness",
+          "#LocalBusiness"
+        ],
+        "status": "scheduled",
+        "postId": "6a6977f634a0a0955d74ae13"
+      },
+      "instagram": {
+        "text": "A customer messages your bakery asking for your location. You quickly reply with your website link on WhatsApp. 📲\n\nThey tap it, wait for a spinning wheel to stop, get annoyed, and close the tab. You just lost a sale without knowing why. 💔\n\nMost mobile links try to load an entire website behind the scenes before showing any words. When opened inside WhatsApp on spotty mobile internet, the page stalls out completely.\n\nWe fix this by setting up your site so the most important details—your phone number, menu, and physical address—load instantly on the screen. No heavy graphics blocking text, no multi-step loading screens, just immediate answers for your buyer. 🛍️\n\nCurious how a fast site can bring you more real walk-in customers? See simple ideas for your store via the link in bio!",
+        "hashtags": [
+          "#Servio",
+          "#SmallBusinessOwner",
+          "#WebDesignServices",
+          "#LocalBusinessIndia",
+          "#BakeryOwner",
+          "#SalonOwner",
+          "#ClinicOwner",
+          "#WhatsAppMarketing",
+          "#BusinessGrowth"
+        ],
+        "status": "scheduled",
+        "postId": "6a6977f80dc384370e2ca9a5"
+      },
+      "twitter": {
+        "text": "When WhatsApp visitors tap your link, a blank screen makes them leave. We make your phone number & address open instantly on mobile data.\n\nSee our work: https://servio-0.web.app?utm_source=twitter&utm_medium=social&utm_campaign=2026-07-29-next-js #Servio",
+        "hashtags": [
+          "#Servio"
+        ]
+      },
+      "imagePrompt": "A modern minimal graphic featuring a smartphone screen displaying an instant-loading business contact card. Clean typography, blue and white palette, simple vector illustration style showing clear address details, tech-startup aesthetic. Abstract minimalist tech illustration built from simple geometric shapes, icons and symbols — NOT a literal screenshot or device mockup. Clean flat vector composition, generous white space, blue (#1E4FFF family) and white palette, professional and calm. ABSOLUTELY NO TEXT, no words, no letters, no numbers, no user-interface mockups, no screens with writing, no photorealistic faces, no logos, no clutter, no watermarks.",
+      "createdAtIso": "2026-07-29T03:48:08.869Z",
+      "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1785296885/vofqckdv9cwtihhqan0q.jpg"
     }
   ]
 }
