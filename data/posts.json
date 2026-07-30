@@ -298,6 +298,49 @@
       "imagePrompt": "A modern minimal graphic featuring a smartphone screen displaying an instant-loading business contact card. Clean typography, blue and white palette, simple vector illustration style showing clear address details, tech-startup aesthetic. Abstract minimalist tech illustration built from simple geometric shapes, icons and symbols — NOT a literal screenshot or device mockup. Clean flat vector composition, generous white space, blue (#1E4FFF family) and white palette, professional and calm. ABSOLUTELY NO TEXT, no words, no letters, no numbers, no user-interface mockups, no screens with writing, no photorealistic faces, no logos, no clutter, no watermarks.",
       "createdAtIso": "2026-07-29T03:48:08.869Z",
       "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1785296885/vofqckdv9cwtihhqan0q.jpg"
+    },
+    {
+      "date": "2026-07-31",
+      "topic": "Node.js",
+      "angle": "How to stop your website from freezing when multiple customers try to book appointments or place orders at the exact same minute.",
+      "linkedin": {
+        "text": "Imagine running a weekend offer at your dental clinic or boutique, only for ten patients to click 'Book Now' at the exact same second.\n\nIf your website processes visits one by one, the screen freezes, spins, or accidentally double-books the same appointment time. Frustrated customers give up and call your competitor down the road.\n\nA properly built website answers every visitor instantly. Instead of making people wait in line while the screen finishes sending receipts, it takes their details right away and handles the heavy work silently in the background.\n\nNo lost sales during rush hours. No awkward phone calls to cancel double-booked slots. Just a fast, reliable page that keeps up with your business.\n\nWant to see how a smooth booking site works for your business? Take a look at real examples of our work at Servio: https://servio-0.web.app?utm_source=linkedin&utm_medium=social&utm_campaign=2026-07-30-node-js",
+        "hashtags": [
+          "#Servio",
+          "#SmallBusiness",
+          "#WebDesign",
+          "#CustomerExperience",
+          "#IndiaBusiness"
+        ],
+        "status": "scheduled",
+        "postId": "6a6ac778b2299d92e6c4cae8"
+      },
+      "instagram": {
+        "text": "You post a flash sale for your bakery on Instagram. 🧁 Ten hungry customers rush to buy the last special cake at the exact same minute.\n\nThen the worst happens. The checkout screen spins forever, and two different people end up paying for the same cake. 😬\n\nWhen your website is built to handle heavy traffic, it never makes customers wait in line. It accepts every booking instantly, keeps your available stock updated in real time, and sends bills silently behind the scenes.\n\nYour customers get a quick, painless checkout, and you get more completed sales without the stress.\n\nCurious how a reliable website can protect your busy sale days? Picture what a site like this could do for your business—link in bio! ✨",
+        "hashtags": [
+          "#Servio",
+          "#SmallBusinessIndia",
+          "#BakeryOwner",
+          "#ClinicManagement",
+          "#BoutiqueShopping",
+          "#WebsiteBuilder",
+          "#LocalBusiness",
+          "#OnlineBooking",
+          "#BusinessGrowth"
+        ],
+        "status": "scheduled",
+        "postId": "6a6ac77a0263c79a74b0eed9"
+      },
+      "twitter": {
+        "text": "When 10 customers try to book at once, a weak website freezes or double-books. A smart site takes every order instantly and works smoothly behind the scenes.\n\nSee how Servio builds sites that never crash:\nhttps://servio-0.web.app?utm_source=twitter&utm_medium=social&utm_campaign=2026-07-30-node-js\n#Servio #WebDesign",
+        "hashtags": [
+          "#Servio",
+          "#WebDesign"
+        ]
+      },
+      "imagePrompt": "Modern minimal startup style graphic with a blue and white palette. A clean split screen illustration showing a frozen spinning wheel on a cluttered left side, contrasted with a smooth green checkmark and fast calendar booking interface on the right side. Modern typography, simple geometric shapes, professional and high trust. Abstract minimalist tech illustration built from simple geometric shapes, icons and symbols — NOT a literal screenshot or device mockup. Clean flat vector composition, generous white space, blue (#1E4FFF family) and white palette, professional and calm. ABSOLUTELY NO TEXT, no words, no letters, no numbers, no user-interface mockups, no screens with writing, no photorealistic faces, no logos, no clutter, no watermarks.",
+      "createdAtIso": "2026-07-30T03:39:38.635Z",
+      "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1785382775/zawwuf2v7edctqm0rqiz.jpg"
     }
   ]
 }
