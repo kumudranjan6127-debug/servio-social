@@ -42,7 +42,12 @@ on:
           - cloudinary
           - gemini-image
           - tweet-test
+          - delete-post
         default: daily
+      post_id:
+        description: "Buffer post id to delete (only used by the delete-post mode)"
+        type: string
+        default: ""
 
 # The job commits data/ and logs/ back to the repo, so it needs write access.
 permissions:
@@ -109,6 +114,9 @@ jobs:
           # changed from a fixed `choice` to a free-form string, no value could
           # break out into the shell (defense-in-depth against script injection).
           MODE_INPUT: ${{ inputs.mode }}
+          # Passed through env (not interpolated into the run block) so it can
+          # never break out into the shell. Used only by the delete-post mode.
+          POST_ID: ${{ inputs.post_id }}
         run: |
           # GitHub Actions passes an unset secret as an EMPTY STRING, not as
           # "undefined". The optional NOTIFY_WEBHOOK_URL is validated with
@@ -134,6 +142,7 @@ jobs:
             gemini-image) npx tsx src/ai/probeImageModels.ts ;;
             cloudinary)   npx tsx src/buffer/testUpload.ts ;;
             tweet-test)   npx tsx src/buffer/testTweet.ts ;;
+            delete-post)  DELETE_POST_ID="$POST_ID" npx tsx src/buffer/deletePost.ts ;;
             health)       npx tsx src/index.ts --health ;;
             week)         npx tsx src/index.ts --week ;;
             *)            npx tsx src/index.ts ;;
