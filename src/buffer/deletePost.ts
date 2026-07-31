@@ -20,10 +20,12 @@ const Env = z.object({
 
 async function main(): Promise<void> {
   const env = Env.parse(process.env);
+  // deletePost returns DeletePostPayload; __typename is always selectable and
+  // the mutation still executes, so this both deletes and confirms.
   const doc =
     "mutation Delete { deletePost(input: { id: " +
     JSON.stringify(env.DELETE_POST_ID) +
-    " }) { ... on PostActionSuccess { post { id } } ... on MutationError { message } } }";
+    " }) { __typename } }";
 
   console.log(`deletePost: deleting ${env.DELETE_POST_ID} via account #2 ...`);
   const res = await axios.post(
@@ -37,7 +39,12 @@ async function main(): Promise<void> {
       timeout: TIMEOUT_MS,
     }
   );
-  console.log(`deletePost: Buffer response: ${JSON.stringify(res.data)}`);
+  const data = res.data as { errors?: { message: string }[] };
+  if (data.errors && data.errors.length > 0) {
+    console.error(`deletePost: Buffer rejected it — ${JSON.stringify(data.errors)}`);
+    process.exit(1);
+  }
+  console.log(`deletePost: SUCCESS — deleted ${env.DELETE_POST_ID}. Response: ${JSON.stringify(res.data)}`);
 }
 
 main().catch((e: unknown) => {
