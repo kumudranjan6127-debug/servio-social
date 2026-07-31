@@ -240,10 +240,28 @@ async function main(): Promise<void> {
     return;
   }
   printChannelTable(channels);
+
+  // Optional SECOND Buffer account (BUFFER_API_KEY_2), used to reach channels
+  // that don't fit the first account's free-plan channel limit (e.g. X,
+  // Facebook). Listed separately so its ids are easy to copy into their secrets.
+  const key2 = process.env.BUFFER_API_KEY_2?.trim();
+  if (key2 && key2.length >= 10) {
+    console.log("\n--- Second Buffer account (BUFFER_API_KEY_2) ---\n");
+    try {
+      const channels2 = await fetchChannels(key2);
+      if (channels2.length === 0) console.log("No channels connected on the second account.");
+      else printChannelTable(channels2);
+    } catch (err) {
+      console.error(`Could not list the second account's channels: ${describeError(err)}`);
+    }
+  }
+
   console.log(
     "\nCopy the CHANNEL ID values into your GitHub Actions secrets:\n" +
-      "  - BUFFER_LINKEDIN_CHANNEL_ID  (the row with service linkedin)\n" +
-      "  - BUFFER_INSTAGRAM_CHANNEL_ID (the row with service instagram)"
+      "  - BUFFER_LINKEDIN_CHANNEL_ID   (service linkedin)\n" +
+      "  - BUFFER_INSTAGRAM_CHANNEL_ID  (service instagram)\n" +
+      "  - BUFFER_TWITTER_CHANNEL_ID    (service twitter / x, if present)\n" +
+      "  - BUFFER_FACEBOOK_CHANNEL_ID   (service facebook, if present)"
   );
 }
 
