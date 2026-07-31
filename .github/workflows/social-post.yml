@@ -41,6 +41,7 @@ on:
           - models
           - cloudinary
           - gemini-image
+          - tweet-test
         default: daily
 
 # The job commits data/ and logs/ back to the repo, so it needs write access.
@@ -132,6 +133,7 @@ jobs:
             models)       npx tsx src/ai/listModels.ts ;;
             gemini-image) npx tsx src/ai/probeImageModels.ts ;;
             cloudinary)   npx tsx src/buffer/testUpload.ts ;;
+            tweet-test)   npx tsx src/buffer/testTweet.ts ;;
             health)       npx tsx src/index.ts --health ;;
             week)         npx tsx src/index.ts --week ;;
             *)            npx tsx src/index.ts ;;
