@@ -36,8 +36,8 @@ Every morning at **9:00 AM India time**, with no human involved, it:
 3. checks its own work for quality and for being too similar to past posts
    (and rewrites it if the check fails),
 4. attaches a branded Servio image, and
-5. publishes to the **Servio LinkedIn Company Page** and the **Servio
-   Instagram** through Buffer (a posting service).
+5. publishes to the **Servio LinkedIn Company Page**, **Servio Instagram**, and
+   **X (Twitter)** through Buffer (a posting service).
 
 There is nothing to approve and nothing to click. Once the keys are set up, it
 just runs, every day.
@@ -71,13 +71,14 @@ just runs, every day.
  └────────┬─────────┘
           ▼
  ┌──────────────────┐
- │  Branded image    │  one of 6 Servio-branded images, uploaded to a
- │  (Cloudinary)     │  public web address so Instagram can use it
+ │  Image            │  a bespoke AI image (Cloudflare), or a branded
+ │  (→ Cloudinary)   │  fallback, hosted on Cloudinary for a public URL
  └────────┬─────────┘
           ▼
  ┌──────────────────┐      ┌─────────────────────────────┐
  │  Buffer           │ ───▶ │  LinkedIn Company Page       │
  │  (the publisher)  │ ───▶ │  Instagram (Business)        │
+ │                   │ ───▶ │  X / Twitter                 │
  └──────────────────┘      └─────────────────────────────┘
           ▼
    history saved (data/posts.json) + blog draft saved + optional
@@ -135,13 +136,15 @@ EXACTLY — capital letters and underscores matter.
 | `CLOUDINARY_CLOUD_NAME` | Image hosting (Instagram needs it) | Cloudinary dashboard, top of the page (SETUP.md section C) |
 | `CLOUDINARY_UPLOAD_PRESET` | Image hosting (goes with the one above) | Cloudinary → Settings → Upload → an "unsigned" preset (SETUP.md section C) |
 | `NOTIFY_WEBHOOK_URL` | A one-line message to your Slack or Discord after every run (success or failure) | Your Slack/Discord "incoming webhook" address — created inside Slack/Discord, both free |
+| `BUFFER_API_KEY_2` | A **second** Buffer account's key — used to post to **X**, which doesn't fit the first account's free 3-channel limit | Buffer (the second account) → publish.buffer.com/settings/api |
+| `BUFFER_TWITTER_CHANNEL_ID` | The X channel on that second account | Printed by `npm run channels` with `BUFFER_API_KEY_2` set |
 
 If the two Cloudinary values are missing, nothing breaks: posts go out without
 an image and Instagram is **skipped** (Instagram refuses image-less posts).
 
-There are a few more optional settings (like `DRY_RUN`) that are switches, not
-keys — they are all listed with plain-English explanations in
-[`.env.example`](.env.example).
+There are a few more optional settings (like `DRY_RUN`, or `TWITTER_POST_TIME`
+to give X its own daily time) that are switches, not keys — they are all listed
+with plain-English explanations in [`.env.example`](.env.example).
 
 ---
 
@@ -189,6 +192,7 @@ locally. But if you want to:
 | `npm start` | The real daily run — generates AND PUBLISHES today's posts. |
 | `npm run generate:week` | Generates 7 different post packs and schedules one for 9:00 IST on each of the next 7 days. |
 | `npm run images` | Regenerates the 6 branded images in `assets/pool/`. |
+| `npm test` | Runs the unit tests. Posts nothing. |
 
 **To rehearse without posting:** open `.env` and set `DRY_RUN=true`, then run
 `npm start`. See the next section.
@@ -263,7 +267,9 @@ morning, so you always get a window to look at it first:
 ```
 servio-social/
 ├─ .github/workflows/
-│  └─ social-post.yml        the daily schedule + manual-run buttons (GitHub Actions)
+│  ├─ social-post.yml        the daily schedule + manual-run buttons (GitHub Actions)
+│  ├─ ci.yml                 typecheck + lint + tests on every push / PR
+│  └─ secret-scan.yml        scans for accidentally-committed secrets
 ├─ assets/
 │  ├─ logo/                  Servio logos
 │  └─ pool/                  the 6 branded images posts rotate through
@@ -274,7 +280,6 @@ servio-social/
 │  ├─ SETUP.md               click-by-click account & key setup (for you)
 │  ├─ BUILD.md               the technical build brief (for developers)
 │  └─ ARCHITECTURE.md        design notes; the old V1 design kept as fallback
-├─ logs/                     one plain-text log file per run (the diary)
 ├─ scripts/
 │  └─ generate-brand-images.mjs   regenerates the assets/pool images
 ├─ src/                      the program itself
@@ -284,6 +289,7 @@ servio-social/
 │  ├─ ai/                    everything that talks to Gemini (topics, writing)
 │  ├─ buffer/                everything that talks to Buffer and Cloudinary
 │  └─ services/              helpers: logging, retries, quality checks, history
+├─ tests/                    unit tests (run with `npm test`)
 ├─ .env.example              every setting explained (copy to .env for local runs)
 └─ package.json              the `npm run ...` commands and the tool list
 ```
@@ -292,34 +298,33 @@ servio-social/
 
 ## How publishing works
 
-The system never talks to LinkedIn or Instagram directly. It hands each
+The system never talks to LinkedIn, Instagram, or X directly. It hands each
 finished post to **Buffer**, a well-established posting service, and Buffer
-does the platform-specific work. One Buffer key covers every connected
-channel.
+does the platform-specific work.
 
-Two publishing styles are used:
+By default it uses the **review window**: each post is **scheduled in Buffer for
+9:00 AM IST**, so it waits there for you to read, edit, or delete first, then
+publishes on its own. LinkedIn and Instagram go through the main Buffer account;
+**X goes through a second Buffer account** (to fit past Buffer's free 3-channel
+limit) on its own 9:00 AM IST slot. Set `REVIEW_WINDOW=false` to publish
+immediately with no waiting window instead.
 
-- **Daily run:** the post is added to Buffer's queue for immediate publishing
-  ("post this now").
-- **Week run (`--week` / mode `week`):** each of the 7 posts is scheduled for
-  an exact moment — 9:00 AM IST on its day — and Buffer holds them and
-  releases them on time.
-
-LinkedIn is published first, then (2 seconds later) Instagram. The two are
-independent on purpose: if one fails, the other still goes out.
+Posts go out one at a time — LinkedIn, Instagram, then X — each independently,
+so if one fails the others still go out.
 
 ---
 
 ## The image pipeline
 
-1. **The pool:** `assets/pool/` holds 6 abstract Servio-branded images
-   (blue-and-white, no text). Each day one is picked based on the date, so the
-   look rotates automatically. (`npm run images` regenerates them.)
+1. **Generation:** each day a bespoke image is generated from the post's image
+   prompt via **Cloudflare Workers AI** (free), with **fal.ai** (paid, optional)
+   and the 6 branded images in `assets/pool/` as fallbacks — the first source
+   that works wins. (`npm run images` regenerates the pool.)
 2. **Hosting:** Buffer only accepts images that live at a public web address —
    it cannot take a file directly. So the chosen image is uploaded to
    **Cloudinary** (a free image-hosting service), which returns a public
    address.
-3. **Attaching:** that address is attached to both posts, with alt text (the
+3. **Attaching:** that address is attached to the posts, with alt text (the
    image description used by screen readers).
 
 If Cloudinary isn't set up, or the upload fails even after retries: LinkedIn
@@ -433,12 +438,9 @@ text is saved under `logs/`.
 
 ## Future improvements (not built yet)
 
-- **X (Twitter) and Facebook** — the short X version of every post is already
-  written and saved daily. Publishing it is: connect the channel in Buffer,
-  add its channel ID, small code addition.
-- **AI-generated images** — the system already writes an image *description*
-  for every post and the image code has a plug-in point for a generator; the
-  pool images are the current stand-in.
+- **Facebook** — the pipeline can already publish through a second Buffer
+  account (that's how X posts go out), so Facebook just needs a connected Buffer
+  Page and its channel ID. (X/Twitter is already live.)
 - **The blog drafts** — one draft article per day accumulates in
   `data/blog-drafts/`. They could be reviewed and published on the Servio
   website.
