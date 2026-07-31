@@ -28,7 +28,16 @@ async function main(): Promise<void> {
     latest?.twitter.text ??
     "Testing our automated posting — we build simple, fast websites for small businesses. https://servio-0.web.app";
 
-  logger.info(`x-test: posting this tweet to X now, via account #2${env.DRY_RUN ? " [DRY RUN — nothing sent]" : ""}:`);
+  // Schedule ~4 minutes out (a concrete time, like the real daily flow) rather
+  // than "add to queue" — a queued post waits for the channel's next queue slot
+  // and can sit unposted if no schedule is set. A dueAt forces Buffer to publish
+  // at that time, which is what actually verifies X goes live.
+  const dueAtIso = new Date(Date.now() + 4 * 60 * 1000).toISOString();
+
+  logger.info(
+    `x-test: scheduling this tweet on X for ${dueAtIso} (~4 min), via account #2` +
+      `${env.DRY_RUN ? " [DRY RUN — nothing sent]" : ""}:`
+  );
   logger.info(text);
 
   const result = await publishPost({
@@ -36,12 +45,13 @@ async function main(): Promise<void> {
     channelId: env.BUFFER_TWITTER_CHANNEL_ID,
     text,
     apiKey: env.BUFFER_API_KEY_2,
+    dueAtIso,
   });
 
   if (result.ok) {
     logger.info(
-      `x-test: SUCCESS — Buffer accepted the tweet (post id: ${result.postId ?? "queued"}). ` +
-        "Check your X account / Buffer queue to see it."
+      `x-test: SUCCESS — Buffer scheduled the tweet (post id: ${result.postId ?? "?"}, ` +
+        `dueAt ${result.dueAt ?? dueAtIso}). It should appear on X at that time — watch the account.`
     );
   } else {
     logger.error(`x-test: FAILED — Buffer rejected it: ${result.error}`);
