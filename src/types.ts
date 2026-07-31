@@ -82,7 +82,7 @@ export interface BufferChannel {
   service: BufferService;
 }
 
-export type PublishTarget = "linkedin" | "instagram";
+export type PublishTarget = "linkedin" | "instagram" | "twitter" | "facebook";
 
 export interface PublishRequest {
   target: PublishTarget;
@@ -92,6 +92,12 @@ export interface PublishRequest {
   image?: HostedImage;
   /** When set, Buffer schedules for this exact UTC instant; otherwise publish via queue now. */
   dueAtIso?: string;
+  /**
+   * Which Buffer account's API key to authenticate with. Defaults to
+   * env.BUFFER_API_KEY when omitted; channels living on a second Buffer account
+   * (e.g. X / Facebook past the free 3-channel limit) pass env.BUFFER_API_KEY_2.
+   */
+  apiKey?: string;
 }
 
 export interface PublishResult {
@@ -125,7 +131,12 @@ export interface PostRecord {
     postId?: string;
     status: "published" | "scheduled" | "failed" | "skipped" | "dry-run";
   };
-  twitter: { text: string; hashtags: string[] };
+  twitter: {
+    text: string;
+    hashtags: string[];
+    postId?: string;
+    status?: "published" | "scheduled" | "failed" | "skipped" | "dry-run";
+  };
   imagePrompt: string;
   /** Public image URL used, if any. */
   imageUrl?: string;

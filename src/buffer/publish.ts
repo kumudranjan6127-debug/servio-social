@@ -159,7 +159,10 @@ export async function publishPost(req: PublishRequest): Promise<PublishResult> {
         { query: document },
         {
           headers: {
-            Authorization: `Bearer ${env.BUFFER_API_KEY}`,
+            // Per-request key so channels on a second Buffer account (X /
+            // Facebook) authenticate with BUFFER_API_KEY_2; defaults to the
+            // primary key for LinkedIn / Instagram.
+            Authorization: `Bearer ${req.apiKey ?? env.BUFFER_API_KEY}`,
             "Content-Type": "application/json",
           },
           timeout: TIMEOUT_MS,

@@ -25,7 +25,7 @@ import { getChannels } from "./buffer/getChannels";
 import { nextNineAmIstIso, nextUpcomingNineAmIstIso, publishPost } from "./buffer/publish";
 import { hostImage } from "./buffer/uploadMedia";
 import { pickLocalImage } from "./ai/generateImage";
-import { env, imageHostingConfigured } from "./config/env";
+import { env, imageHostingConfigured, twitterConfigured, facebookConfigured } from "./config/env";
 import {
   hasRecordForDate,
   loadHistory,
@@ -265,7 +265,8 @@ async function publishTo(
   channelId: string,
   post: PlatformPost,
   image: HostedImage | undefined,
-  dueAtIso: string | undefined
+  dueAtIso: string | undefined,
+  apiKey?: string
 ): Promise<PlatformOutcome> {
   try {
     const result = await publishPost({
@@ -274,6 +275,7 @@ async function publishTo(
       text: composeText(post),
       image,
       dueAtIso,
+      apiKey,
     });
     if (!result.ok) {
       const reason = result.error ?? "unknown Buffer error";
@@ -314,7 +316,12 @@ async function publishBoth(
   content: GeneratedContent,
   hosted: HostedImage | null,
   dueAtIso: string | undefined
-): Promise<{ linkedin: PlatformOutcome; instagram: PlatformOutcome }> {
+): Promise<{
+  linkedin: PlatformOutcome;
+  instagram: PlatformOutcome;
+  twitter: PlatformOutcome;
+  facebook: PlatformOutcome;
+}> {
   const image = hosted ?? undefined;
   const linkedin = await publishTo(
     "linkedin",
@@ -341,7 +348,46 @@ async function publishBoth(
       dueAtIso
     );
   }
-  return { linkedin, instagram };
+
+  // X / Twitter — bonus platform, published via the SECOND Buffer account
+  // (BUFFER_API_KEY_2). Skipped (never failed) when not configured. The tweet
+  // already carries its own hashtags + link, so it is sent as-is (empty hashtag
+  // list → no append) to stay within X's 280-character limit.
+  let twitter: PlatformOutcome;
+  if (!twitterConfigured || !env.BUFFER_TWITTER_CHANNEL_ID || !env.BUFFER_API_KEY_2) {
+    twitter = { status: "skipped", detail: "X not configured (BUFFER_API_KEY_2 / BUFFER_TWITTER_CHANNEL_ID)" };
+    logger.info(`twitter: skipped — ${twitter.detail}`);
+  } else {
+    await sleep(INTER_PUBLISH_SLEEP_MS);
+    twitter = await publishTo(
+      "twitter",
+      env.BUFFER_TWITTER_CHANNEL_ID,
+      { text: content.twitter.text, hashtags: [] },
+      image,
+      dueAtIso,
+      env.BUFFER_API_KEY_2
+    );
+  }
+
+  // Facebook — bonus platform (also via the second account); reuses the LinkedIn
+  // copy (long-form with a clickable link suits a FB Page). Skipped when unset.
+  let facebook: PlatformOutcome;
+  if (!facebookConfigured || !env.BUFFER_FACEBOOK_CHANNEL_ID || !env.BUFFER_API_KEY_2) {
+    facebook = { status: "skipped", detail: "Facebook not configured (BUFFER_FACEBOOK_CHANNEL_ID)" };
+    logger.info(`facebook: skipped — ${facebook.detail}`);
+  } else {
+    await sleep(INTER_PUBLISH_SLEEP_MS);
+    facebook = await publishTo(
+      "facebook",
+      env.BUFFER_FACEBOOK_CHANNEL_ID,
+      content.linkedin,
+      image,
+      dueAtIso,
+      env.BUFFER_API_KEY_2
+    );
+  }
+
+  return { linkedin, instagram, twitter, facebook };
 }
 
 // ---------------------------------------------------------------------------
@@ -354,6 +400,7 @@ function buildRecord(
   content: GeneratedContent,
   linkedin: PlatformOutcome,
   instagram: PlatformOutcome,
+  twitter: PlatformOutcome,
   hosted: HostedImage | null
 ): PostRecord {
   const record: PostRecord = {
@@ -370,12 +417,17 @@ function buildRecord(
       hashtags: content.instagram.hashtags,
       status: instagram.status,
     },
-    twitter: { text: content.twitter.text, hashtags: content.twitter.hashtags },
+    twitter: {
+      text: content.twitter.text,
+      hashtags: content.twitter.hashtags,
+      status: twitter.status,
+    },
     imagePrompt: content.imagePrompt,
     createdAtIso: new Date().toISOString(),
   };
   if (linkedin.postId !== undefined) record.linkedin.postId = linkedin.postId;
   if (instagram.postId !== undefined) record.instagram.postId = instagram.postId;
+  if (twitter.postId !== undefined) record.twitter.postId = twitter.postId;
   if (hosted !== null) record.imageUrl = hosted.url;
   return record;
 }
@@ -391,6 +443,8 @@ function dailySummaryMd(
   content: GeneratedContent,
   linkedin: PlatformOutcome,
   instagram: PlatformOutcome,
+  twitter: PlatformOutcome,
+  facebook: PlatformOutcome,
   hosted: HostedImage | null,
   draftPath: string
 ): string {
@@ -408,6 +462,8 @@ function dailySummaryMd(
     "| --- | --- | --- | --- |",
     outcomeRow("LinkedIn", linkedin),
     outcomeRow("Instagram", instagram),
+    outcomeRow("X / Twitter", twitter),
+    outcomeRow("Facebook", facebook),
     "",
     `**Image:** ${hosted ? hosted.url : "none"}`,
     "",
@@ -461,17 +517,19 @@ async function runDaily(): Promise<number> {
     hosted = await prepareImage(content);
   }
 
-  const { linkedin, instagram } = await publishBoth(content, hosted, dueAtIso);
+  const { linkedin, instagram, twitter, facebook } = await publishBoth(content, hosted, dueAtIso);
 
   if (env.DRY_RUN) {
     logger.info("[dry-run] skipping saveRecord — data/posts.json stays untouched");
   } else {
-    saveRecord(buildRecord(postDate, content, linkedin, instagram, hosted));
+    saveRecord(buildRecord(postDate, content, linkedin, instagram, twitter, hosted));
   }
   const draftPath = saveBlogDraft(postDate, content.topic, content.blogDraft);
 
   const bothFailed = linkedin.status === "failed" && instagram.status === "failed";
-  const statusLine = `LinkedIn ${linkedin.status}, Instagram ${instagram.status}`;
+  const statusLine =
+    `LinkedIn ${linkedin.status}, Instagram ${instagram.status}, ` +
+    `X ${twitter.status}, Facebook ${facebook.status}`;
   const verb = env.REVIEW_WINDOW ? "scheduled for" : "posted";
   await notifyWebhook(
     bothFailed
@@ -480,7 +538,9 @@ async function runDaily(): Promise<number> {
           (env.REVIEW_WINDOW ? " (review/edit/delete in Buffer before then)" : "")
   );
 
-  logger.summary(dailySummaryMd(postDate, content, linkedin, instagram, hosted, draftPath));
+  logger.summary(
+    dailySummaryMd(postDate, content, linkedin, instagram, twitter, facebook, hosted, draftPath)
+  );
   return bothFailed ? 1 : 0;
 }
 
@@ -537,9 +597,9 @@ async function runWeek(): Promise<number> {
       hosted = await prepareImage(content);
     }
 
-    const { linkedin, instagram } = await publishBoth(content, hosted, dueAtIso);
+    const { linkedin, instagram, twitter } = await publishBoth(content, hosted, dueAtIso);
 
-    const record = buildRecord(date, content, linkedin, instagram, hosted);
+    const record = buildRecord(date, content, linkedin, instagram, twitter, hosted);
     if (env.DRY_RUN) {
       logger.info("[dry-run] skipping saveRecord for this day");
     } else {
