@@ -30,8 +30,9 @@ const IMAGE_TIMEOUT_MS = 120_000;
 function imagePromptFor(content: GeneratedContent): string {
   return content.imagePrompt.trim().length > 0
     ? content.imagePrompt.trim()
-    : `Modern minimal professional brand graphic about ${content.topic}, ` +
-        "blue and white palette, clean, no text, no faces";
+    : `Premium 3D glassmorphism brand graphic about ${content.topic}, ` +
+        "translucent frosted glass, glossy geometric shapes, vibrant blue-to-violet " +
+        "gradients, depth and studio lighting, no text, no faces";
 }
 
 /** Writes downloaded image bytes to a temp file and returns the LocalImage. */
