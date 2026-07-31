@@ -23,6 +23,13 @@ const EnvSchema = z.object({
   BUFFER_LINKEDIN_CHANNEL_ID: z.string().trim().min(1, "BUFFER_LINKEDIN_CHANNEL_ID is required"),
   BUFFER_INSTAGRAM_CHANNEL_ID: z.string().trim().min(1, "BUFFER_INSTAGRAM_CHANNEL_ID is required"),
 
+  // --- Optional: a SECOND Buffer account, for channels that don't fit the first
+  // account's free 3-channel limit (e.g. X / Facebook). When BUFFER_API_KEY_2 and
+  // the matching channel id are both set, that platform publishes via this key. ---
+  BUFFER_API_KEY_2: z.string().trim().optional(),
+  BUFFER_TWITTER_CHANNEL_ID: z.string().trim().optional(),
+  BUFFER_FACEBOOK_CHANNEL_ID: z.string().trim().optional(),
+
   // --- Optional: image hosting (Instagram needs a public image URL) ---
   CLOUDINARY_CLOUD_NAME: z.string().trim().optional(),
   CLOUDINARY_UPLOAD_PRESET: z.string().trim().optional(),
@@ -118,6 +125,16 @@ export const cloudflareImageConfigured: boolean = Boolean(
 
 /** True when fal.ai (paid image generation) is configured. */
 export const falImageConfigured: boolean = Boolean(env.FAL_KEY);
+
+/** True when X/Twitter is configured (second Buffer account key + channel id). */
+export const twitterConfigured: boolean = Boolean(
+  env.BUFFER_API_KEY_2 && env.BUFFER_TWITTER_CHANNEL_ID
+);
+
+/** True when Facebook is configured (second Buffer account key + channel id). */
+export const facebookConfigured: boolean = Boolean(
+  env.BUFFER_API_KEY_2 && env.BUFFER_FACEBOOK_CHANNEL_ID
+);
 
 /** True when ANY AI image generator is configured (Cloudflare preferred, then fal). */
 export const aiImageConfigured: boolean = cloudflareImageConfigured || falImageConfigured;
