@@ -29,6 +29,16 @@ const EnvSchema = z.object({
   BUFFER_API_KEY_2: z.string().trim().optional(),
   BUFFER_TWITTER_CHANNEL_ID: z.string().trim().optional(),
   BUFFER_FACEBOOK_CHANNEL_ID: z.string().trim().optional(),
+  /**
+   * X/Twitter's own daily post time in IST, HH:MM (24h). Default "09:00".
+   * Lets X schedule independently of LinkedIn/Instagram. Invalid values fall
+   * back to 09:00.
+   */
+  TWITTER_POST_TIME: z
+    .string()
+    .trim()
+    .optional()
+    .transform((v) => (v && /^\d{1,2}:\d{2}$/.test(v) ? v : "09:00")),
 
   // --- Optional: image hosting (Instagram needs a public image URL) ---
   CLOUDINARY_CLOUD_NAME: z.string().trim().optional(),
