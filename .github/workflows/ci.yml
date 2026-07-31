@@ -1,6 +1,6 @@
-# Continuous integration — typechecks and lints on every push to main and every
-# pull request. This is the gate the publish workflow can't be: it validates
-# code changes (including Dependabot bumps) BEFORE they reach main.
+# Continuous integration — typechecks, lints, and tests on every push to main
+# and every pull request. This is the gate the publish workflow can't be: it
+# validates code changes (including Dependabot bumps) BEFORE they reach main.
 name: CI
 
 on:
@@ -28,3 +28,5 @@ jobs:
         run: npm run typecheck
       - name: Lint
         run: npm run lint
+      - name: Test
+        run: npm test
