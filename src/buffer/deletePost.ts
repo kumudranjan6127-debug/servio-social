@@ -20,12 +20,13 @@ const Env = z.object({
 
 async function main(): Promise<void> {
   const env = Env.parse(process.env);
-  // deletePost returns DeletePostPayload; __typename is always selectable and
-  // the mutation still executes, so this both deletes and confirms.
+  // deletePost returns a DeletePostPayload union: a success arm or a
+  // *MutationError arm. Select __typename + the error message so a refusal is
+  // explained rather than opaque.
   const doc =
     "mutation Delete { deletePost(input: { id: " +
     JSON.stringify(env.DELETE_POST_ID) +
-    " }) { __typename } }";
+    " }) { __typename ... on VoidMutationError { message } } }";
 
   console.log(`deletePost: deleting ${env.DELETE_POST_ID} via account #2 ...`);
   const res = await axios.post(
@@ -39,12 +40,20 @@ async function main(): Promise<void> {
       timeout: TIMEOUT_MS,
     }
   );
-  const data = res.data as { errors?: { message: string }[] };
+  const data = res.data as {
+    errors?: { message: string }[];
+    data?: { deletePost?: { __typename?: string; message?: string } };
+  };
   if (data.errors && data.errors.length > 0) {
-    console.error(`deletePost: Buffer rejected it — ${JSON.stringify(data.errors)}`);
+    console.error(`deletePost: GraphQL errors — ${JSON.stringify(data.errors)}`);
     process.exit(1);
   }
-  console.log(`deletePost: SUCCESS — deleted ${env.DELETE_POST_ID}. Response: ${JSON.stringify(res.data)}`);
+  const payload = data.data?.deletePost;
+  if (payload?.__typename && /error/i.test(payload.__typename)) {
+    console.error(`deletePost: Buffer refused — ${payload.message ?? payload.__typename}`);
+    process.exit(1);
+  }
+  console.log(`deletePost: SUCCESS (${payload?.__typename ?? "?"}) — deleted ${env.DELETE_POST_ID}.`);
 }
 
 main().catch((e: unknown) => {
