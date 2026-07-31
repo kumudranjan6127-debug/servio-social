@@ -247,3 +247,47 @@ export function nextUpcomingNineAmIstIso(): string {
   tomorrow.setUTCDate(tomorrow.getUTCDate() + 1);
   return tomorrow.toISOString();
 }
+
+/**
+ * UTC ISO of the SOONEST upcoming HH:MM in IST (Asia/Kolkata): today's
+ * occurrence if it has not passed yet, otherwise tomorrow's. Generalises
+ * nextUpcomingNineAmIstIso to any time — used to schedule X/Twitter on its own
+ * daily slot, independent of LinkedIn/Instagram. The instant is built directly
+ * in the +05:30 offset, so no UTC arithmetic is needed.
+ */
+export function nextUpcomingIstTimeIso(hour: number, minute: number): string {
+  const now = new Date();
+  const istToday = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Kolkata",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).format(now);
+  const hh = String(hour).padStart(2, "0");
+  const mm = String(minute).padStart(2, "0");
+  const todayAt = new Date(`${istToday}T${hh}:${mm}:00+05:30`);
+  if (now.getTime() < todayAt.getTime()) {
+    return todayAt.toISOString();
+  }
+  const tomorrow = new Date(todayAt);
+  tomorrow.setUTCDate(tomorrow.getUTCDate() + 1);
+  return tomorrow.toISOString();
+}
+
+/**
+ * UTC ISO of HH:MM IST on the same IST calendar day as `dueAtIso` (a 09:00-IST
+ * instant, whose UTC date equals the IST date). When `dueAtIso` is absent
+ * (immediate mode), falls back to the next upcoming HH:MM IST — so X always
+ * lands on a concrete daily time rather than sitting in Buffer's queue.
+ */
+export function istTimeOnDayOf(
+  dueAtIso: string | undefined,
+  hour: number,
+  minute: number
+): string {
+  if (!dueAtIso) return nextUpcomingIstTimeIso(hour, minute);
+  const date = dueAtIso.slice(0, 10);
+  const hh = String(hour).padStart(2, "0");
+  const mm = String(minute).padStart(2, "0");
+  return new Date(`${date}T${hh}:${mm}:00+05:30`).toISOString();
+}

@@ -22,7 +22,12 @@ import { normalizeHashtags } from "./ai/generateHashtags";
 import { refineImagePrompt } from "./ai/generateImagePrompt";
 import { geminiCall, generateContent } from "./ai/generatePost";
 import { getChannels } from "./buffer/getChannels";
-import { nextNineAmIstIso, nextUpcomingNineAmIstIso, publishPost } from "./buffer/publish";
+import {
+  istTimeOnDayOf,
+  nextNineAmIstIso,
+  nextUpcomingNineAmIstIso,
+  publishPost,
+} from "./buffer/publish";
 import { hostImage } from "./buffer/uploadMedia";
 import { pickLocalImage } from "./ai/generateImage";
 import { env, imageHostingConfigured, twitterConfigured, facebookConfigured } from "./config/env";
@@ -358,13 +363,19 @@ async function publishBoth(
     twitter = { status: "skipped", detail: "X not configured (BUFFER_API_KEY_2 / BUFFER_TWITTER_CHANNEL_ID)" };
     logger.info(`twitter: skipped — ${twitter.detail}`);
   } else {
+    // X posts on its OWN daily IST slot (TWITTER_POST_TIME, default 09:00),
+    // always as a scheduled post so it reliably publishes at that time instead
+    // of sitting in Buffer's queue.
+    const [thh, tmm] = env.TWITTER_POST_TIME.split(":");
+    const twitterDueAtIso = istTimeOnDayOf(dueAtIso, Number(thh), Number(tmm));
     await sleep(INTER_PUBLISH_SLEEP_MS);
+    logger.info(`twitter: scheduling for ${twitterDueAtIso} (X slot ${env.TWITTER_POST_TIME} IST)`);
     twitter = await publishTo(
       "twitter",
       env.BUFFER_TWITTER_CHANNEL_ID,
       { text: content.twitter.text, hashtags: [] },
       image,
-      dueAtIso,
+      twitterDueAtIso,
       env.BUFFER_API_KEY_2
     );
   }
