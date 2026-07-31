@@ -11,17 +11,22 @@
 import type { GeneratedContent } from "../types";
 
 /**
- * Brand style constants appended to every image prompt. Deliberately steers
- * toward ABSTRACT, icon/shape-based art and hard-forbids text and UI screens:
- * the free/fast image models (e.g. FLUX-schnell) render any on-image text as
- * gibberish, so the reliable fix is to keep text out of the picture entirely.
+ * Brand style constants appended to every image prompt. Steers toward a premium
+ * 3D glassmorphism look — vibrant gradients, translucent frosted glass, depth and
+ * studio lighting — while hard-forbidding text, UI writing and photorealistic
+ * faces: the free/fast image models (e.g. FLUX-schnell) render any on-image text
+ * as gibberish and faces poorly, so the reliable fix is to keep both out entirely.
  */
 const IMAGE_STYLE =
-  "Abstract minimalist tech illustration built from simple geometric shapes, icons and " +
-  "symbols — NOT a literal screenshot or device mockup. Clean flat vector composition, " +
-  "generous white space, blue (#1E4FFF family) and white palette, professional and calm. " +
-  "ABSOLUTELY NO TEXT, no words, no letters, no numbers, no user-interface mockups, no " +
-  "screens with writing, no photorealistic faces, no logos, no clutter, no watermarks";
+  "Premium 3D-rendered concept art with rich glassmorphism: translucent frosted-glass " +
+  "panels, layered transparency, soft blur, glossy reflections and inner glow, with real " +
+  "depth and dimensional studio lighting. Vibrant saturated gradients — electric blue " +
+  "(#1E4FFF) flowing into cyan, indigo, violet and magenta — over a clean soft-lit " +
+  "background with gentle bloom and a shallow depth of field. Floating glossy geometric " +
+  "shapes, frosted-glass cards, glowing orbs and abstract nodes and connectors that suggest " +
+  "sleek modern web technology and digital craft. Polished, high-detail, dimensional, " +
+  "energetic yet professional. NO TEXT, no words, no letters, no numbers, no readable labels " +
+  "or UI writing, no photorealistic human faces, no logos or brand marks, no watermarks";
 
 /**
  * Refine the generated image prompt into the final, brand-safe prompt.
