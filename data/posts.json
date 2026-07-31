@@ -341,6 +341,48 @@
       "imagePrompt": "Modern minimal startup style graphic with a blue and white palette. A clean split screen illustration showing a frozen spinning wheel on a cluttered left side, contrasted with a smooth green checkmark and fast calendar booking interface on the right side. Modern typography, simple geometric shapes, professional and high trust. Abstract minimalist tech illustration built from simple geometric shapes, icons and symbols — NOT a literal screenshot or device mockup. Clean flat vector composition, generous white space, blue (#1E4FFF family) and white palette, professional and calm. ABSOLUTELY NO TEXT, no words, no letters, no numbers, no user-interface mockups, no screens with writing, no photorealistic faces, no logos, no clutter, no watermarks.",
       "createdAtIso": "2026-07-30T03:39:38.635Z",
       "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1785382775/zawwuf2v7edctqm0rqiz.jpg"
+    },
+    {
+      "date": "2026-08-01",
+      "topic": "Firebase",
+      "angle": "How to instantly block taken time slots on your website so two customers never double-book the same appointment.",
+      "linkedin": {
+        "text": "Imagine two clients showing up at your dental clinic at 4:00 PM for the exact same appointment time. 📅\n\nIt is awkward, embarrassing, and hurts your reputation. Double-booking usually happens because two people view your website at the same time, see an open time slot, and both tap to book it.\n\nWith smart website design, the moment someone picks a time slot, it grays out immediately on everyone else's phone—no screen refresh needed. If two people click at the exact same second, the system handles it in milliseconds, accepting only the first request and keeping your schedule clean.\n\nYou can even hold a slot temporarily for a few minutes while a customer fills out payment details, then send an instant text confirmation.\n\nNo double bookings. No frantic phone calls.\n\nSee how Servio builds websites that keep your daily calendar running smoothly:\nhttps://servio-0.web.app?utm_source=linkedin&utm_medium=social&utm_campaign=2026-07-31-firebase",
+        "hashtags": [
+          "#Servio",
+          "#SmallBusiness",
+          "#AppointmentBooking",
+          "#LocalBusiness",
+          "#WebDesign"
+        ],
+        "status": "scheduled",
+        "postId": "6a6c1d7ebb30a3674700c3b2"
+      },
+      "instagram": {
+        "text": "Ever had two clients show up at your salon for the exact same 3 PM spot? 💇‍♂️\n\nIt is super stressful trying to explain the mix-up while someone sits waiting in your chair.\n\nWhen your website handles bookings properly, that never happens.\n\nHere is how it works:\n• The second someone selects a time slot, it turns grey on every other screen instantly.\n• If two people tap the same button at the exact same millisecond, only the first one gets accepted.\n• The site holds the spot for a few minutes while they enter payment details.\n• An SMS confirmation sends instantly and updates your calendar.\n\nNo more double-bookings and zero awkward apologies. ✨\n\nImagine having a clean, stress-free schedule every single day. See what a modern website can do for your local business—link in bio! 📲",
+        "hashtags": [
+          "#Servio",
+          "#SmallBusinessIndia",
+          "#SalonOwner",
+          "#ClinicManagement",
+          "#BusinessGrowth",
+          "#WebsiteTips",
+          "#LocalService",
+          "#DigitalIndia",
+          "#CustomerExperience"
+        ],
+        "status": "scheduled",
+        "postId": "6a6c1d80bb30a3674700c3dc"
+      },
+      "twitter": {
+        "text": "Stop double-booking clients. When a customer picks a time slot, it grays out instantly on every phone screen. Zero mix-ups.\n\nSee how Servio helps local shops:\nhttps://servio-0.web.app?utm_source=twitter&utm_medium=social&utm_campaign=2026-07-31-firebase #Servio",
+        "hashtags": [
+          "#Servio"
+        ]
+      },
+      "imagePrompt": "A clean and modern minimal graphic featuring two floating appointment cards, one turning active blue with a subtle checkmark and the other instantly graying out with a neat lock icon, set against a crisp white background with bold typography reading 'Zero Double Bookings'. Abstract minimalist tech illustration built from simple geometric shapes, icons and symbols — NOT a literal screenshot or device mockup. Clean flat vector composition, generous white space, blue (#1E4FFF family) and white palette, professional and calm. ABSOLUTELY NO TEXT, no words, no letters, no numbers, no user-interface mockups, no screens with writing, no photorealistic faces, no logos, no clutter, no watermarks.",
+      "createdAtIso": "2026-07-31T03:58:56.919Z",
+      "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1785470333/kizublz5f2ml6nyvqslf.jpg"
     }
   ]
 }
