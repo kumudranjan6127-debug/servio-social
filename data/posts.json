@@ -519,6 +519,52 @@
       "imagePrompt": "Modern minimal startup style graphic in a clean blue and white palette. Features an illustration of a laptop connected to a secure cloud lock icon, representing safe offsite file storage for small business photos and price lists. Clean visual layout with typography reading 'Keep Your Business Data Safe'. Premium 3D-rendered concept art with rich glassmorphism: translucent frosted-glass panels, layered transparency, soft blur, glossy reflections and inner glow, with real depth and dimensional studio lighting. Vibrant saturated gradients — electric blue (#1E4FFF) flowing into cyan, indigo, violet and magenta — over a clean soft-lit background with gentle bloom and a shallow depth of field. Floating glossy geometric shapes, frosted-glass cards, glowing orbs and abstract nodes and connectors that suggest sleek modern web technology and digital craft. Polished, high-detail, dimensional, energetic yet professional. NO TEXT, no words, no letters, no numbers, no readable labels or UI writing, no photorealistic human faces, no logos or brand marks, no watermarks.",
       "createdAtIso": "2026-08-03T04:04:27.166Z",
       "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1785729861/tz7nwidbeal1cdmwucsw.jpg"
+    },
+    {
+      "date": "2026-08-05",
+      "topic": "Open Source",
+      "angle": "Why 'free' website software usually ends up costing you more in unexpected developer fees every time something breaks.",
+      "linkedin": {
+        "text": "You set up a website using \"free\" software to save money, but now every few months something breaks and you have to hire someone to fix it.\n\nIt usually starts with small issues. A simple button stops working after a background update. Or worse, the whole site goes blank on a busy weekend.\n\nBecause free software has no official customer support team to call, you end up paying private technicians high hourly rates just to figure out why your booking form crashed or why photos disappeared.\n\nOn top of that, automated web bots constantly scan free software for weak spots, leading to unexpected cleanup bills when your site gets targeted.\n\nFree software sounds great at first, but surprise repair bills add up quickly.\n\nAt Servio, we build and manage simple, solid websites so you never have to worry about unexpected repair costs or technical headaches.\n\nSee how a hassle-free website works for your business: https://servio-0.web.app?utm_source=linkedin&utm_medium=social&utm_campaign=2026-08-04-open-source",
+        "hashtags": [
+          "#Servio",
+          "#SmallBusinessIndia",
+          "#Websites",
+          "#BusinessOwner",
+          "#WebsiteMaintenance"
+        ],
+        "status": "scheduled",
+        "postId": "6a71605281392595a3cdc763"
+      },
+      "instagram": {
+        "text": "Ever felt happy using \"free\" website software, only to get hit with a heavy repair bill when the site randomly crashed? 🛠️\n\nMany salon, cafe, and boutique owners start with free software to save cash. But here is what usually happens behind the scenes:\n\nWhen small automatic updates run, they often fight with each other. Suddenly, your main menu vanishes or your contact form stops sending messages. 📲\n\nSince free software has no helpline, you have to pay a technician by the hour to rescue your page. 💸\n\nAnd because everyone can see how free software is built, automated bots target unmanaged sites, causing expensive cleanup bills.\n\nAt Servio, we build and look after clean, reliable websites so you never deal with surprise breakdowns.\n\nCheck our link in bio to see simple website ideas for your business! 💻",
+        "hashtags": [
+          "#Servio",
+          "#SmallBusinessIndia",
+          "#ShopOwner",
+          "#BoutiqueOwner",
+          "#CafeOwner",
+          "#ClinicOwner",
+          "#BusinessGrowth",
+          "#IndianBusiness",
+          "#WebsiteTips",
+          "#DigitalShop"
+        ],
+        "status": "scheduled",
+        "postId": "6a716054d702c24ecb216faf"
+      },
+      "twitter": {
+        "text": "Think 'free' website software saves money? When updates clash or bots hit your site, you pay heavy tech fees to fix it. Get a smooth site without surprise costs: https://servio-0.web.app?utm_source=twitter&utm_medium=social&utm_campaign=2026-08-04-open-source #Servio #Websites",
+        "hashtags": [
+          "#Servio",
+          "#Websites"
+        ],
+        "status": "scheduled",
+        "postId": "6a7160573e02cab47710de99"
+      },
+      "imagePrompt": "A modern minimal social media graphic featuring clean typography on a crisp white background with soft blue accents, displaying the text 'The Hidden Cost of Free Websites' alongside a sleek, simple laptop graphic in a modern startup style. Premium 3D-rendered concept art with rich glassmorphism: translucent frosted-glass panels, layered transparency, soft blur, glossy reflections and inner glow, with real depth and dimensional studio lighting. Vibrant saturated gradients — electric blue (#1E4FFF) flowing into cyan, indigo, violet and magenta — over a clean soft-lit background with gentle bloom and a shallow depth of field. Floating glossy geometric shapes, frosted-glass cards, glowing orbs and abstract nodes and connectors that suggest sleek modern web technology and digital craft. Polished, high-detail, dimensional, energetic yet professional. NO TEXT, no words, no letters, no numbers, no readable labels or UI writing, no photorealistic human faces, no logos or brand marks, no watermarks.",
+      "createdAtIso": "2026-08-04T03:45:27.301Z",
+      "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1785815121/xvkg1cpk4s06pxhoerdm.jpg"
     }
   ]
 }
