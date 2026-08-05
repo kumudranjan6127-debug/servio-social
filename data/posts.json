@@ -565,6 +565,52 @@
       "imagePrompt": "A modern minimal social media graphic featuring clean typography on a crisp white background with soft blue accents, displaying the text 'The Hidden Cost of Free Websites' alongside a sleek, simple laptop graphic in a modern startup style. Premium 3D-rendered concept art with rich glassmorphism: translucent frosted-glass panels, layered transparency, soft blur, glossy reflections and inner glow, with real depth and dimensional studio lighting. Vibrant saturated gradients — electric blue (#1E4FFF) flowing into cyan, indigo, violet and magenta — over a clean soft-lit background with gentle bloom and a shallow depth of field. Floating glossy geometric shapes, frosted-glass cards, glowing orbs and abstract nodes and connectors that suggest sleek modern web technology and digital craft. Polished, high-detail, dimensional, energetic yet professional. NO TEXT, no words, no letters, no numbers, no readable labels or UI writing, no photorealistic human faces, no logos or brand marks, no watermarks.",
       "createdAtIso": "2026-08-04T03:45:27.301Z",
       "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1785815121/xvkg1cpk4s06pxhoerdm.jpg"
+    },
+    {
+      "date": "2026-08-06",
+      "topic": "GitHub",
+      "angle": "How to keep a master copy of your website safe so a disappearing designer can never lock you out or make you pay twice.",
+      "linkedin": {
+        "text": "Imagine paying for a brand-new website for your dental clinic, only for the designer to stop replying to your calls six months later. When you need to update your pricing, you realize you do not even own the master files. You are forced to pay someone else to build the whole site again from scratch.\n\nThis happens to local business owners every day. But there is a simple way to protect yourself.\n\nWhen we build your website, we set up a safe, private master vault under your own business email. You remain the master owner. When a designer or developer works on your site, you grant them temporary guest access. \n\nIf they disappear, you remove their access with one click. Every change is logged in a timeline, so if something breaks, you can instantly turn back time to a working version.\n\nIf you ever hire someone new, they can take over in minutes without starting over.\n\nSee how Servio keeps your website safe and fully under your control: https://servio-0.web.app?utm_source=linkedin&utm_medium=social&utm_campaign=2026-08-05-github",
+        "hashtags": [
+          "#Servio",
+          "#SmallBusinessIndia",
+          "#WebDesign",
+          "#BusinessOwner",
+          "#TechTips"
+        ],
+        "status": "scheduled",
+        "postId": "6a72b113beaf5fe355565b36"
+      },
+      "instagram": {
+        "text": "Ever tried contacting your website designer to update a menu or phone number, only to get radio silence? 📱\n\nIt is frustrating when a disappearing freelancer holds your website hostage. Many boutique and cafe owners end up paying twice just to rebuild what they already bought.\n\nThere is a better way to handle this. We create a secure master copy of your website tied directly to your shop's email address. You stay in full control of your site at all times.\n\nIf a designer leaves, you simply remove their key. If a mistake breaks a page, you can roll back to a safe copy with ease. And if a new helper steps in, they pick up right where the last one left off. 🔒\n\nWant a website that stays 100% yours forever? Check out how Servio builds websites for small businesses (link in bio).",
+        "hashtags": [
+          "#Servio",
+          "#WebsiteTips",
+          "#IndianBusiness",
+          "#ShopOwner",
+          "#BoutiqueOwner",
+          "#CafeOwner",
+          "#SmallBusinessSupport",
+          "#WebsiteMaintenance",
+          "#LocalBusiness",
+          "#DigitalSafety"
+        ],
+        "status": "scheduled",
+        "postId": "6a72b11626354a038b5161c2"
+      },
+      "twitter": {
+        "text": "Designer ghosted you? Without a master copy under your email, you could be locked out. Servio stores a safe master copy so you retain full ownership forever.\n\nhttps://servio-0.web.app?utm_source=twitter&utm_medium=social&utm_campaign=2026-08-05-github #Servio #WebDesign",
+        "hashtags": [
+          "#Servio",
+          "#WebDesign"
+        ],
+        "status": "scheduled",
+        "postId": "6a72b118c549049f4653c1e3"
+      },
+      "imagePrompt": "A modern, minimal visual featuring a stylized digital safety vault with glowing blue outlines on a clean white background. Subtle typography in dark navy blue reads 'Total Control Over Your Website Files', designed in a clean startup tech aesthetic. Premium 3D-rendered concept art with rich glassmorphism: translucent frosted-glass panels, layered transparency, soft blur, glossy reflections and inner glow, with real depth and dimensional studio lighting. Vibrant saturated gradients — electric blue (#1E4FFF) flowing into cyan, indigo, violet and magenta — over a clean soft-lit background with gentle bloom and a shallow depth of field. Floating glossy geometric shapes, frosted-glass cards, glowing orbs and abstract nodes and connectors that suggest sleek modern web technology and digital craft. Polished, high-detail, dimensional, energetic yet professional. NO TEXT, no words, no letters, no numbers, no readable labels or UI writing, no photorealistic human faces, no logos or brand marks, no watermarks.",
+      "createdAtIso": "2026-08-05T03:42:16.901Z",
+      "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1785901330/tykmdh1wqgponbenyovq.jpg"
     }
   ]
 }
