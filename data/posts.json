@@ -744,6 +744,49 @@
       "imagePrompt": "A clean, modern graphic with a deep blue and crisp white color palette. Features a minimalist illustration of a smartphone screen displaying a successful late-night booking calendar confirmation next to a sleek storefront icon, with simple bold typography reading 'Your Shop Never Closes'. Premium 3D-rendered concept art with rich glassmorphism: translucent frosted-glass panels, layered transparency, soft blur, glossy reflections and inner glow, with real depth and dimensional studio lighting. Vibrant saturated gradients — electric blue (#1E4FFF) flowing into cyan, indigo, violet and magenta — over a clean soft-lit background with gentle bloom and a shallow depth of field. Floating glossy geometric shapes, frosted-glass cards, glowing orbs and abstract nodes and connectors that suggest sleek modern web technology and digital craft. Polished, high-detail, dimensional, energetic yet professional. NO TEXT, no words, no letters, no numbers, no readable labels or UI writing, no photorealistic human faces, no logos or brand marks, no watermarks.",
       "createdAtIso": "2026-08-08T14:58:44.746Z",
       "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1786201119/vmiicledyq3jzypcarxx.jpg"
+    },
+    {
+      "date": "2026-08-10",
+      "topic": "Software Engineering",
+      "angle": "What small business owners should know about Software Engineering before hiring a web agency",
+      "linkedin": {
+        "text": "Ever hired someone to build your website, only to feel locked out when you asked for the login details?\n\nIt happens to local business owners all the time. An agency builds your site, but they keep the keys. When you want to update your clinic details or add new boutique items, you are stuck waiting for them.\n\nBefore you hire anyone for your website, keep these simple rules in mind:\n\n1. Own your keys. Make sure your name is on all hosting accounts and service logins from day one.\n2. Don't rebuild what exists. Good builders use trusted, ready-made tools so you do not waste money paying them to invent basic features from scratch.\n3. Build for today, plan for tomorrow. Get what your shop needs now, but ensure another builder can easily add features later if you expand.\n4. Budget for light check-ups. Websites need small regular check-ups to stay fast and secure.\n\nCurious how a clean, worry-free site looks for your business? See real examples here: https://servio-0.web.app?utm_source=linkedin&utm_medium=social&utm_campaign=2026-08-09-software-engineering",
+        "hashtags": [
+          "#Servio",
+          "#SmallBusiness",
+          "#WebDesign",
+          "#BusinessOwner"
+        ],
+        "status": "scheduled",
+        "postId": "6a78965c1757b5cd434df09c"
+      },
+      "instagram": {
+        "text": "Imagine paying for a custom website, only to find out you cannot even change your phone number without paying your web designer again. 😅\n\nMany restaurant owners, boutique founders, and clinic managers fall into this trap. Before hiring anyone to build your website, keep these safety checks in mind:\n\n• Demand full ownership: Your main accounts, address, and files must belong to you from day one.\n• Insist on clear notes: If another helper ever works on your site, they should easily understand it without rebuilding everything.\n• Use smart ready-made tools: Good builders save your money by using proven tools instead of rewriting basic things from scratch.\n• Plan for ongoing care: Just like a shop delivery scooter, a website needs quick monthly check-ups to stay safe and fast.\n\nYour website should give your business freedom, not extra stress.\n\nWant to see how simple website ownership can be? Take a look at our work via the link in bio!",
+        "hashtags": [
+          "#Servio",
+          "#SmallBusinessIndia",
+          "#Websites",
+          "#ShopOwner",
+          "#BoutiqueOwner",
+          "#ClinicOwner",
+          "#BusinessGrowth",
+          "#WebsiteTips"
+        ],
+        "status": "scheduled",
+        "postId": "6a78965e1757b5cd434df10a"
+      },
+      "twitter": {
+        "text": "Hiring someone to build your website? Make sure you own all accounts and files from day one. Never get locked out of your own business site. See how we build simple, worry-free sites: https://servio-0.web.app?utm_source=twitter&utm_medium=social&utm_campaign=2026-08-09-software-engineering #Servio #Websites",
+        "hashtags": [
+          "#Servio",
+          "#Websites"
+        ],
+        "status": "scheduled",
+        "postId": "6a789660d192ae76f3cfb86b"
+      },
+      "imagePrompt": "Modern minimal social banner featuring a sleek blue and white color palette. Visual depicts a clean digital key icon resting next to a simple website browser wireframe, symbolizing business ownership and website security. Sharp typography with a fresh startup feel. Premium 3D-rendered concept art with rich glassmorphism: translucent frosted-glass panels, layered transparency, soft blur, glossy reflections and inner glow, with real depth and dimensional studio lighting. Vibrant saturated gradients — electric blue (#1E4FFF) flowing into cyan, indigo, violet and magenta — over a clean soft-lit background with gentle bloom and a shallow depth of field. Floating glossy geometric shapes, frosted-glass cards, glowing orbs and abstract nodes and connectors that suggest sleek modern web technology and digital craft. Polished, high-detail, dimensional, energetic yet professional. NO TEXT, no words, no letters, no numbers, no readable labels or UI writing, no photorealistic human faces, no logos or brand marks, no watermarks.",
+      "createdAtIso": "2026-08-09T15:01:53.004Z",
+      "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1786287707/svettw6bmgmwf73xbhyf.jpg"
     }
   ]
 }
