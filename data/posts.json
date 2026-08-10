@@ -787,6 +787,51 @@
       "imagePrompt": "Modern minimal social banner featuring a sleek blue and white color palette. Visual depicts a clean digital key icon resting next to a simple website browser wireframe, symbolizing business ownership and website security. Sharp typography with a fresh startup feel. Premium 3D-rendered concept art with rich glassmorphism: translucent frosted-glass panels, layered transparency, soft blur, glossy reflections and inner glow, with real depth and dimensional studio lighting. Vibrant saturated gradients — electric blue (#1E4FFF) flowing into cyan, indigo, violet and magenta — over a clean soft-lit background with gentle bloom and a shallow depth of field. Floating glossy geometric shapes, frosted-glass cards, glowing orbs and abstract nodes and connectors that suggest sleek modern web technology and digital craft. Polished, high-detail, dimensional, energetic yet professional. NO TEXT, no words, no letters, no numbers, no readable labels or UI writing, no photorealistic human faces, no logos or brand marks, no watermarks.",
       "createdAtIso": "2026-08-09T15:01:53.004Z",
       "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1786287707/svettw6bmgmwf73xbhyf.jpg"
+    },
+    {
+      "date": "2026-08-11",
+      "topic": "AI",
+      "angle": "How to instantly answer routine customer questions about pricing and availability on your website when your shop is closed for the day.",
+      "linkedin": {
+        "text": "It is 10 PM, your salon or clinic is closed, and a customer messages asking for your price list. 🌙\n\nIf they have to wait until 9 AM for a reply, they might easily reach out to another local business instead.\n\nA smart chat assistant on your website can fix this. You can connect it directly to your regular price list or frequent questions. When someone asks about costs or opening hours late at night, the assistant reads your official list and answers right away.\n\nIt can even show your online calendar so visitors can pick an open slot and book an appointment overnight. If a question is too complicated, the assistant politely takes the customer's phone number so you can follow up over morning tea. 💬\n\nWant to see how an intelligent helper can work on your own website? See real examples of Servio's work here: https://servio-0.web.app?utm_source=linkedin&utm_medium=social&utm_campaign=2026-08-10-ai",
+        "hashtags": [
+          "#Servio",
+          "#SmallBusinessOwner",
+          "#WebsiteTips",
+          "#CustomerService",
+          "#LocalBusiness"
+        ],
+        "status": "scheduled",
+        "postId": "6a79eec73be8fcfa952c6a3b"
+      },
+      "instagram": {
+        "text": "Ever wake up to missed messages from potential clients asking \"How much is a session?\" or \"Do you have open spots this Saturday?\" 📱\n\nBy the time you reply, they have often booked somewhere else.\n\nYou can put a polite helper right on your website to answer those exact questions 24 hours a day. ☕\n\nIt links to your existing price sheets and FAQ pages, so answers stay accurate. It can even display open time slots from your booking calendar so customers can book themselves while you rest.\n\nFor complex custom requests, it asks for their name and phone number so you have a tidy list of leads ready every morning. 🗓️\n\nCurious how a website like this would look for your shop or service? Visit our link in bio to explore how Servio can help!",
+        "hashtags": [
+          "#Servio",
+          "#SmallBusinessIndia",
+          "#ShopOwner",
+          "#ClinicOwner",
+          "#SalonOwner",
+          "#WebDesign",
+          "#BusinessGrowth",
+          "#CustomerSupport",
+          "#LocalService"
+        ],
+        "status": "scheduled",
+        "postId": "6a79eeca1fe2c852a98e20b1"
+      },
+      "twitter": {
+        "text": "What happens when customers visit your site late at night asking about prices? A smart chat helper can answer basic questions and book appointments 24/7. See how it works for your business: https://servio-0.web.app?utm_source=twitter&utm_medium=social&utm_campaign=2026-08-10-ai #Servio #SmallBiz",
+        "hashtags": [
+          "#Servio",
+          "#SmallBiz"
+        ],
+        "status": "scheduled",
+        "postId": "6a79eecd02f32cc0487c1010"
+      },
+      "imagePrompt": "Modern minimal startup tech illustration featuring a clean white and deep blue color palette. A stylized smartphone displaying a simple chat screen with green checkmarks alongside a subtle calendar grid. Clean typography, vector style, uncluttered background. Premium 3D-rendered concept art with rich glassmorphism: translucent frosted-glass panels, layered transparency, soft blur, glossy reflections and inner glow, with real depth and dimensional studio lighting. Vibrant saturated gradients — electric blue (#1E4FFF) flowing into cyan, indigo, violet and magenta — over a clean soft-lit background with gentle bloom and a shallow depth of field. Floating glossy geometric shapes, frosted-glass cards, glowing orbs and abstract nodes and connectors that suggest sleek modern web technology and digital craft. Polished, high-detail, dimensional, energetic yet professional. NO TEXT, no words, no letters, no numbers, no readable labels or UI writing, no photorealistic human faces, no logos or brand marks, no watermarks.",
+      "createdAtIso": "2026-08-10T15:31:25.222Z",
+      "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1786375878/vs4mkj30hfrqqyih4wyq.jpg"
     }
   ]
 }
