@@ -920,6 +920,51 @@
       "imagePrompt": "A clean, minimal social media graphic featuring a split layout in a modern blue and white color palette. The left side shows a stylized graphic of a smartphone display with a clean FAQ list, and the right side displays bold typography reading 'Stop Answering The Same Messages Every Day'. Premium 3D-rendered concept art with rich glassmorphism: translucent frosted-glass panels, layered transparency, soft blur, glossy reflections and inner glow, with real depth and dimensional studio lighting. Vibrant saturated gradients — electric blue (#1E4FFF) flowing into cyan, indigo, violet and magenta — over a clean soft-lit background with gentle bloom and a shallow depth of field. Floating glossy geometric shapes, frosted-glass cards, glowing orbs and abstract nodes and connectors that suggest sleek modern web technology and digital craft. Polished, high-detail, dimensional, energetic yet professional. NO TEXT, no words, no letters, no numbers, no readable labels or UI writing, no photorealistic human faces, no logos or brand marks, no watermarks.",
       "createdAtIso": "2026-08-12T15:30:01.615Z",
       "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1786548595/a1liab9cjhxumuerqhon.jpg"
+    },
+    {
+      "date": "2026-08-16",
+      "topic": "SaaS",
+      "angle": "Why your website should update automatically like your phone apps, so it never gets slow, outdated, or broken when customer phones change.",
+      "linkedin": {
+        "text": "Ever had a customer tell you that your website looks completely broken on their new phone?\n\nMaybe the booking button won't click. Or the payment screen gets stuck halfway through. It is frustrating because the site worked fine just a few months ago.\n\nHere is what happens: phone software updates all the time. New screen sizes come out, maps get updated, and payment methods change. Traditional websites get left behind unless you constantly pay someone to fix them.\n\nModern business websites work like the everyday apps on your smartphone. They update smoothly in the background without you having to touch a thing.\n\nWhen phone screens change, your layout adjusts automatically. When payment systems update, your checkout keeps working without silent errors. You never have to worry about broken buttons, slow pages, or rebuilding your website from scratch every two years.\n\nYour website stays fast, secure, and ready for customers every single day.\n\nSee how modern, maintenance-free websites work for small businesses: https://servio-0.web.app?utm_source=linkedin&utm_medium=social&utm_campaign=2026-08-16-saas",
+        "hashtags": [
+          "#Servio",
+          "#SmallBusinessIndia",
+          "#WebDesign",
+          "#BusinessTips",
+          "#Entrepreneurship"
+        ],
+        "status": "scheduled",
+        "postId": "6a8119de1dbfebd7710d2be3"
+      },
+      "instagram": {
+        "text": "You buy a new phone, download your favorite app, and it just works. No glitches, no broken buttons.\n\nSo why do so many business websites break down after a year? 📱\n\nPhones and web browsers update constantly. Old-style websites cannot keep up on their own. Suddenly, your clinic's booking form stops loading or your cafe menu looks cut in half on newer screens.\n\nYour website should take care of itself in the background, just like a modern app.\n\nAutomatic updates mean:\n✨ Booking forms and payment buttons never silently fail\n✨ Layouts fit perfectly on every new phone screen\n✨ Fast loading speeds without hiring someone to tune it\n✨ No expensive rebuilds every few years\n\nPicture a website that never gets outdated. Check out our work via the link in bio.",
+        "hashtags": [
+          "#Servio",
+          "#SmallBusinessOwners",
+          "#IndianStartups",
+          "#ShopOwners",
+          "#LocalBusiness",
+          "#BoutiqueBusiness",
+          "#CafeOwners",
+          "#WebsiteUpkeep",
+          "#OnlinePresence"
+        ],
+        "status": "scheduled",
+        "postId": "6a8119e0ced1ab157dc5c82b"
+      },
+      "twitter": {
+        "text": "Your phone apps update quietly in the background so they never break. Your business website should do the exact same thing—no broken buttons or costly redesigns. #Servio #SmallBusiness",
+        "hashtags": [
+          "#Servio",
+          "#SmallBusiness"
+        ],
+        "status": "scheduled",
+        "postId": "6a8119e313afe87ec8a9c488"
+      },
+      "imagePrompt": "Modern minimal graphic featuring a smartphone screen seamlessly refreshing with smooth blue gradient layers, clean white typography displaying 'Always Updated, Never Outdated', set against a bright minimalist blue and white background. Premium 3D-rendered concept art with rich glassmorphism: translucent frosted-glass panels, layered transparency, soft blur, glossy reflections and inner glow, with real depth and dimensional studio lighting. Vibrant saturated gradients — electric blue (#1E4FFF) flowing into cyan, indigo, violet and magenta — over a clean soft-lit background with gentle bloom and a shallow depth of field. Floating glossy geometric shapes, frosted-glass cards, glowing orbs and abstract nodes and connectors that suggest sleek modern web technology and digital craft. Polished, high-detail, dimensional, energetic yet professional. NO TEXT, no words, no letters, no numbers, no readable labels or UI writing, no photorealistic human faces, no logos or brand marks, no watermarks.",
+      "createdAtIso": "2026-08-16T02:01:07.569Z",
+      "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1786845661/bgnzpk9azimb7vnh2t26.jpg"
     }
   ]
 }
