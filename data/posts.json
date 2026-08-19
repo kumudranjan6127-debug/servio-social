@@ -965,6 +965,49 @@
       "imagePrompt": "Modern minimal graphic featuring a smartphone screen seamlessly refreshing with smooth blue gradient layers, clean white typography displaying 'Always Updated, Never Outdated', set against a bright minimalist blue and white background. Premium 3D-rendered concept art with rich glassmorphism: translucent frosted-glass panels, layered transparency, soft blur, glossy reflections and inner glow, with real depth and dimensional studio lighting. Vibrant saturated gradients — electric blue (#1E4FFF) flowing into cyan, indigo, violet and magenta — over a clean soft-lit background with gentle bloom and a shallow depth of field. Floating glossy geometric shapes, frosted-glass cards, glowing orbs and abstract nodes and connectors that suggest sleek modern web technology and digital craft. Polished, high-detail, dimensional, energetic yet professional. NO TEXT, no words, no letters, no numbers, no readable labels or UI writing, no photorealistic human faces, no logos or brand marks, no watermarks.",
       "createdAtIso": "2026-08-16T02:01:07.569Z",
       "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1786845661/bgnzpk9azimb7vnh2t26.jpg"
+    },
+    {
+      "date": "2026-08-19",
+      "topic": "Web Development",
+      "angle": "How Web Development quietly decides whether a business website wins or loses customers",
+      "linkedin": {
+        "text": "Ever try tapping a button on a phone screen, only for the page to jump and make you click the wrong link?\n\nIt is annoying. And when it happens on your business website, potential customers leave before they even read about your services.\n\nThe way a website is built under the hood quietly decides whether you win or lose customers.\n\nSmall build flaws add up fast:\n- Forms that erase typed answers if someone mistypes one letter.\n- Buttons so tiny on phone screens that visitors tap three times in frustration.\n- Heavy files that freeze the page, making your business feel slow and unresponsive.\n- Missing structure that stops local search engines from showing your shop to nearby clients.\n\nA great website does not just look clean. It works effortlessly from the first tap to the final booking.\n\nSee how a smooth, reliable website can bring you more customer enquiries: https://servio-0.web.app?utm_source=linkedin&utm_medium=social&utm_campaign=2026-08-19-web-development",
+        "hashtags": [
+          "#WebDevelopment",
+          "#SmallBusiness",
+          "#BusinessGrowth",
+          "#Servio"
+        ],
+        "status": "scheduled",
+        "postId": "6a850daa8a0a45b02c5e1850"
+      },
+      "instagram": {
+        "text": "You spend time and effort getting someone to check out your business. Then a small glitch pushes them away. 📱\n\nImagine a customer filling out your enquiry form. They make one tiny typo in their phone number, hit submit, and the entire form resets to blank.\n\nWill they retype everything? Most people will not. They will close the tab and check your competitor instead. 🚪\n\nWhen buttons jump around while loading, or menus feel clunky on mobile phones, visitors get frustrated in seconds.\n\nProper website development makes sure every tap works instantly, forms save details smoothly, and your business looks reliable from day one. ✨\n\nHead to the link in bio to see examples of fast, clean websites built to turn visitors into real customers.",
+        "hashtags": [
+          "#WebDevelopment",
+          "#SmallBusinessOwner",
+          "#LocalBusiness",
+          "#OnlinePresence",
+          "#BusinessTips",
+          "#CustomerExperience",
+          "#Servio",
+          "#WebDesign"
+        ],
+        "status": "scheduled",
+        "postId": "6a850dad52d75a5c9376936d"
+      },
+      "twitter": {
+        "text": "When buttons jump or forms reset, visitors leave. How your site is built quietly wins or loses sales.\n\nSee how clean sites work: https://servio-0.web.app?utm_source=twitter&utm_medium=social&utm_campaign=2026-08-19-web-development #WebDevelopment #Servio",
+        "hashtags": [
+          "#WebDevelopment",
+          "#Servio"
+        ],
+        "status": "scheduled",
+        "postId": "6a850daf4f1c1259e7c61b13"
+      },
+      "imagePrompt": "Modern minimal graphic showing a clean comparison between an error-prone mobile interface and a smooth, easy-to-tap layout, styled in a professional blue and white color palette with bold typography. Premium 3D-rendered concept art with rich glassmorphism: translucent frosted-glass panels, layered transparency, soft blur, glossy reflections and inner glow, with real depth and dimensional studio lighting. Vibrant saturated gradients — electric blue (#1E4FFF) flowing into cyan, indigo, violet and magenta — over a clean soft-lit background with gentle bloom and a shallow depth of field. Floating glossy geometric shapes, frosted-glass cards, glowing orbs and abstract nodes and connectors that suggest sleek modern web technology and digital craft. Polished, high-detail, dimensional, energetic yet professional. NO TEXT, no words, no letters, no numbers, no readable labels or UI writing, no photorealistic human faces, no logos or brand marks, no watermarks.",
+      "createdAtIso": "2026-08-19T01:58:07.736Z",
+      "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1787104681/eof4yj39qtqsvmh7hm8p.jpg"
     }
   ]
 }
