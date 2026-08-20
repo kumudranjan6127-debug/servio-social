@@ -1008,6 +1008,49 @@
       "imagePrompt": "Modern minimal graphic showing a clean comparison between an error-prone mobile interface and a smooth, easy-to-tap layout, styled in a professional blue and white color palette with bold typography. Premium 3D-rendered concept art with rich glassmorphism: translucent frosted-glass panels, layered transparency, soft blur, glossy reflections and inner glow, with real depth and dimensional studio lighting. Vibrant saturated gradients — electric blue (#1E4FFF) flowing into cyan, indigo, violet and magenta — over a clean soft-lit background with gentle bloom and a shallow depth of field. Floating glossy geometric shapes, frosted-glass cards, glowing orbs and abstract nodes and connectors that suggest sleek modern web technology and digital craft. Polished, high-detail, dimensional, energetic yet professional. NO TEXT, no words, no letters, no numbers, no readable labels or UI writing, no photorealistic human faces, no logos or brand marks, no watermarks.",
       "createdAtIso": "2026-08-19T01:58:07.736Z",
       "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1787104681/eof4yj39qtqsvmh7hm8p.jpg"
+    },
+    {
+      "date": "2026-08-20",
+      "topic": "React",
+      "angle": "A practical, no-hype look at using React well on a small business website",
+      "linkedin": {
+        "text": "When customers ask for a custom price estimate or want to book complex appointments online, does your website get stuck or force them to call you instead?\n\nIf your website only shows photos and simple text, basic pages do the job. But if you need an interactive cost calculator, a private customer area, or a smooth booking setup, building with React makes practical sense.\n\nHere is what every business owner should know:\n\n1. Built for action: If visitors need to click, calculate, or filter things smoothly, it handles it instantly without refreshing the whole page.\n\n2. Search engines still see you: Modern setups prepare pages before sending them to phones and laptops, so Google reads every word easily.\n\n3. No trapped businesses: Millions of developers use React worldwide. If you ever switch agencies, finding someone new to manage your site is straightforward.\n\n4. Requires regular care: Unlike basic site builders, custom setups need routine checkups and security upkeep.\n\nCurious what an interactive tool could do for your business? See real examples of what we build at Servio: https://servio-0.web.app?utm_source=linkedin&utm_medium=social&utm_campaign=2026-08-20-react",
+        "hashtags": [
+          "#Servio",
+          "#Websites",
+          "#SmallBusiness",
+          "#BusinessTips",
+          "#WebDesign"
+        ],
+        "status": "scheduled",
+        "postId": "6a865ed5c823b06c483f8078"
+      },
+      "instagram": {
+        "text": "\"Can you send me a quick quote?\"\n\nIf you spend half your workday calculating custom prices for clients over WhatsApp, your website could be doing that heavy lifting for you. 💡\n\nWhen your business needs interactive features—like an instant quote builder or a step-by-step booking screen—building with React is a practical choice.\n\nIt makes your site feel like a fast, smooth mobile app. Customers get instant answers without refreshing pages, and you save hours of repetitive messaging. ✨\n\nThe biggest advantage? Millions of professionals work with this technology globally, so your business is never trapped with a single designer forever. 🛠️\n\nWant to see how an interactive website can make running your business easier? Explore our work at the link in bio!",
+        "hashtags": [
+          "#Servio",
+          "#SmallBusinessOwner",
+          "#BusinessGrowth",
+          "#LocalBusiness",
+          "#IndianStartups",
+          "#WebsiteTips",
+          "#OnlinePresence",
+          "#DigitalBusiness"
+        ],
+        "status": "scheduled",
+        "postId": "6a865ed8e5065537ab4c4f95"
+      },
+      "twitter": {
+        "text": "Need a site that gives instant quotes or handles bookings like a fast app? Modern React makes it smooth and easy for any developer to manage later. See our work: https://servio-0.web.app?utm_source=twitter&utm_medium=social&utm_campaign=2026-08-20-react #Servio",
+        "hashtags": [
+          "#Servio"
+        ],
+        "status": "scheduled",
+        "postId": "6a865eda160f3c2311a0f916"
+      },
+      "imagePrompt": "A clean, modern social media graphic with a crisp blue and white color palette. It features minimalist tech UI cards showing an interactive booking tool and an instant quote calculator, paired with clear, readable typography. Premium 3D-rendered concept art with rich glassmorphism: translucent frosted-glass panels, layered transparency, soft blur, glossy reflections and inner glow, with real depth and dimensional studio lighting. Vibrant saturated gradients — electric blue (#1E4FFF) flowing into cyan, indigo, violet and magenta — over a clean soft-lit background with gentle bloom and a shallow depth of field. Floating glossy geometric shapes, frosted-glass cards, glowing orbs and abstract nodes and connectors that suggest sleek modern web technology and digital craft. Polished, high-detail, dimensional, energetic yet professional. NO TEXT, no words, no letters, no numbers, no readable labels or UI writing, no photorealistic human faces, no logos or brand marks, no watermarks.",
+      "createdAtIso": "2026-08-20T01:56:42.514Z",
+      "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1787190997/su0lvmk1b7u2ism5oadn.jpg"
     }
   ]
 }
