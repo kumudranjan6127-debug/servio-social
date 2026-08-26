@@ -1051,6 +1051,50 @@
       "imagePrompt": "A clean, modern social media graphic with a crisp blue and white color palette. It features minimalist tech UI cards showing an interactive booking tool and an instant quote calculator, paired with clear, readable typography. Premium 3D-rendered concept art with rich glassmorphism: translucent frosted-glass panels, layered transparency, soft blur, glossy reflections and inner glow, with real depth and dimensional studio lighting. Vibrant saturated gradients — electric blue (#1E4FFF) flowing into cyan, indigo, violet and magenta — over a clean soft-lit background with gentle bloom and a shallow depth of field. Floating glossy geometric shapes, frosted-glass cards, glowing orbs and abstract nodes and connectors that suggest sleek modern web technology and digital craft. Polished, high-detail, dimensional, energetic yet professional. NO TEXT, no words, no letters, no numbers, no readable labels or UI writing, no photorealistic human faces, no logos or brand marks, no watermarks.",
       "createdAtIso": "2026-08-20T01:56:42.514Z",
       "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1787190997/su0lvmk1b7u2ism5oadn.jpg"
+    },
+    {
+      "date": "2026-08-26",
+      "topic": "Next.js",
+      "angle": "Common Next.js mistakes small businesses make on their websites, and the simple fixes",
+      "linkedin": {
+        "text": "You paid good money for a modern website, but customers on mobile phones still wait on a blank white screen.\n\nModern website systems like Next.js are built to make pages open instantly. Yet many small business sites still feel sluggish because of two common mistakes:\n\n1. Uploading massive raw photos directly from a camera. This forces customer phones to download huge files before the page can open.\n2. Setting up pages so search engines cannot read the text easily, making it harder for local buyers to discover you.\n\nThe fixes are straightforward. Let the system resize and compress images for mobile screens automatically, and make sure your key business information is pre-built so it appears the moment someone taps your link.\n\nA fast website makes your business look professional and keeps customers from clicking away.\n\nSee how clean, fast websites look for small businesses: https://servio-0.web.app?utm_source=linkedin&utm_medium=social&utm_campaign=2026-08-26-next-js",
+        "hashtags": [
+          "#Servio",
+          "#SmallBusiness",
+          "#WebDesign",
+          "#BusinessTips",
+          "#CustomerExperience"
+        ],
+        "status": "scheduled",
+        "postId": "6a8e49ed4daefb0f908cc6e6"
+      },
+      "instagram": {
+        "text": "A potential customer taps your boutique or cafe link while riding the bus. 📱\n\nThey wait three seconds. Five seconds. The page refuses to show up, so they hit back and tap your competitor instead.\n\nWhen websites are built with modern tools like Next.js, two small slips usually cause this delay:\n\nFirst, uploading heavy, uncompressed photos that swallow customer mobile data.\n\nSecond, loading too many decorative extras before showing the actual menu, address, or phone number.\n\nThe fix is simple: let your pages display key details right away and size every photo automatically for phones. Fast pages mean more happy calls and visits. ✨\n\nWant to see how smooth a website can feel for your business? Check the link in bio.",
+        "hashtags": [
+          "#Servio",
+          "#SmallBusinessIndia",
+          "#ShopOwner",
+          "#LocalBusiness",
+          "#CafeOwner",
+          "#ClinicMarketing",
+          "#BusinessGrowth",
+          "#Websites"
+        ],
+        "status": "scheduled",
+        "postId": "6a8e49ef8c18e093aa6a1c14"
+      },
+      "twitter": {
+        "text": "A slow website loses customers fast. Modern tech like Next.js should load instantly. Fix heavy photos and pre-load key text.\n\nSee examples: https://servio-0.web.app?utm_source=twitter&utm_medium=social&utm_campaign=2026-08-26-next-js #Servio #SmallBusiness",
+        "hashtags": [
+          "#Servio",
+          "#SmallBusiness"
+        ],
+        "status": "scheduled",
+        "postId": "6a8e49f26e7257c67e7ae578"
+      },
+      "imagePrompt": "A minimalist, clean digital workspace showing a smartphone displaying a fast-loading, elegant small business webpage. Modern blue and white aesthetic with plenty of negative space and soft studio lighting. Premium 3D-rendered concept art with rich glassmorphism: translucent frosted-glass panels, layered transparency, soft blur, glossy reflections and inner glow, with real depth and dimensional studio lighting. Vibrant saturated gradients — electric blue (#1E4FFF) flowing into cyan, indigo, violet and magenta — over a clean soft-lit background with gentle bloom and a shallow depth of field. Floating glossy geometric shapes, frosted-glass cards, glowing orbs and abstract nodes and connectors that suggest sleek modern web technology and digital craft. Polished, high-detail, dimensional, energetic yet professional. NO TEXT, no words, no letters, no numbers, no readable labels or UI writing, no photorealistic human faces, no logos or brand marks, no watermarks.",
+      "createdAtIso": "2026-08-26T02:05:38.447Z",
+      "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1787709932/wdogiznucbt2rdgtg77m.jpg"
     }
   ]
 }
