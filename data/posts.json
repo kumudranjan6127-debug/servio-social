@@ -1095,6 +1095,50 @@
       "imagePrompt": "A minimalist, clean digital workspace showing a smartphone displaying a fast-loading, elegant small business webpage. Modern blue and white aesthetic with plenty of negative space and soft studio lighting. Premium 3D-rendered concept art with rich glassmorphism: translucent frosted-glass panels, layered transparency, soft blur, glossy reflections and inner glow, with real depth and dimensional studio lighting. Vibrant saturated gradients — electric blue (#1E4FFF) flowing into cyan, indigo, violet and magenta — over a clean soft-lit background with gentle bloom and a shallow depth of field. Floating glossy geometric shapes, frosted-glass cards, glowing orbs and abstract nodes and connectors that suggest sleek modern web technology and digital craft. Polished, high-detail, dimensional, energetic yet professional. NO TEXT, no words, no letters, no numbers, no readable labels or UI writing, no photorealistic human faces, no logos or brand marks, no watermarks.",
       "createdAtIso": "2026-08-26T02:05:38.447Z",
       "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1787709932/wdogiznucbt2rdgtg77m.jpg"
+    },
+    {
+      "date": "2026-08-31",
+      "topic": "Node.js",
+      "angle": "What small business owners should know about Node.js before hiring a web agency",
+      "linkedin": {
+        "text": "Ever had a web agency throw terms like \"Node.js\" at you and quote double the price, leaving you wondering what you are actually paying for?\n\nYou do not need to understand code. You just need to know what it does for your bottom line.\n\nThink of it as a high-speed engine working behind the scenes. When dozens of customers check your menu, book a salon appointment, or send an enquiry at the exact same moment, this engine keeps your website quick and responsive instead of freezing or crashing.\n\nHere is what to keep in mind: if you only need a simple 5-page site to showcase your clinic or boutique, you do not need an overpriced, complex setup. But if you take live bookings, run an online store, or update stock in real time, a fast engine stops impatient visitors from bouncing to a competitor.\n\nBefore hiring an agency, ask how their setup helps your customers order or book faster, not how fancy the tools sound.\n\nSee how we build fast, clean websites for growing businesses: https://servio-0.web.app?utm_source=linkedin&utm_medium=social&utm_campaign=2026-08-30-node-js",
+        "hashtags": [
+          "#SmallBusiness",
+          "#WebDesign",
+          "#BusinessOwners",
+          "#Servio",
+          "#TechTips"
+        ],
+        "status": "scheduled",
+        "postId": "6a94722be7e04684c601f29b"
+      },
+      "instagram": {
+        "text": "You ask an agency for a website quote, and they hit you with technical terms you never asked for.\n\n\"We build custom engines on Node.js,\" they say, adding an extra zero to the invoice. 🧾\n\nWhat does that actually mean for your clinic, boutique, or cafe?\n\nThink of it like a smooth restaurant kitchen. When festival season arrives and 30 people try to view your catalog or book an appointment at once, it keeps your website snappy. No loading wheels. No frozen pages.\n\nHere is the simple rule:\n• Simple website to show your phone number and location? Keep it light and affordable.\n• Live bookings, customer accounts, or order updates? You need speed behind the scenes so customers never leave out of frustration.\n\nA great agency talks about your business results, not technical labels. 💡\n\nWant a website that brings in steady enquiries without the headache? Visit the link in bio to see our work.",
+        "hashtags": [
+          "#SmallBusinessOwner",
+          "#LocalBusiness",
+          "#WebsiteTips",
+          "#ShopOwner",
+          "#Servio",
+          "#IndianStartups",
+          "#BusinessGrowth",
+          "#WebDesignTips"
+        ],
+        "status": "scheduled",
+        "postId": "6a94722ed58664eabd7a6416"
+      },
+      "twitter": {
+        "text": "An agency pitching \"Node.js\" to double your quote? All that matters is speed: will your site stay fast when 50 customers book at once?\n\nSee how we build clean, reliable business sites: https://servio-0.web.app?utm_source=twitter&utm_medium=social&utm_campaign=2026-08-30-node-js #Servio #WebDesign",
+        "hashtags": [
+          "#Servio",
+          "#WebDesign"
+        ],
+        "status": "scheduled",
+        "postId": "6a947230d58664eabd7a6458"
+      },
+      "imagePrompt": "Modern minimal social media card in a crisp blue and white palette. Features clean typography reading 'What to ask your web agency before paying for tech jargon' with subtle, clean geometric outlines of a digital storefront. Premium 3D-rendered concept art with rich glassmorphism: translucent frosted-glass panels, layered transparency, soft blur, glossy reflections and inner glow, with real depth and dimensional studio lighting. Vibrant saturated gradients — electric blue (#1E4FFF) flowing into cyan, indigo, violet and magenta — over a clean soft-lit background with gentle bloom and a shallow depth of field. Floating glossy geometric shapes, frosted-glass cards, glowing orbs and abstract nodes and connectors that suggest sleek modern web technology and digital craft. Polished, high-detail, dimensional, energetic yet professional. NO TEXT, no words, no letters, no numbers, no readable labels or UI writing, no photorealistic human faces, no logos or brand marks, no watermarks.",
+      "createdAtIso": "2026-08-30T18:10:56.599Z",
+      "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1788113450/spl5wvi17r6e4wjxawfk.jpg"
     }
   ]
 }
