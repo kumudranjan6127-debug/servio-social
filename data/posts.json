@@ -1139,6 +1139,50 @@
       "imagePrompt": "Modern minimal social media card in a crisp blue and white palette. Features clean typography reading 'What to ask your web agency before paying for tech jargon' with subtle, clean geometric outlines of a digital storefront. Premium 3D-rendered concept art with rich glassmorphism: translucent frosted-glass panels, layered transparency, soft blur, glossy reflections and inner glow, with real depth and dimensional studio lighting. Vibrant saturated gradients — electric blue (#1E4FFF) flowing into cyan, indigo, violet and magenta — over a clean soft-lit background with gentle bloom and a shallow depth of field. Floating glossy geometric shapes, frosted-glass cards, glowing orbs and abstract nodes and connectors that suggest sleek modern web technology and digital craft. Polished, high-detail, dimensional, energetic yet professional. NO TEXT, no words, no letters, no numbers, no readable labels or UI writing, no photorealistic human faces, no logos or brand marks, no watermarks.",
       "createdAtIso": "2026-08-30T18:10:56.599Z",
       "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1788113450/spl5wvi17r6e4wjxawfk.jpg"
+    },
+    {
+      "date": "2026-09-08",
+      "topic": "Firebase",
+      "angle": "How to show live order updates on your website so customers stop calling your shop every ten minutes to ask if their order is ready.",
+      "linkedin": {
+        "text": "\"Is my order ready yet?\"\n\nIf you run a bakery, cafe, or print shop, you probably hear this question twenty times every afternoon.\n\nEvery call interrupts your team. Someone has to wash their hands, walk to the prep station, check the status slip, and pick up the receiver. It breaks your focus and slows down order prep.\n\nBig pizza chains solved this years ago with live tracking screens. Modern websites can do the exact same thing for your local business—without crazy expenses.\n\nHere is how simple it is: your customer gets a private tracking link after ordering. Back in your kitchen or workshop, a team member taps a button on a regular phone: \"Preparing\" or \"Ready for Pickup.\"\n\nThe customer's screen updates instantly. No refreshing the page, no guessing, and zero phone calls.\n\nEven better, this system needs no dedicated computer servers to run, meaning standard order volumes easily fit into free service limits.\n\nCurious how a live tracking screen could work for your business? Take a look at our recent work: https://servio-0.web.app?utm_source=linkedin&utm_medium=social&utm_campaign=2026-09-08-firebase",
+        "hashtags": [
+          "#Servio",
+          "#SmallBusiness",
+          "#CustomerService",
+          "#LocalBusiness",
+          "#WebDesign"
+        ],
+        "status": "scheduled",
+        "postId": "6a9f06ff5642808542550c11"
+      },
+      "instagram": {
+        "text": "You are decorating a custom cake, and the shop phone rings.\n\n\"Hi, just checking if my box is ready for pickup?\"\n\nYou stop, wash your hands, check the counter, and answer.\n\nTen minutes later, another customer calls with the same question.\n\nConstant status calls drain your afternoon. Here is a calmer way to run your day:\n\nGive customers their own private tracking screen when they place an order.\n\nWhen your team finishes packing their items, you tap one button on your shop phone: \"Ready for Pickup.\"\n\nTheir screen changes instantly right before their eyes. No page reloading. No checking in. No phone calls holding up your counter.\n\nBest of all, typical daily orders cost nothing extra in server fees to keep updated live.\n\nWant to see how an order tracking page could look for your business? Check the link in bio to see our work! 📲✨",
+        "hashtags": [
+          "#Servio",
+          "#SmallBusinessOwner",
+          "#ShopOwner",
+          "#BakeryLife",
+          "#CafeBusiness",
+          "#CustomerExperience",
+          "#LocalShop",
+          "#BusinessTips",
+          "#WebDesign"
+        ],
+        "status": "scheduled",
+        "postId": "6a9f070286a1c35c123946bb"
+      },
+      "twitter": {
+        "text": "Tired of calls asking 'Is my order ready?'\n\nGive customers a live tracking screen that updates the second you tap a button on your phone.\n\nSee how: https://servio-0.web.app?utm_source=twitter&utm_medium=social&utm_campaign=2026-09-08-firebase #Servio",
+        "hashtags": [
+          "#Servio"
+        ],
+        "status": "scheduled",
+        "postId": "6a9f070417b22218b4d377ed"
+      },
+      "imagePrompt": "A minimalist, clean flat-lay visual showing a smartphone displaying a sleek, modern order tracking bar next to a tidy cafe counter, rendered in a crisp royal blue and pure white palette with elegant typography. Premium 3D-rendered concept art with rich glassmorphism: translucent frosted-glass panels, layered transparency, soft blur, glossy reflections and inner glow, with real depth and dimensional studio lighting. Vibrant saturated gradients — electric blue (#1E4FFF) flowing into cyan, indigo, violet and magenta — over a clean soft-lit background with gentle bloom and a shallow depth of field. Floating glossy geometric shapes, frosted-glass cards, glowing orbs and abstract nodes and connectors that suggest sleek modern web technology and digital craft. Polished, high-detail, dimensional, energetic yet professional. NO TEXT, no words, no letters, no numbers, no readable labels or UI writing, no photorealistic human faces, no logos or brand marks, no watermarks.",
+      "createdAtIso": "2026-09-07T18:48:36.786Z",
+      "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1788806910/lrurbiwuayti2iql3cb1.jpg"
     }
   ]
 }
