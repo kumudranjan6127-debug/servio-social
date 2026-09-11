@@ -1183,6 +1183,50 @@
       "imagePrompt": "A minimalist, clean flat-lay visual showing a smartphone displaying a sleek, modern order tracking bar next to a tidy cafe counter, rendered in a crisp royal blue and pure white palette with elegant typography. Premium 3D-rendered concept art with rich glassmorphism: translucent frosted-glass panels, layered transparency, soft blur, glossy reflections and inner glow, with real depth and dimensional studio lighting. Vibrant saturated gradients — electric blue (#1E4FFF) flowing into cyan, indigo, violet and magenta — over a clean soft-lit background with gentle bloom and a shallow depth of field. Floating glossy geometric shapes, frosted-glass cards, glowing orbs and abstract nodes and connectors that suggest sleek modern web technology and digital craft. Polished, high-detail, dimensional, energetic yet professional. NO TEXT, no words, no letters, no numbers, no readable labels or UI writing, no photorealistic human faces, no logos or brand marks, no watermarks.",
       "createdAtIso": "2026-09-07T18:48:36.786Z",
       "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1788806910/lrurbiwuayti2iql3cb1.jpg"
+    },
+    {
+      "date": "2026-09-12",
+      "topic": "UI/UX",
+      "angle": "How asking customers to fill out too many details just to book an appointment makes them give up and close your page.",
+      "linkedin": {
+        "text": "Someone visits your clinic, salon, or consultancy website ready to book an appointment. Then they see your form.\n\nTen required boxes. Their home address. A big blank box asking them to explain their entire issue in detail. A dropdown menu that is tricky to tap on their phone.\n\nWhat happens next? They tell themselves, \"I will finish this later when I am free.\" But they never come back. They go to another local business with a faster, simpler booking page.\n\nTo lock in a spot, you really only need three simple things: their name, their contact detail, and the time they want to visit.\n\nEvery extra question you ask before they confirm makes people hesitate. You can easily ask the extra details on the confirmation screen or in a follow-up message after their slot is saved.\n\nMake booking feel effortless, and your calendar fills up much faster.\n\nCurious how a clean, simple website looks for a business like yours? Take a look at our live examples: https://servio-0.web.app?utm_source=linkedin&utm_medium=social&utm_campaign=2026-09-11-ui-ux",
+        "hashtags": [
+          "#Servio",
+          "#WebDesign",
+          "#SmallBusiness",
+          "#CustomerExperience",
+          "#LocalBusiness"
+        ],
+        "status": "scheduled",
+        "postId": "6aa3895771ba1c02ccf36413"
+      },
+      "instagram": {
+        "text": "Ever tried to book a simple haircut or a doctor visit on your phone and faced an endless form? 📱\n\nFull address. Age. Big open box asking you to type out your entire story on a tiny keyboard.\n\nMost people just sigh, close the tab, and look for another shop. 🚪\n\nWhen a customer is ready to book, do not make them do homework. \n\nAll you really need first is:\n1. Their name\n2. Their contact detail\n3. Their preferred day and time\n\nSave the detailed questions for the thank-you screen or the confirmation email after their slot is locked in. \n\nWhen booking takes five seconds instead of five minutes, more visitors actually turn into paying clients.\n\nWant to see how simple your booking page can be? Check out our work via the link in bio! ✨",
+        "hashtags": [
+          "#Servio",
+          "#SmallBusinessIndia",
+          "#WebsiteTips",
+          "#ClinicOwner",
+          "#SalonOwner",
+          "#BusinessGrowth",
+          "#CustomerCare",
+          "#Websites"
+        ],
+        "status": "scheduled",
+        "postId": "6aa3895a71ba1c02ccf36468"
+      },
+      "twitter": {
+        "text": "Long booking forms scare customers away. Keep it simple: name, contact, and time slot. Ask extra questions after they book so they do not close your page. https://servio-0.web.app?utm_source=twitter&utm_medium=social&utm_campaign=2026-09-11-ui-ux #Servio #WebDesign",
+        "hashtags": [
+          "#Servio",
+          "#WebDesign"
+        ],
+        "status": "scheduled",
+        "postId": "6aa3895c74b1f1d0ccd24cd2"
+      },
+      "imagePrompt": "A clean, modern graphic in a blue and white palette with minimalist startup style. It features a side-by-side comparison of a cluttered, intimidating digital form contrasted with a sleek, simple three-step booking confirmation card. Premium 3D-rendered concept art with rich glassmorphism: translucent frosted-glass panels, layered transparency, soft blur, glossy reflections and inner glow, with real depth and dimensional studio lighting. Vibrant saturated gradients — electric blue (#1E4FFF) flowing into cyan, indigo, violet and magenta — over a clean soft-lit background with gentle bloom and a shallow depth of field. Floating glossy geometric shapes, frosted-glass cards, glowing orbs and abstract nodes and connectors that suggest sleek modern web technology and digital craft. Polished, high-detail, dimensional, energetic yet professional. NO TEXT, no words, no letters, no numbers, no readable labels or UI writing, no photorealistic human faces, no logos or brand marks, no watermarks.",
+      "createdAtIso": "2026-09-11T04:53:48.624Z",
+      "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1789102422/aht8wpjjueaoq2oy4xtf.jpg"
     }
   ]
 }
