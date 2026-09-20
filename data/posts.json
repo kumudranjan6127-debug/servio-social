@@ -1316,6 +1316,51 @@
       "imagePrompt": "A minimalist graphic on a crisp white and deep royal blue background showing a small key next to a simple glowing cloud icon. Clean modern typography reading 'Keep Your Master Key', subtle geometric accents, startup branding style. Premium 3D-rendered concept art with rich glassmorphism: translucent frosted-glass panels, layered transparency, soft blur, glossy reflections and inner glow, with real depth and dimensional studio lighting. Vibrant saturated gradients — electric blue (#1E4FFF) flowing into cyan, indigo, violet and magenta — over a clean soft-lit background with gentle bloom and a shallow depth of field. Floating glossy geometric shapes, frosted-glass cards, glowing orbs and abstract nodes and connectors that suggest sleek modern web technology and digital craft. Polished, high-detail, dimensional, energetic yet professional. NO TEXT, no words, no letters, no numbers, no readable labels or UI writing, no photorealistic human faces, no logos or brand marks, no watermarks.",
       "createdAtIso": "2026-09-13T17:31:25.679Z",
       "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1789320679/dfu56ksh8sqhb2xvmafo.jpg"
+    },
+    {
+      "date": "2026-09-21",
+      "topic": "Open Source",
+      "angle": "What happens when your website crashes during peak business hours and you realize there is no customer care helpline to fix it.",
+      "linkedin": {
+        "text": "Imagine it is 8 PM on a busy Friday evening. Customers are visiting your online store or trying to book a table at your cafe, but your website shows a blank white error screen.\n\nYou quickly look for a phone number to call for help. That is when you discover the truth: free, community-built website software does not come with a helpline.\n\nThere is no customer care agent. No support desk to resolve the issue. Instead, you are left searching online message boards where strangers discuss computer errors you cannot understand.\n\nWhen things break, different pieces of add-on software clash behind the scenes. Finding out whose tool caused the crash falls completely on you. In a panic, many owners end up paying complete strangers and handing over secret website passwords just to get the doors open again.\n\nRunning a business is stressful enough without having to be an emergency technician.\n\nSee how Servio builds and looks after reliable websites so you never have to deal with broken screens alone: https://servio-0.web.app?utm_source=linkedin&utm_medium=social&utm_campaign=2026-09-20-open-source",
+        "hashtags": [
+          "#Servio",
+          "#SmallBusiness",
+          "#Websites",
+          "#BusinessOwners",
+          "#OnlineBusiness"
+        ],
+        "status": "scheduled",
+        "postId": "6aaf69444594e3153f4a8d6d"
+      },
+      "instagram": {
+        "text": "It is festival season, your shop is buzzing, and orders should be rolling in.\n\nThen your website suddenly goes blank.\n\nYou pick up your phone to call customer support. But there is no toll-free number. No live chat agent. No help desk.\n\nWith free website software, nobody is waiting on the other end to fix your site when it breaks. You are expected to read through public help forums and figure out why different add-on tools clashed with each other.\n\nMeanwhile, impatient customers leave and buy from your competitors instead.\n\nYour website should bring you peace of mind, not sudden panic during your busiest sales days.\n\nTake a look at how we build and maintain simple, dependable websites for growing businesses. Link in bio.",
+        "hashtags": [
+          "#Servio",
+          "#SmallBusinessOwner",
+          "#OnlineStore",
+          "#ShopOwner",
+          "#CafeOwner",
+          "#LocalBusiness",
+          "#WebsiteTips",
+          "#IndianBusiness",
+          "#Entrepreneurship"
+        ],
+        "status": "scheduled",
+        "postId": "6aaf6946b87fe8130459fcf7"
+      },
+      "twitter": {
+        "text": "Your website goes down on your busiest sales day, and you realize there is no helpline to call for support. Free software puts all the repair work on you. See how Servio keeps your site running smoothly: https://servio-0.web.app?utm_source=twitter&utm_medium=social&utm_campaign=2026-09-20-open-source #Servio #Business",
+        "hashtags": [
+          "#Servio",
+          "#Business"
+        ],
+        "status": "scheduled",
+        "postId": "6aaf6949b87fe8130459fd29"
+      },
+      "imagePrompt": "A clean, modern social graphic with a deep navy blue background, crisp white typography displaying the headline 'Who fixes your website when it crashes?', and a minimal graphic of a disconnected wire turning into a solid glowing blue line. Premium 3D-rendered concept art with rich glassmorphism: translucent frosted-glass panels, layered transparency, soft blur, glossy reflections and inner glow, with real depth and dimensional studio lighting. Vibrant saturated gradients — electric blue (#1E4FFF) flowing into cyan, indigo, violet and magenta — over a clean soft-lit background with gentle bloom and a shallow depth of field. Floating glossy geometric shapes, frosted-glass cards, glowing orbs and abstract nodes and connectors that suggest sleek modern web technology and digital craft. Polished, high-detail, dimensional, energetic yet professional. NO TEXT, no words, no letters, no numbers, no readable labels or UI writing, no photorealistic human faces, no logos or brand marks, no watermarks.",
+      "createdAtIso": "2026-09-20T05:04:09.386Z",
+      "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1789880643/ia1wtnqs3amwai6pphet.jpg"
     }
   ]
 }
