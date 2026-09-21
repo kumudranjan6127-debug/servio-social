@@ -1361,6 +1361,50 @@
       "imagePrompt": "A clean, modern social graphic with a deep navy blue background, crisp white typography displaying the headline 'Who fixes your website when it crashes?', and a minimal graphic of a disconnected wire turning into a solid glowing blue line. Premium 3D-rendered concept art with rich glassmorphism: translucent frosted-glass panels, layered transparency, soft blur, glossy reflections and inner glow, with real depth and dimensional studio lighting. Vibrant saturated gradients — electric blue (#1E4FFF) flowing into cyan, indigo, violet and magenta — over a clean soft-lit background with gentle bloom and a shallow depth of field. Floating glossy geometric shapes, frosted-glass cards, glowing orbs and abstract nodes and connectors that suggest sleek modern web technology and digital craft. Polished, high-detail, dimensional, energetic yet professional. NO TEXT, no words, no letters, no numbers, no readable labels or UI writing, no photorealistic human faces, no logos or brand marks, no watermarks.",
       "createdAtIso": "2026-09-20T05:04:09.386Z",
       "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1789880643/ia1wtnqs3amwai6pphet.jpg"
+    },
+    {
+      "date": "2026-09-22",
+      "topic": "GitHub",
+      "angle": "How to instantly undo a broken website update so you do not lose customer calls while waiting for someone to fix it.",
+      "linkedin": {
+        "text": "You check your clinic's website on a busy Saturday morning, and the booking button has stopped working after a Friday evening update.\n\nYou call your web designer, but they are away for the weekend. Every passing hour without a working form means missed patient calls and lost revenue.\n\nHere is the good news: if your site is set up properly on GitHub, you do not have to wait for anyone to rescue you.\n\nGitHub acts like an automatic time machine for your website. Every change ever made is saved as a complete snapshot. The working version from yesterday never disappears.\n\nEven if you do not know a thing about computer code, you can log in through any regular web browser, click on the update under 'Pull Requests', and press the 'Revert' button.\n\nWithin minutes, your website safely rolls back to the working version. The broken update stays saved in the background so your designer can inspect it on Monday. Meanwhile, your calls keep coming in.\n\nSee how we build dependable websites for local businesses: https://servio-0.web.app?utm_source=linkedin&utm_medium=social&utm_campaign=2026-09-22-github",
+        "hashtags": [
+          "#Servio",
+          "#SmallBusiness",
+          "#WebDesign",
+          "#BusinessOwners",
+          "#CustomerService"
+        ],
+        "status": "scheduled",
+        "postId": "6ab187d8cbf92765bbeb2d82"
+      },
+      "instagram": {
+        "text": "Imagine running a busy cafe. Lunch rush is starting, but customers say your online menu suddenly stopped opening after last night's update. 🍽️\n\nTo make matters worse, your web designer is unreachable.\n\nMost owners would panic. But when your site is stored on GitHub, you have an emergency undo button in your pocket.\n\nGitHub saves every single update as a separate snapshot. The version that worked yesterday is always there, waiting.\n\nYou simply log in from your browser, locate the latest update, and click 'Revert'.\n\nIn just a few minutes, your site jumps back to normal. Your customers can place their orders, and your web person can figure out what went wrong later when they are back online.\n\nNever let a bad update pause your sales.\n\nWant to see how a smooth, reliable website looks for your business? Tap the link in bio to check out our work at Servio. ✨",
+        "hashtags": [
+          "#Servio",
+          "#SmallBusinessIndia",
+          "#CafeOwner",
+          "#BusinessGrowth",
+          "#WebsiteTips",
+          "#LocalBusiness",
+          "#Entrepreneurs",
+          "#DigitalStore",
+          "#RestaurantOwner"
+        ],
+        "status": "scheduled",
+        "postId": "6ab187db640ac1a51da72c52"
+      },
+      "twitter": {
+        "text": "A broken website update shouldn't cost you customer calls while your web designer is away. You can undo it in minutes with one click from any browser. See how we keep your business running: https://servio-0.web.app?utm_source=twitter&utm_medium=social&utm_campaign=2026-09-22-github #Servio",
+        "hashtags": [
+          "#Servio"
+        ],
+        "status": "scheduled",
+        "postId": "6ab187ddeccf538628904e31"
+      },
+      "imagePrompt": "Modern minimal social graphic in a crisp blue and white palette. A clean split-screen illustration showing an alert icon transforming smoothly into a calm green checkmark beside a single 'Revert' button. Minimalist typography, soft studio lighting, professional startup tech aesthetic. Premium 3D-rendered concept art with rich glassmorphism: translucent frosted-glass panels, layered transparency, soft blur, glossy reflections and inner glow, with real depth and dimensional studio lighting. Vibrant saturated gradients — electric blue (#1E4FFF) flowing into cyan, indigo, violet and magenta — over a clean soft-lit background with gentle bloom and a shallow depth of field. Floating glossy geometric shapes, frosted-glass cards, glowing orbs and abstract nodes and connectors that suggest sleek modern web technology and digital craft. Polished, high-detail, dimensional, energetic yet professional. NO TEXT, no words, no letters, no numbers, no readable labels or UI writing, no photorealistic human faces, no logos or brand marks, no watermarks.",
+      "createdAtIso": "2026-09-21T19:39:09.703Z",
+      "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1790019543/rdmwhoc8tud1hwe5zrhe.jpg"
     }
   ]
 }
