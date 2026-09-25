@@ -1405,6 +1405,50 @@
       "imagePrompt": "Modern minimal social graphic in a crisp blue and white palette. A clean split-screen illustration showing an alert icon transforming smoothly into a calm green checkmark beside a single 'Revert' button. Minimalist typography, soft studio lighting, professional startup tech aesthetic. Premium 3D-rendered concept art with rich glassmorphism: translucent frosted-glass panels, layered transparency, soft blur, glossy reflections and inner glow, with real depth and dimensional studio lighting. Vibrant saturated gradients — electric blue (#1E4FFF) flowing into cyan, indigo, violet and magenta — over a clean soft-lit background with gentle bloom and a shallow depth of field. Floating glossy geometric shapes, frosted-glass cards, glowing orbs and abstract nodes and connectors that suggest sleek modern web technology and digital craft. Polished, high-detail, dimensional, energetic yet professional. NO TEXT, no words, no letters, no numbers, no readable labels or UI writing, no photorealistic human faces, no logos or brand marks, no watermarks.",
       "createdAtIso": "2026-09-21T19:39:09.703Z",
       "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1790019543/rdmwhoc8tud1hwe5zrhe.jpg"
+    },
+    {
+      "date": "2026-09-26",
+      "topic": "Developer Productivity",
+      "angle": "Common Developer Productivity mistakes small businesses make on their websites, and the simple fixes",
+      "linkedin": {
+        "text": "Ever waited two weeks just to get a phone number or a holiday timing updated on your website?\n\nWhen a bakery updates its menu prices or a clinic adds a new doctor, it should take a few minutes. It should never turn into a long, painful project.\n\nA common mistake when small business websites are built is letting the setup become messy and tangled behind the scenes. When things are disorganized, even the smallest change requires hours of chasing someone down. You get frustrated, give up, and leave old details online. That confuses buyers and costs you real enquiries.\n\nThe simple fix is insisting on a clean, well-organized website from day one. When a site is put together properly, updating your photos, services, or contact info is smooth, predictable, and fast.\n\nTake a look at how we build clean, headache-free websites for local businesses: https://servio-0.web.app?utm_source=linkedin&utm_medium=social&utm_campaign=2026-09-26-developer-productivity",
+        "hashtags": [
+          "#Servio",
+          "#SmallBusiness",
+          "#WebDesign",
+          "#BusinessTips",
+          "#Productivity"
+        ],
+        "status": "scheduled",
+        "postId": "6ab6c1d9637945f3f28d8c4b"
+      },
+      "instagram": {
+        "text": "You need to change your shop’s festival hours on your website.\n\nIt should take five minutes.\n\nInstead, it takes three emails, four phone calls, and two weeks of waiting.\n\nBy the time the change goes live, the festival is already over!\n\nThis happens when a website is built in a messy, tangled way. Every single tweak feels like tearing down a wall just to hang a picture.\n\nA good website should never steal hours from your week. It should be built cleanly so changes happen quickly and without stress.\n\nCurious what a neat, simple website could look like for your business? Visit the link in bio to see examples of our work.",
+        "hashtags": [
+          "#Servio",
+          "#SmallBusinessOwner",
+          "#LocalBusiness",
+          "#ShopOwner",
+          "#IndianBusiness",
+          "#BusinessGrowth",
+          "#WebDesign",
+          "#ProductivityTips",
+          "#StartupIndia"
+        ],
+        "status": "scheduled",
+        "postId": "6ab6c1dbbb822d0d17f216d5"
+      },
+      "twitter": {
+        "text": "Changing your shop's hours on your website shouldn't take 2 weeks. Messy setups waste your time. See how clean sites work: https://servio-0.web.app?utm_source=twitter&utm_medium=social&utm_campaign=2026-09-26-developer-productivity #Servio",
+        "hashtags": [
+          "#Servio"
+        ],
+        "status": "scheduled",
+        "postId": "6ab6c1def2adb5dafba6f498"
+      },
+      "imagePrompt": "A clean, modern social card in a crisp blue and white color palette showing a neat comparison between a cluttered timeline and a fast, streamlined timeline, with minimal tech typography. Premium 3D-rendered concept art with rich glassmorphism: translucent frosted-glass panels, layered transparency, soft blur, glossy reflections and inner glow, with real depth and dimensional studio lighting. Vibrant saturated gradients — electric blue (#1E4FFF) flowing into cyan, indigo, violet and magenta — over a clean soft-lit background with gentle bloom and a shallow depth of field. Floating glossy geometric shapes, frosted-glass cards, glowing orbs and abstract nodes and connectors that suggest sleek modern web technology and digital craft. Polished, high-detail, dimensional, energetic yet professional. NO TEXT, no words, no letters, no numbers, no readable labels or UI writing, no photorealistic human faces, no logos or brand marks, no watermarks.",
+      "createdAtIso": "2026-09-25T18:47:58.169Z",
+      "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1790362072/wxzlpvz5b9zwwzslwlx1.jpg"
     }
   ]
 }
