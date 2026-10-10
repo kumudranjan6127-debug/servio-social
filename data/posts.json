@@ -1536,6 +1536,51 @@
       "imagePrompt": "A clean, modern graphic with a crisp blue and white palette, featuring a minimalist outline of a smartphone beside an open calendar and checklist, with neat modern typography. Premium 3D-rendered concept art with rich glassmorphism: translucent frosted-glass panels, layered transparency, soft blur, glossy reflections and inner glow, with real depth and dimensional studio lighting. Vibrant saturated gradients — electric blue (#1E4FFF) flowing into cyan, indigo, violet and magenta — over a clean soft-lit background with gentle bloom and a shallow depth of field. Floating glossy geometric shapes, frosted-glass cards, glowing orbs and abstract nodes and connectors that suggest sleek modern web technology and digital craft. Polished, high-detail, dimensional, energetic yet professional. NO TEXT, no words, no letters, no numbers, no readable labels or UI writing, no photorealistic human faces, no logos or brand marks, no watermarks.",
       "createdAtIso": "2026-10-06T19:40:26.216Z",
       "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1791315620/oecwtr879zwlspbcc1pq.jpg"
+    },
+    {
+      "date": "2026-10-11",
+      "topic": "Software Engineering",
+      "angle": "Why simple updates to your prices or menu keep breaking other pages on your website, and how proper build quality stops that headache.",
+      "linkedin": {
+        "text": "You update the price of one dish on your cafe menu, and suddenly your contact page looks completely broken.\n\nIt sounds absurd, but it happens to small business owners all the time.\n\nWhy? Because many websites are built like a house of cards. The written words and the visual styling are tangled together.\n\nWhen things are built this way, adding a single sentence of description can push buttons off the screen. Changing a rate on your homepage means you have to remember to change it in four other spots, or customers see two different numbers and lose trust.\n\nA properly built website separates your text from the layout. Your prices and descriptions live in one central place. You update a number once, and it changes across your whole site automatically.\n\nNo overlapping text. No broken forms. No weekend panic.\n\nSee how clean, stress-free websites work for growing businesses: https://servio-0.web.app?utm_source=linkedin&utm_medium=social&utm_campaign=2026-10-10-software-engineering",
+        "hashtags": [
+          "#WebDesign",
+          "#SmallBusiness",
+          "#BusinessTips",
+          "#Servio",
+          "#WebsiteCare"
+        ],
+        "status": "scheduled",
+        "postId": "6ac9d5c5bba9419ccbf09a7b"
+      },
+      "instagram": {
+        "text": "Ever changed a single number on your price list, only for your website layout to completely fall apart? 🤦‍♂️\n\nIt happens to so many salon and clinic owners.\n\nYou add a short note under a service, and suddenly the text spills outside the box. Or you update a rate on your home page, but your booking page still shows the old rate.\n\nWhen a site is rushed, the wording and the visual code are glued together. Editing a simple price can accidentally scramble your footer or break your enquiry form.\n\nWith solid build quality, your content lives on its own. You change a price in one simple box, and every page updates cleanly.\n\nCurious what a headache-free website looks like for your business? Tap the link in bio to explore our work.",
+        "hashtags": [
+          "#SmallBusinessOwner",
+          "#ShopOwner",
+          "#SalonOwner",
+          "#ClinicLife",
+          "#CafeOwner",
+          "#BusinessOwner",
+          "#WebDesignTips",
+          "#LocalBusiness",
+          "#Servio"
+        ],
+        "status": "scheduled",
+        "postId": "6ac9d5c7c4de2d2b1218ebc7"
+      },
+      "twitter": {
+        "text": "Changing a price shouldn't break your website layout. Good build quality means simple updates never break other pages.\n\nSee how: https://servio-0.web.app?utm_source=twitter&utm_medium=social&utm_campaign=2026-10-10-software-engineering #Servio #SmallBusiness",
+        "hashtags": [
+          "#Servio",
+          "#SmallBusiness"
+        ],
+        "status": "scheduled",
+        "postId": "6ac9d5cac4de2d2b1218ecab"
+      },
+      "imagePrompt": "A clean, modern blue and white graphic showing a comparison between a fragile, broken website layout card and a perfectly aligned, clean pricing card, in a minimalist tech aesthetic. Premium 3D-rendered concept art with rich glassmorphism: translucent frosted-glass panels, layered transparency, soft blur, glossy reflections and inner glow, with real depth and dimensional studio lighting. Vibrant saturated gradients — electric blue (#1E4FFF) flowing into cyan, indigo, violet and magenta — over a clean soft-lit background with gentle bloom and a shallow depth of field. Floating glossy geometric shapes, frosted-glass cards, glowing orbs and abstract nodes and connectors that suggest sleek modern web technology and digital craft. Polished, high-detail, dimensional, energetic yet professional. NO TEXT, no words, no letters, no numbers, no readable labels or UI writing, no photorealistic human faces, no logos or brand marks, no watermarks.",
+      "createdAtIso": "2026-10-10T06:06:02.164Z",
+      "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1791612356/jwmyjypgp00b0whkybcc.jpg"
     }
   ]
 }
