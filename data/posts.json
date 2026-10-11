@@ -1581,6 +1581,50 @@
       "imagePrompt": "A clean, modern blue and white graphic showing a comparison between a fragile, broken website layout card and a perfectly aligned, clean pricing card, in a minimalist tech aesthetic. Premium 3D-rendered concept art with rich glassmorphism: translucent frosted-glass panels, layered transparency, soft blur, glossy reflections and inner glow, with real depth and dimensional studio lighting. Vibrant saturated gradients — electric blue (#1E4FFF) flowing into cyan, indigo, violet and magenta — over a clean soft-lit background with gentle bloom and a shallow depth of field. Floating glossy geometric shapes, frosted-glass cards, glowing orbs and abstract nodes and connectors that suggest sleek modern web technology and digital craft. Polished, high-detail, dimensional, energetic yet professional. NO TEXT, no words, no letters, no numbers, no readable labels or UI writing, no photorealistic human faces, no logos or brand marks, no watermarks.",
       "createdAtIso": "2026-10-10T06:06:02.164Z",
       "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1791612356/jwmyjypgp00b0whkybcc.jpg"
+    },
+    {
+      "date": "2026-10-12",
+      "topic": "AI",
+      "angle": "Common AI mistakes small businesses make on their websites, and the simple fixes",
+      "linkedin": {
+        "text": "Imagine a customer visiting your clinic or shop website at 9 PM. They ask your new AI chat box if you offer a 50% discount, and the bot cheerfully promises they can have it.\n\nAI tools promise to save busy owners time, but simple setup mistakes often push good customers away.\n\nHere are three easy fixes to keep your website helpful and trusted:\n\n1. Do not let chatbots guess. Restrict them strictly to your approved answers for opening hours and service lists, and always give visitors a clear button to speak to a real person.\n\n2. Avoid raw computer text. Text generated entirely by AI sounds repetitive and robotic. Use it only as a rough draft, then add your own words and local neighborhood details.\n\n3. Skip fake computer-generated photos. Shoppers spot plastic-looking faces right away. Real photos of your team, your shop counter, and your actual work build real confidence.\n\nTake a look at how we build clear, reliable websites for growing businesses: https://servio-0.web.app?utm_source=linkedin&utm_medium=social&utm_campaign=2026-10-11-ai",
+        "hashtags": [
+          "#Servio",
+          "#SmallBusiness",
+          "#WebDesign",
+          "#BusinessTips",
+          "#CustomerTrust"
+        ],
+        "status": "scheduled",
+        "postId": "6acb26cbed92ed8fa5f25fb0"
+      },
+      "instagram": {
+        "text": "You added an AI helper to your cafe or salon website to save time, but customer calls suddenly dropped.\n\nHere is what often goes wrong:\n\n• The chat box makes wild promises on pricing that you never approved.\n• The text on your pages sounds stiff and generic, like a robot wrote it.\n• Fake, glossy pictures of pretend staff make your business look like a scam.\n• The chat window takes forever to load, freezing the entire screen on mobile phones.\n\nFixing this is simpler than you think.\n\nKeep your automated chats locked strictly to your real list of questions. Use honest photos of your real shop floor. And always make sure the chat only turns on after your main page opens smoothly.\n\nYour website should help buyers trust you faster, not leave them confused.\n\nWant to see how a clean, welcoming site looks for your business? Tap the link in bio! ✨",
+        "hashtags": [
+          "#Servio",
+          "#SmallBusinessIndia",
+          "#ShopOwner",
+          "#CafeOwner",
+          "#SalonOwner",
+          "#WebsiteTips",
+          "#LocalBusiness",
+          "#BusinessGrowth",
+          "#CustomerExperience"
+        ],
+        "status": "scheduled",
+        "postId": "6acb26cded92ed8fa5f25fff"
+      },
+      "twitter": {
+        "text": "Adding AI to your site?\n1. Lock chat answers to real FAQs\n2. Use real photos, not fake AI faces\nReal trust wins sales.\nSee site ideas: https://servio-0.web.app?utm_source=twitter&utm_medium=social&utm_campaign=2026-10-11-ai #Servio",
+        "hashtags": [
+          "#Servio"
+        ],
+        "status": "scheduled",
+        "postId": "6acb26d0c4de2d2b124f7a3a"
+      },
+      "imagePrompt": "A minimalist split-screen graphic with a crisp blue and white color palette, showing a chaotic artificial robotic chat bubble on the left and a neat, friendly business storefront on the right, paired with clean sans-serif typography. Premium 3D-rendered concept art with rich glassmorphism: translucent frosted-glass panels, layered transparency, soft blur, glossy reflections and inner glow, with real depth and dimensional studio lighting. Vibrant saturated gradients — electric blue (#1E4FFF) flowing into cyan, indigo, violet and magenta — over a clean soft-lit background with gentle bloom and a shallow depth of field. Floating glossy geometric shapes, frosted-glass cards, glowing orbs and abstract nodes and connectors that suggest sleek modern web technology and digital craft. Polished, high-detail, dimensional, energetic yet professional. NO TEXT, no words, no letters, no numbers, no readable labels or UI writing, no photorealistic human faces, no logos or brand marks, no watermarks.",
+      "createdAtIso": "2026-10-11T06:04:00.294Z",
+      "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1791698634/v8hxvgpufykqgf5pccdv.jpg"
     }
   ]
 }
