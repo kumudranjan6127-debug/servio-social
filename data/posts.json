@@ -1713,6 +1713,50 @@
       "imagePrompt": "A clean, modern flat graphic featuring a blue and white color palette, showing an open business storefront transitioning into an upward-trending growth line. Minimalist composition with subtle geometric shapes and bold, readable typography suited for a startup brand. Premium 3D-rendered concept art with rich glassmorphism: translucent frosted-glass panels, layered transparency, soft blur, glossy reflections and inner glow, with real depth and dimensional studio lighting. Vibrant saturated gradients — electric blue (#1E4FFF) flowing into cyan, indigo, violet and magenta — over a clean soft-lit background with gentle bloom and a shallow depth of field. Floating glossy geometric shapes, frosted-glass cards, glowing orbs and abstract nodes and connectors that suggest sleek modern web technology and digital craft. Polished, high-detail, dimensional, energetic yet professional. NO TEXT, no words, no letters, no numbers, no readable labels or UI writing, no photorealistic human faces, no logos or brand marks, no watermarks.",
       "createdAtIso": "2026-10-13T06:56:36.620Z",
       "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1791874591/m8febl9wypikbxqbnpal.jpg"
+    },
+    {
+      "date": "2026-10-16",
+      "topic": "SaaS",
+      "angle": "A practical, no-hype look at using SaaS well on a small business website",
+      "linkedin": {
+        "text": "You added a chat box, a review pop-up, and a booking calendar to your website—and now the whole page takes forever to open.\n\nIt happens to so many clinic and salon owners. Every new online tool promises to bring in more business. But piling on monthly software subscriptions can quietly drive customers away.\n\nFirst, each tool slows your page down. Busy people on mobile phones will not wait; they tap back and call your competitor.\n\nSecond, some tools push your visitor away to a strange web address to fill out a form. That makes people hesitate and wonder if your site is safe.\n\nThird, when one tool updates overnight, it can quietly break your contact forms without you ever knowing.\n\nBefore you pay for another tool, check what your website can already do on its own. When you do add a tool, make sure it stays inside your site and lets you download your customer list whenever you want.\n\nSee how clean, fast websites help businesses win more enquiries: https://servio-0.web.app?utm_source=linkedin&utm_medium=social&utm_campaign=2026-10-15-saas",
+        "hashtags": [
+          "#SmallBusiness",
+          "#WebDesign",
+          "#BusinessTips",
+          "#Servio",
+          "#CustomerExperience"
+        ],
+        "status": "scheduled",
+        "postId": "6ad05ccb6ff8a3fe7b38fdd4"
+      },
+      "instagram": {
+        "text": "A customer clicks \"Book a Consultation\" on your website, and suddenly gets redirected to a strange, unfamiliar web address. 📲\n\nWhat do they do? Most close the tab because it looks suspicious.\n\nWe see local business owners add four or five monthly tools to their websites—one for chat, one for reviews, one for forms, one for calendars.\n\nHere is what usually happens:\n• Your website becomes painfully slow to load.\n• Monthly software fees quietly pile up.\n• One update breaks your booking page, and you lose calls without knowing it.\n\nA great website should handle the basics smoothly right on the page, without piling on extra gadgets that confuse your visitors.\n\nCurious how a clean, simple website can look for your business? Tap the link in bio to see our work.",
+        "hashtags": [
+          "#Servio",
+          "#SmallBusinessOwner",
+          "#ShopOwner",
+          "#LocalBusiness",
+          "#BusinessGrowth",
+          "#WebDesignTips",
+          "#Entrepreneurs",
+          "#SimpleBusiness"
+        ],
+        "status": "scheduled",
+        "postId": "6ad05cce78f377d888b186b2"
+      },
+      "twitter": {
+        "text": "Too many monthly add-on tools slow your website down and push buyers away. Keep bookings and forms right on your own page.\n\nSee how a clean site works: https://servio-0.web.app?utm_source=twitter&utm_medium=social&utm_campaign=2026-10-15-saas #Servio #SmallBusiness",
+        "hashtags": [
+          "#Servio",
+          "#SmallBusiness"
+        ],
+        "status": "scheduled",
+        "postId": "6ad05cd07b2b6a2866e43f9b"
+      },
+      "imagePrompt": "A minimalist, modern social graphic featuring an open laptop showing a clean and fast business website layout, with faint blue outline icons representing forms and calendars, set against a crisp white and soft blue background with clean modern typography. Premium 3D-rendered concept art with rich glassmorphism: translucent frosted-glass panels, layered transparency, soft blur, glossy reflections and inner glow, with real depth and dimensional studio lighting. Vibrant saturated gradients — electric blue (#1E4FFF) flowing into cyan, indigo, violet and magenta — over a clean soft-lit background with gentle bloom and a shallow depth of field. Floating glossy geometric shapes, frosted-glass cards, glowing orbs and abstract nodes and connectors that suggest sleek modern web technology and digital craft. Polished, high-detail, dimensional, energetic yet professional. NO TEXT, no words, no letters, no numbers, no readable labels or UI writing, no photorealistic human faces, no logos or brand marks, no watermarks.",
+      "createdAtIso": "2026-10-15T04:55:44.602Z",
+      "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1792040139/pn57hw62fmcyxpdihiqh.jpg"
     }
   ]
 }
