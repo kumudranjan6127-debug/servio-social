@@ -1757,6 +1757,51 @@
       "imagePrompt": "A minimalist, modern social graphic featuring an open laptop showing a clean and fast business website layout, with faint blue outline icons representing forms and calendars, set against a crisp white and soft blue background with clean modern typography. Premium 3D-rendered concept art with rich glassmorphism: translucent frosted-glass panels, layered transparency, soft blur, glossy reflections and inner glow, with real depth and dimensional studio lighting. Vibrant saturated gradients — electric blue (#1E4FFF) flowing into cyan, indigo, violet and magenta — over a clean soft-lit background with gentle bloom and a shallow depth of field. Floating glossy geometric shapes, frosted-glass cards, glowing orbs and abstract nodes and connectors that suggest sleek modern web technology and digital craft. Polished, high-detail, dimensional, energetic yet professional. NO TEXT, no words, no letters, no numbers, no readable labels or UI writing, no photorealistic human faces, no logos or brand marks, no watermarks.",
       "createdAtIso": "2026-10-15T04:55:44.602Z",
       "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1792040139/pn57hw62fmcyxpdihiqh.jpg"
+    },
+    {
+      "date": "2026-10-18",
+      "topic": "Web Development",
+      "angle": "Why having a business website should not mean waiting days for a developer just to change your prices or working hours.",
+      "linkedin": {
+        "text": "You change the price of your lunch special or adjust holiday hours, but your website still shows the old details three days later.\n\nEvery time you need a tiny edit, you have to email a developer, wait for a reply, and then pay an invoice just to change three lines of text.\n\nMeanwhile, a customer shows up at your door when you are closed or complains because the price at the counter does not match what was on your screen.\n\nA business website should work for you, not hold you hostage. With the right setup, updating your timings, fees, or menu items takes less than two minutes from your phone or laptop. The design stays locked so nothing gets messed up, and you never have to wait on anyone else.\n\nYou run your business fast. Your website should keep up with your schedule without extra fees.\n\nSee how we build easy-to-manage websites for local businesses: https://servio-0.web.app?utm_source=linkedin&utm_medium=social&utm_campaign=2026-10-17-web-development",
+        "hashtags": [
+          "#Servio",
+          "#SmallBusiness",
+          "#WebDesign",
+          "#BusinessOwners",
+          "#LocalBusiness"
+        ],
+        "status": "scheduled",
+        "postId": "6ad2fcee52adf2bfae761516"
+      },
+      "instagram": {
+        "text": "Ever had to close early for an emergency, but your website still told customers you were open? 🤦\n\nOr worse: you revised your service prices weeks ago, yet you are still waiting on an outside designer just to update the numbers on your page.\n\nWhen basic edits take days, you end up with confused visitors, awkward conversations at the counter, and bills for work you could do yourself in two minutes.\n\nA proper business site lets you type in your new timings or prices, hit save, and get right back to your day—with zero fear of breaking the layout.\n\nVisit the link in bio to see how we build sites that business owners can actually manage themselves. ✨",
+        "hashtags": [
+          "#Servio",
+          "#SmallBusinessIndia",
+          "#BoutiqueOwner",
+          "#CafeOwner",
+          "#ClinicOwner",
+          "#WebDesign",
+          "#LocalBusiness",
+          "#ShopOwner",
+          "#Entrepreneur"
+        ],
+        "status": "scheduled",
+        "postId": "6ad2fcf187c4935770af498c"
+      },
+      "twitter": {
+        "text": "You shouldn't wait 3 days or pay developer fees just to update your store hours or prices. Good websites let you edit details in 2 minutes without breaking the design.\n\nSee how we build simple sites: https://servio-0.web.app?utm_source=twitter&utm_medium=social&utm_campaign=2026-10-17-web-development #Servio #WebDesign",
+        "hashtags": [
+          "#Servio",
+          "#WebDesign"
+        ],
+        "status": "scheduled",
+        "postId": "6ad2fcf38ac6cfe5442e16af"
+      },
+      "imagePrompt": "Modern minimal graphic on a crisp white and deep royal blue background showing a clean mock-up of an intuitive website edit screen with updated store hours and prices, featuring clean typography and simple layout lines. Premium 3D-rendered concept art with rich glassmorphism: translucent frosted-glass panels, layered transparency, soft blur, glossy reflections and inner glow, with real depth and dimensional studio lighting. Vibrant saturated gradients — electric blue (#1E4FFF) flowing into cyan, indigo, violet and magenta — over a clean soft-lit background with gentle bloom and a shallow depth of field. Floating glossy geometric shapes, frosted-glass cards, glowing orbs and abstract nodes and connectors that suggest sleek modern web technology and digital craft. Polished, high-detail, dimensional, energetic yet professional. NO TEXT, no words, no letters, no numbers, no readable labels or UI writing, no photorealistic human faces, no logos or brand marks, no watermarks.",
+      "createdAtIso": "2026-10-17T04:43:31.381Z",
+      "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1792212206/livijw4tgtxdsnzr12uv.jpg"
     }
   ]
 }
