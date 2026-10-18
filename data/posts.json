@@ -1802,6 +1802,49 @@
       "imagePrompt": "Modern minimal graphic on a crisp white and deep royal blue background showing a clean mock-up of an intuitive website edit screen with updated store hours and prices, featuring clean typography and simple layout lines. Premium 3D-rendered concept art with rich glassmorphism: translucent frosted-glass panels, layered transparency, soft blur, glossy reflections and inner glow, with real depth and dimensional studio lighting. Vibrant saturated gradients — electric blue (#1E4FFF) flowing into cyan, indigo, violet and magenta — over a clean soft-lit background with gentle bloom and a shallow depth of field. Floating glossy geometric shapes, frosted-glass cards, glowing orbs and abstract nodes and connectors that suggest sleek modern web technology and digital craft. Polished, high-detail, dimensional, energetic yet professional. NO TEXT, no words, no letters, no numbers, no readable labels or UI writing, no photorealistic human faces, no logos or brand marks, no watermarks.",
       "createdAtIso": "2026-10-17T04:43:31.381Z",
       "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1792212206/livijw4tgtxdsnzr12uv.jpg"
+    },
+    {
+      "date": "2026-10-19",
+      "topic": "React",
+      "angle": "What small business owners should know about React before hiring a web agency",
+      "linkedin": {
+        "text": "You ask for a quote to build a website for your clinic or cafe, and the agency hands you a steep estimate loaded with buzzwords like 'React'.\n\nBefore you approve that budget, here is what you should know.\n\nReact was created for complex, interactive web apps. If you just need a straightforward website that shares your services, shows your working hours, and helps local customers call you, a full React setup is often expensive overkill.\n\nHowever, it does bring real advantages when used for the right reasons:\n\n• You are not trapped: Because so many developers know it, you can easily hire someone new if your agency disappears.\n• Mobile ready: If you plan to build a phone app later, your team can reuse much of the same code to save money.\n• Google visibility matters: Standard React setups can sometimes hide your text from search engines. Ensure your agency sets it up so Google reads every page cleanly.\n\nCurious what kind of site actually makes sense for your business? Take a look at examples of our work at Servio: https://servio-0.web.app?utm_source=linkedin&utm_medium=social&utm_campaign=2026-10-18-react",
+        "hashtags": [
+          "#Servio",
+          "#Websites",
+          "#SmallBusiness",
+          "#WebDesign",
+          "#BusinessTips"
+        ],
+        "status": "scheduled",
+        "postId": "6ad44fc30b0d72757a099b5d"
+      },
+      "instagram": {
+        "text": "You reach out to a web agency for a fresh boutique website, and they send back an expensive proposal mentioning 'React'.\n\nDo you actually need it? Here is the honest truth.\n\nIf your goal is simple—getting local customers to see your menu, check your prices, and book an appointment—a full React build is usually costly overkill.\n\nReact shines when you are building interactive tools, like customer portals or custom booking systems.\n\nThe bright side? Because it is so popular, you avoid getting stuck with one developer forever. Plus, if you ever decide to launch a smartphone app, much of the work can be reused to save you money.\n\nJust remember to ask your agency if Google can easily find your pages, and set aside a small budget for routine security updates.\n\nWant to see how simple, effective websites look in action? Check the link in bio.",
+        "hashtags": [
+          "#Servio",
+          "#SmallBusinessIndia",
+          "#WebDesign",
+          "#ShopOwner",
+          "#LocalBusiness",
+          "#BusinessTips",
+          "#BoutiqueOwner",
+          "#ClinicMarketing"
+        ],
+        "status": "scheduled",
+        "postId": "6ad44fc5769b457934a9ed6a"
+      },
+      "twitter": {
+        "text": "Told you need a costly React site? If you just need locals to find your clinic or cafe, it might be overkill. Build what fits your business. See our work: https://servio-0.web.app?utm_source=twitter&utm_medium=social&utm_campaign=2026-10-18-react #Servio",
+        "hashtags": [
+          "#Servio"
+        ],
+        "status": "scheduled",
+        "postId": "6ad44fc70b0d72757a099ba0"
+      },
+      "imagePrompt": "A clean, modern graphic with a soft blue and white palette featuring minimal typography comparing a simple storefront website to complex application gears, styled for a startup tech aesthetic. Premium 3D-rendered concept art with rich glassmorphism: translucent frosted-glass panels, layered transparency, soft blur, glossy reflections and inner glow, with real depth and dimensional studio lighting. Vibrant saturated gradients — electric blue (#1E4FFF) flowing into cyan, indigo, violet and magenta — over a clean soft-lit background with gentle bloom and a shallow depth of field. Floating glossy geometric shapes, frosted-glass cards, glowing orbs and abstract nodes and connectors that suggest sleek modern web technology and digital craft. Polished, high-detail, dimensional, energetic yet professional. NO TEXT, no words, no letters, no numbers, no readable labels or UI writing, no photorealistic human faces, no logos or brand marks, no watermarks.",
+      "createdAtIso": "2026-10-18T04:49:11.942Z",
+      "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1792298946/z5bsu9gupckwqnvfgws9.jpg"
     }
   ]
 }
