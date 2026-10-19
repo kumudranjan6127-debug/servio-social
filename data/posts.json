@@ -1845,6 +1845,50 @@
       "imagePrompt": "A clean, modern graphic with a soft blue and white palette featuring minimal typography comparing a simple storefront website to complex application gears, styled for a startup tech aesthetic. Premium 3D-rendered concept art with rich glassmorphism: translucent frosted-glass panels, layered transparency, soft blur, glossy reflections and inner glow, with real depth and dimensional studio lighting. Vibrant saturated gradients — electric blue (#1E4FFF) flowing into cyan, indigo, violet and magenta — over a clean soft-lit background with gentle bloom and a shallow depth of field. Floating glossy geometric shapes, frosted-glass cards, glowing orbs and abstract nodes and connectors that suggest sleek modern web technology and digital craft. Polished, high-detail, dimensional, energetic yet professional. NO TEXT, no words, no letters, no numbers, no readable labels or UI writing, no photorealistic human faces, no logos or brand marks, no watermarks.",
       "createdAtIso": "2026-10-18T04:49:11.942Z",
       "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1792298946/z5bsu9gupckwqnvfgws9.jpg"
+    },
+    {
+      "date": "2026-10-20",
+      "topic": "Next.js",
+      "angle": "Why your business website stays invisible on Google when nearby customers search for the exact things you sell.",
+      "linkedin": {
+        "text": "You run a salon, dental clinic, or bakery. Customers praise your work every single day.\n\nYet when someone three streets away searches Google for what you offer, your business is nowhere to be found. A competitor two miles further out takes the call instead.\n\nWhy does this happen?\n\nMany modern websites are built in a way that loads as blank code behind the scenes. When Google visits your page, it has to wait to piece everything together. Often, Google simply moves on before seeing your actual services, prices, or address.\n\nTo show up in local searches, your website must send fully readable text the exact millisecond Google arrives. It needs to tell search engines your real opening hours, your exact location, and load instantly on slow phone connections.\n\nWhen your pages are served ready to read, Google finally understands what you sell and puts you in front of local buyers.\n\nCurious how a clean, search-ready website looks for your trade? Take a look at our work: https://servio-0.web.app?utm_source=linkedin&utm_medium=social&utm_campaign=2026-10-19-next-js",
+        "hashtags": [
+          "#Servio",
+          "#Websites",
+          "#SmallBusiness",
+          "#LocalBusiness",
+          "#BusinessGrowth"
+        ],
+        "status": "scheduled",
+        "postId": "6ad5a3740a208cb3239552fc"
+      },
+      "instagram": {
+        "text": "Imagine a customer walking past your shop, but brown paper covers the front window. 🏪\n\nThey have no clue what is inside, so they walk into the store down the road instead.\n\nThat is what happens to thousands of business websites every day.\n\nBehind the scenes, many websites load as empty code that takes time to assemble. When Google's scanner checks your page, it sees blank space instead of your menu, services, or prices. 📄\n\nBecause it sees nothing, it ranks you lower.\n\nA properly built site sends finished, complete text right away. Google reads your address, your opening hours, and every service you provide instantly.\n\nAdd fast-loading pictures that open in a flash on mobile phones, and nearby shoppers finally find your doors first. ✨\n\nSee how clear, fast websites help local businesses stand out—link in bio!",
+        "hashtags": [
+          "#Servio",
+          "#SmallBusinessIndia",
+          "#ShopOwner",
+          "#LocalBusiness",
+          "#CafeOwner",
+          "#BoutiqueOwner",
+          "#WebsiteDesign",
+          "#BusinessOwners",
+          "#GrowYourBusiness"
+        ],
+        "status": "scheduled",
+        "postId": "6ad5a3760b0d72757a5125d2"
+      },
+      "twitter": {
+        "text": "Why is your shop hidden on Google? Many websites load blank code bots skip. We make sites that show full text instantly so locals find you: https://servio-0.web.app?utm_source=twitter&utm_medium=social&utm_campaign=2026-10-19-next-js #Servio",
+        "hashtags": [
+          "#Servio"
+        ],
+        "status": "scheduled",
+        "postId": "6ad5a3790a208cb323955349"
+      },
+      "imagePrompt": "A minimalist split graphic showing a search magnifying glass discovering clear, organized business cards on a clean white background with deep navy blue accents, modern clean startup style. Premium 3D-rendered concept art with rich glassmorphism: translucent frosted-glass panels, layered transparency, soft blur, glossy reflections and inner glow, with real depth and dimensional studio lighting. Vibrant saturated gradients — electric blue (#1E4FFF) flowing into cyan, indigo, violet and magenta — over a clean soft-lit background with gentle bloom and a shallow depth of field. Floating glossy geometric shapes, frosted-glass cards, glowing orbs and abstract nodes and connectors that suggest sleek modern web technology and digital craft. Polished, high-detail, dimensional, energetic yet professional. NO TEXT, no words, no letters, no numbers, no readable labels or UI writing, no photorealistic human faces, no logos or brand marks, no watermarks.",
+      "createdAtIso": "2026-10-19T04:58:33.276Z",
+      "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1792385907/daszdr5fvchikng5h5fl.jpg"
     }
   ]
 }
