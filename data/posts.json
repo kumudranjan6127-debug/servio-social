@@ -1889,6 +1889,49 @@
       "imagePrompt": "A minimalist split graphic showing a search magnifying glass discovering clear, organized business cards on a clean white background with deep navy blue accents, modern clean startup style. Premium 3D-rendered concept art with rich glassmorphism: translucent frosted-glass panels, layered transparency, soft blur, glossy reflections and inner glow, with real depth and dimensional studio lighting. Vibrant saturated gradients — electric blue (#1E4FFF) flowing into cyan, indigo, violet and magenta — over a clean soft-lit background with gentle bloom and a shallow depth of field. Floating glossy geometric shapes, frosted-glass cards, glowing orbs and abstract nodes and connectors that suggest sleek modern web technology and digital craft. Polished, high-detail, dimensional, energetic yet professional. NO TEXT, no words, no letters, no numbers, no readable labels or UI writing, no photorealistic human faces, no logos or brand marks, no watermarks.",
       "createdAtIso": "2026-10-19T04:58:33.276Z",
       "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1792385907/daszdr5fvchikng5h5fl.jpg"
+    },
+    {
+      "date": "2026-10-22",
+      "topic": "Node.js",
+      "angle": "How to show customers live updates on their orders or appointments without making them constantly refresh the screen on their phone.",
+      "linkedin": {
+        "text": "\"Is my order ready yet? How much longer?\"\n\nIf you run a busy cafe, clinic, or bakery, your staff spends half the evening answering that exact question. Customers want to know what is happening, so they sit on your website constantly hitting refresh or calling your front desk.\n\nBig apps like Domino's or Swiggy solved this years ago. When your pizza moves to the oven, the progress bar moves on your phone automatically. You do not need to tap refresh even once.\n\nYour small business can do the exact same thing on your own website.\n\nInstead of a customer's phone constantly asking your website for updates and draining their battery, the website quietly pushes the update the moment you change an order status. One small screen change keeps hundreds of customers calm, frees up your phone lines, and makes your business look completely modern.\n\nWant to see how clear, modern websites help local businesses run smoother? Visit our site to explore real examples: https://servio-0.web.app?utm_source=linkedin&utm_medium=social&utm_campaign=2026-10-21-node-js",
+        "hashtags": [
+          "#Servio",
+          "#SmallBusiness",
+          "#CustomerExperience",
+          "#BusinessTips",
+          "#Websites"
+        ],
+        "status": "scheduled",
+        "postId": "6ad84794aff466fe0900e67d"
+      },
+      "instagram": {
+        "text": "Every business owner knows this phone call: \n\n\"Hi, I placed an order 20 minutes ago. Is it ready yet?\"\n\nWhen people do not know what is happening, they get anxious. They tap refresh on their phone ten times, and then they call your shop.\n\nModern business websites can update an order or appointment status live on screen. \n\nThe moment you click \"Ready for Pickup\" or \"Doctor is Ready\", your customer's screen changes on its own. No refreshing. No drained phone batteries. No endless phone calls while you are trying to serve people in front of you.\n\nIt is the same smooth experience people love from big delivery apps, built right into a simple local business website.\n\nTake a look at how we build clean, helpful websites for local shops. Link in bio.",
+        "hashtags": [
+          "#Servio",
+          "#SmallBusinessIndia",
+          "#LocalBusiness",
+          "#ShopOwner",
+          "#RestaurantOwner",
+          "#CustomerService",
+          "#WebsiteDesign",
+          "#BusinessGrowth"
+        ],
+        "status": "scheduled",
+        "postId": "6ad8479750009d9e950c1eb6"
+      },
+      "twitter": {
+        "text": "Tired of calls asking \"Where is my order?\"\n\nModern websites update your customer's screen live without them having to refresh. It builds trust and keeps your staff focused.\n\nSee examples: https://servio-0.web.app?utm_source=twitter&utm_medium=social&utm_campaign=2026-10-21-node-js #Servio",
+        "hashtags": [
+          "#Servio"
+        ],
+        "status": "scheduled",
+        "postId": "6ad84799db7d819821470d0d"
+      },
+      "imagePrompt": "A clean, modern social card featuring a minimal smartphone mockup displaying an automatic live order status bar, against a crisp blue and white geometric background with bold, friendly typography. Premium 3D-rendered concept art with rich glassmorphism: translucent frosted-glass panels, layered transparency, soft blur, glossy reflections and inner glow, with real depth and dimensional studio lighting. Vibrant saturated gradients — electric blue (#1E4FFF) flowing into cyan, indigo, violet and magenta — over a clean soft-lit background with gentle bloom and a shallow depth of field. Floating glossy geometric shapes, frosted-glass cards, glowing orbs and abstract nodes and connectors that suggest sleek modern web technology and digital craft. Polished, high-detail, dimensional, energetic yet professional. NO TEXT, no words, no letters, no numbers, no readable labels or UI writing, no photorealistic human faces, no logos or brand marks, no watermarks.",
+      "createdAtIso": "2026-10-21T05:03:21.568Z",
+      "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1792558995/ukjzsg1tra2xgtbzprkk.jpg"
     }
   ]
 }
