@@ -1932,6 +1932,51 @@
       "imagePrompt": "A clean, modern social card featuring a minimal smartphone mockup displaying an automatic live order status bar, against a crisp blue and white geometric background with bold, friendly typography. Premium 3D-rendered concept art with rich glassmorphism: translucent frosted-glass panels, layered transparency, soft blur, glossy reflections and inner glow, with real depth and dimensional studio lighting. Vibrant saturated gradients — electric blue (#1E4FFF) flowing into cyan, indigo, violet and magenta — over a clean soft-lit background with gentle bloom and a shallow depth of field. Floating glossy geometric shapes, frosted-glass cards, glowing orbs and abstract nodes and connectors that suggest sleek modern web technology and digital craft. Polished, high-detail, dimensional, energetic yet professional. NO TEXT, no words, no letters, no numbers, no readable labels or UI writing, no photorealistic human faces, no logos or brand marks, no watermarks.",
       "createdAtIso": "2026-10-21T05:03:21.568Z",
       "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1792558995/ukjzsg1tra2xgtbzprkk.jpg"
+    },
+    {
+      "date": "2026-11-04",
+      "topic": "Firebase",
+      "angle": "How to let shoppers log in using just their mobile number so they never abandon their cart because they forgot a password.",
+      "linkedin": {
+        "text": "A customer spends twenty minutes picking items in your online store. They tap checkout. Then your site asks them to create an account with a password they will never remember.\n\nWhat happens next? Most simply close the tab.\n\nNobody wants to think up a complex password just to buy a box of sweets, a dress, or a skincare cream. When you make people jump through hoops, you lose sales you worked hard to get.\n\nThere is a simpler way to run your store. Let customers log in with just their mobile number. They type their phone number, receive a quick text code, and boom — they are ready to pay. They stay logged in for their next visit, too, so reordering takes seconds.\n\nIt runs reliably on Google's own systems, keeping fake bots away while welcoming real shoppers without any delay.\n\nCurious how smooth your checkout could feel? Explore our work and see what Servio can build for your store: https://servio-0.web.app?utm_source=linkedin&utm_medium=social&utm_campaign=2026-11-04-firebase",
+        "hashtags": [
+          "#Servio",
+          "#Ecommerce",
+          "#SmallBusiness",
+          "#OnlineStore",
+          "#WebDesign"
+        ],
+        "status": "scheduled",
+        "postId": "6aea455c343beca74f0d0131"
+      },
+      "instagram": {
+        "text": "Ever added something to your cart, seen a 'Create Password' screen, and just given up?\n\nYour customers do the exact same thing.\n\nWhen someone is ready to buy from your boutique or bakery, the last thing they want is another password to memorize. If buying feels like homework, they walk away.\n\nInstead, let them sign in using just their mobile number.\n\nA quick text message with a simple code gets them straight to the payment step. No forgotten passwords. No resets. Plus, they stay signed in so next time they visit, they can order in seconds.\n\nClean, quick, and stress-free for your buyers.\n\nWant to see how an easy checkout can work for your business? Check out our recent work at the link in bio.",
+        "hashtags": [
+          "#Servio",
+          "#SmallBusinessOwner",
+          "#ShopLocal",
+          "#IndianBusiness",
+          "#OnlineShopping",
+          "#EcommerceTips",
+          "#WebsitesForSmallBusiness",
+          "#RetailBusiness",
+          "#CheckoutExperience"
+        ],
+        "status": "scheduled",
+        "postId": "6aea455f5fa3d509fa4062b1"
+      },
+      "twitter": {
+        "text": "Forcing shoppers to create a password right at checkout costs you sales. Letting them log in with just an SMS code keeps buying fast and effortless. See how clean your store could look: https://servio-0.web.app?utm_source=twitter&utm_medium=social&utm_campaign=2026-11-04-firebase #Servio #Ecommerce",
+        "hashtags": [
+          "#Servio",
+          "#Ecommerce"
+        ],
+        "status": "scheduled",
+        "postId": "6aea45615fa3d509fa406325"
+      },
+      "imagePrompt": "Modern minimal social media graphic showing a clean smartphone mockup displaying a one-tap phone number checkout screen with a numeric verification code. Blue and crisp white color palette, professional typography, subtle soft shadows, clean tech startup aesthetic. Premium 3D-rendered concept art with rich glassmorphism: translucent frosted-glass panels, layered transparency, soft blur, glossy reflections and inner glow, with real depth and dimensional studio lighting. Vibrant saturated gradients — electric blue (#1E4FFF) flowing into cyan, indigo, violet and magenta — over a clean soft-lit background with gentle bloom and a shallow depth of field. Floating glossy geometric shapes, frosted-glass cards, glowing orbs and abstract nodes and connectors that suggest sleek modern web technology and digital craft. Polished, high-detail, dimensional, energetic yet professional. NO TEXT, no words, no letters, no numbers, no readable labels or UI writing, no photorealistic human faces, no logos or brand marks, no watermarks.",
+      "createdAtIso": "2026-11-03T20:34:41.429Z",
+      "imageUrl": "https://res.cloudinary.com/rcdkca9i/image/upload/v1793738075/mfpt4amzg13fj77h9ru3.jpg"
     }
   ]
 }
